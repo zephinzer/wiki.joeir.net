@@ -7,3 +7,6 @@ nav:
   - Home: ./index.md
   - Code Logistics:
       - Git 101: ./code-logistics/git-101.md
+theme: mkdocs
+markdown_extensions:
+  - admonition
