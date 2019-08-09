@@ -6,7 +6,13 @@ site_description: my wiki of sorts
 nav:
   - Home: ./index.md
   - Code Logistics:
-      - Git 101: ./code-logistics/git-101.md
+    - Git 101: ./code-logistics/git.md
+  - Wing Chun:
+    - Forms: ./wing-chun/forms.md
+  - Español:
+    - Los Verbos: ./español/los-verbos.md
+    - Los Numeros: ./español/los-numeros.md
+    - El Tiempo: ./español/el-tiempo.md
 theme: mkdocs
 markdown_extensions:
   - admonition

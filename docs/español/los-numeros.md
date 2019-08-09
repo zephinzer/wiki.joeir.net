@@ -1,0 +1,72 @@
+# Los Numeros
+
+| Numero | En Ingles |
+| --- | --- |
+| 0.3 | Cero y tres décimos |
+| 0.2 | Cero y dos décimos |
+| 0.11 | Cero y once centésimos |
+| 0.1 | Cero y undécimo |
+| 0.01 | Cero y uncentésimo |
+| 0.001 | Cero y unmilésimo |
+| 0.0001 | Cero comma cero cero cero uno |
+| 0 | Cero |
+| 1 | Uno |
+| 2 | Dos |
+| 3 | Tres |
+| 4 | Cuatro |
+| 5 | Cinco |
+| 6 | Seis |
+| 7 | Siete |
+| 8 | Ocho |
+| 9 | Nueve |
+| 10 | Diez |
+| 11 | Once |
+| 12 | Doce |
+| 13 | Trece |
+| 14 | Cartoce |
+| 15 | Quince |
+| 16 | Dieciséis |
+| 17 | Diecisiete |
+| 18 | Dieciocho |
+| 19 | Diecinueve |
+| 20 | Veinte |
+| 21 | Veintiuno |
+| 22 | Veintidos |
+| 23 | Veintitres |
+| 24 | Veinticuatro |
+| 25 | Veinticinco |
+| 26 | Veintiseis |
+| 27 | Veintisiete |
+| 28 | Veintiocho |
+| 29 | Veintinueve |
+| 30 | Treinta |
+| 31 | Treinta y uno |
+| 40 | Cuarenta |
+| 50 | Cincuenta |
+| 60 | Sesenta |
+| 70 | Setenta |
+| 80 | Ochenta |
+| 90 | Noventa |
+| 100 | Cien |
+| 101 | Ciento uno |
+| 110 | Ciento diez |
+| 111 | Ciento once |
+| 200 | Doscientos |
+| 300 | Trescientos |
+| 400 | Cuatrocientos |
+| 500 | Quinientos |
+| 600 | Seiscientos |
+| 700 | Setecientos |
+| 800 | Ochocientos |
+| 900 | Novecientos |
+| 1,000 | Mil |
+| 1,001 | Mil uno |
+| 1,010 | Mil diez |
+| 1,100 | Mil cien |
+| 1,101 | Mil ciento uno |
+| 1,110 | Mil ciento diez |
+| 1,111 | Mil ciento once |
+| 10,000 | Diez mil |
+| 1,000,000 | Millón |
+| 1,000,000,000 | Mil millones |
+| 1,000,000,000,000 | billón |

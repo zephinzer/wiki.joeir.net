@@ -153,22 +153,26 @@ git reset HEAD^
 
 ### Reverting a commit
 
-- I would like to create a commit that reverses the changes in a certain commit with hash `1234567890abcdef`
+- I would like to create a commit that reverses the changes in a certain commit with hash `${COMMIT_HASH}`
 
 ```sh
 # use `git log` to find the commit hash of the commit you wish to undo the effects of
-git revert 1234567890abcdef
+git revert ${COMMIT_HASH}
 ```
 
 ## Submitting changes
 
 ### Pushing
 
+- I would like push all committed changes from my computer to the remote
+
 ```sh
 git push
 ```
 
 ### Force Pushing
+
+- I have modified a commit locally and am unable to push normally to the remote since I rewrote history (**WARNING**: this will erase any changes others may have made between when the original commit was made, and your current commits)
 
 ```sh
 git push -f
@@ -199,7 +203,25 @@ git log -n 5
 git diff HEAD ${COMMIT_HASH}
 ```
 
-## Others
+## Viewing repository information
+
+### View the Git configuration
+
+```sh
+git config -l
+```
+
+### Check which branch you're on
+
+```sh
+git branch
+```
+
+### See all remotes
+
+```sh
+git remote -v
+```
 
 ### Checking which `.gitignore` is ignoring a file
 
