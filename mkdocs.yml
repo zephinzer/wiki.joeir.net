@@ -1,0 +1,9 @@
+site_name: wiki.joeir.net
+site_url: http://wiki.joeir.net
+repo_url: https://github.com/zephinzer/net.joeir.wiki.
+site_author: zephinzer
+site_description: my wiki of sorts
+nav:
+  - Home: ./index.md
+  - Code Logistics:
+      - Git 101: ./code-logistics/git-101.md
