@@ -1,8 +1,13 @@
+# enlace de referencia: https://www.mkdocs.org/user-guide/configuration/
 site_name: wiki.joeir.net
 site_url: http://wiki.joeir.net
 repo_url: https://github.com/zephinzer/net.joeir.wiki.
+repo_name: GitHub
 site_author: zephinzer
-site_description: my wiki of sorts
+site_description: Joseph's Wiki of Sorts
+google_analytics:
+  - UA-142320208-2
+  - wiki.joeir.net
 nav:
   - Home: ./index.md
   - Code Logistics:
@@ -18,3 +23,6 @@ nav:
 theme: material
 markdown_extensions:
   - admonition
+  - toc:
+      permalink: true
+dev_addr: 0.0.0.0:12345
