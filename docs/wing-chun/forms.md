@@ -4,9 +4,11 @@ This document contains teachings of the Wing Chun forms taught to me according t
 
 ```
              /- [    Lee Shing    ] -> [ Joseph Cheng  ] -\
-[ Yip Man ] <                                               > [ Chua Kah Joo] -> This Document
+[ Yip Man ] <                                               > [ Chua Kah Joo ] -> This Document
              \- [ Wong Shun Leung ] -> [ Nino Bernardo ] -/ 
 ```
+
+If you're interested, I belong to the [Wing Chun Kuen Training Center in Singapore](https://www.wingchunsg.com).
 
 ## Siu Lim Tao (小念头)
 
