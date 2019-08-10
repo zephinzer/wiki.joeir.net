@@ -20,5 +20,5 @@ serve:
 static:
 	mkdocs build -s -v -d $$(pwd)/site
 
-gh_pages:
+deploy:
 	mkdocs gh-deploy
