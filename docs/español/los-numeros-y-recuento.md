@@ -1,6 +1,6 @@
 # Los Numeros y Recuento
 
-## Matematica
+## Operaciones de Matemáticas
 
 | En Inglés | En Español |
 | --- | --- |

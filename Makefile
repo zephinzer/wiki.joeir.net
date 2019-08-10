@@ -22,3 +22,8 @@ static:
 
 deploy:
 	mkdocs gh-deploy
+
+#####################################################
+
+visit_repo:
+	open https://github.com/zephinzer/net.joeir.wiki.
