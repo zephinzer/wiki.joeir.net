@@ -15,6 +15,6 @@ nav:
     - Las Referencias de Aprender: ./español/las-referencias-de-aprender.md
     - El Tiempo: ./español/el-tiempo.md
     - Los Verbos: ./español/los-verbos.md
-theme: mkdocs
+theme: material
 markdown_extensions:
   - admonition
