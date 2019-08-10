@@ -6,7 +6,8 @@ Git is a source control management tool that helps to keep track of changes made
 
 ### Cloning a repository
 
-I would like to make a local copy of code from a public repository I found online.
+!!! Info "Why"
+    - I would like to make a local copy of code from a public repository I found online.
 
 ```sh
 # for http-based
@@ -18,7 +19,8 @@ git clone ssh://git@github.com/zephinzer/blog.joeir.net
 
 ### Creating a new repository
 
-I would like to initialise a new Git repository on my computer.
+!!! Info "Why"
+    - I would like to initialise a new Git repository on my computer.
 
 ```sh
 git init
@@ -28,7 +30,8 @@ git init
 
 ### Adding a Git remote
 
-I would like to add a new remote named `origin` to my repository.
+!!! Info "Why"
+    - I would like to add a new remote named `origin` to my repository.
 
 ```sh
 git remote add origin ssh://git@github.com/zephinzer/blog.joeir.net
@@ -36,7 +39,8 @@ git remote add origin ssh://git@github.com/zephinzer/blog.joeir.net
 
 ### Updating the Git remote
 
-I would like to update the URL for my remote named `origin` in my repository.
+!!! Info "Why"
+    - I would like to update the URL for my remote named `origin` in my repository.
 
 ```sh
 git remote set-url origin ssh://git@github.com/zephinzer/blog.joeir.net
@@ -46,7 +50,8 @@ git remote set-url origin ssh://git@github.com/zephinzer/blog.joeir.net
 
 ### Fetching
 
-I would like to get updates from the remote but I don't want to update my code yet.
+!!! Info "Why"
+    - I would like to get updates from the remote but I don't want to update my code yet.
 
 ```sh
 git fetch
@@ -54,7 +59,8 @@ git fetch
 
 ### Merging
 
-I have reviewed the changes I retrieved from the remote and I want to update my local code to match the remote's copy now.
+!!! Info "Why"
+    - I have reviewed the changes I retrieved from the remote and I want to update my local code to match the remote's copy now.
 
 ```sh
 git merge HEAD
@@ -62,7 +68,8 @@ git merge HEAD
 
 ### Pulling: Fetching + Merging
 
-I would like to update my code so that it is the same as the remote's.
+!!! Info "Why"
+    - I would like to update my code so that it is the same as the remote's.
 
 ```sh
 git pull
@@ -70,7 +77,8 @@ git pull
 
 ### Pull with Rebase
 
-I would like to update my code by placing whatever's from the remote before my current changes so that it is the same as the remote's and I don't have a merge commit.
+!!! Info "Why"
+    - I would like to update my code by placing whatever's from the remote before my current changes so that it is the same as the remote's and I don't have a merge commit.
 
 ```sh
 git pull -r
@@ -78,7 +86,8 @@ git pull -r
 
 ### Rebase
 
-Rebasing is useful for feature branches to pull in changes from master.
+!!! Info "Why"
+    - I would like to pull in changes from another branch that's available locally and place those changes before the changes I've committed.
 
 ```sh
 # assuming we are on branch feature_x pulling in updates from master
@@ -89,12 +98,24 @@ git rebase master
 
 ### Stashing
 
+!!! Info "Why"
+    - I would like to temporarily store my unstaged changes so that I can pull in the latest updates from the remote.
+
 ```sh
-# put all unstaged changes
+# put all unstaged changes into a stash
 git stash
+
+# checking stashed changes
+git stash list
+
+# popping the last stashed change
+git stash pop
 ```
 
 ### Staging
+
+!!! Info "Why"
+    - I would like to add file(s) that will be 'saved' during a commit.
 
 ```sh
 # to stage all changes, run this from project root
@@ -106,11 +127,18 @@ git add ./path/to/changed_file
 
 ### Commiting
 
+!!! Info "Why"
+    - I would like to save my changes to my local Git repository.
+
 ```sh
 git commit -m 'some message'
 ```
 
 ### Commiting without any changes
+
+!!! Info "Why"
+    - I would like to add a commit to my local repository without adding any files
+    - I would like to have a commit that can trigger a pipeline in the remote source control
 
 ```sh
 git commit --allow-empty 'some message'
@@ -120,7 +148,8 @@ git commit --allow-empty 'some message'
 
 ### Adding a file to a previous commit
 
-I forgot to run `git add` on a file that should be in the previous commit.
+!!! Info "Why"
+    - I forgot to run `git add` on a file that should be in the previous commit.
 
 ```sh
 # stage the missing file first
@@ -132,7 +161,8 @@ git commit --amend
 
 ### Squash commit
 
-- I have made 5 commits and I would like to compress them into a single commit so my Git history is cleaner.
+!!! Info "Why"
+    - I have made 5 commits and I would like to compress them into a single commit so my Git history is cleaner.
 
 ```sh
 # indicate `p` or `pick` for the head commit, and `s` or `squash` for the rest
@@ -141,7 +171,8 @@ git rebase -i HEAD~5
 
 ### Uncommit last commit
 
-- I would like to reverse the last commit but leave changes I made intact
+!!! Info "Why"
+    - I would like to reverse the last commit but leave changes I made intact
 
 ```sh
 # this will leave the committed files as staged
@@ -153,7 +184,8 @@ git reset HEAD^
 
 ### Reverting a commit
 
-- I would like to create a commit that reverses the changes in a certain commit with hash `${COMMIT_HASH}`
+!!! Info "Why"
+    - I would like to create a commit that reverses the changes in a certain commit with hash `${COMMIT_HASH}`
 
 ```sh
 # use `git log` to find the commit hash of the commit you wish to undo the effects of
@@ -164,7 +196,8 @@ git revert ${COMMIT_HASH}
 
 ### Pushing
 
-- I would like push all committed changes from my computer to the remote
+!!! Info "Why"
+    - I would like push all committed changes from my computer to the remote
 
 ```sh
 git push
@@ -172,7 +205,8 @@ git push
 
 ### Force Pushing
 
-- I have modified a commit locally and am unable to push normally to the remote since I rewrote history (**WARNING**: this will erase any changes others may have made between when the original commit was made, and your current commits)
+!!! Info "Why"
+    - I have modified a commit locally and am unable to push normally to the remote since I rewrote history (**WARNING**: this will erase any changes others may have made between when the original commit was made, and your current commits)
 
 ```sh
 git push -f
@@ -182,11 +216,18 @@ git push -f
 
 ### View all current changes
 
+!!! Info "Why"
+    - I would like to see what files have been staged
+
 ```sh
 git status
 ```
 
 ### View commit history
+
+!!! Info "Why"
+    - I want to do an interactive rebase (squashing) and I would like to see which commit I should rebase up till
+    - I want to see what changes have been made by other team members/developers
 
 ```sh
 # interactive browsing of git commits
@@ -198,6 +239,9 @@ git log -n 5
 
 ### View difference between commits
 
+!!! Info "Why"
+    - I would like to check out what changes have been made between two commits
+
 ```sh
 # view file changes from HEAD to ${COMMIT_HASH}
 git diff HEAD ${COMMIT_HASH}
@@ -207,11 +251,17 @@ git diff HEAD ${COMMIT_HASH}
 
 ### View the Git configuration
 
+!!! Info "Why"
+    - I would like to see who am I committing code as
+
 ```sh
 git config -l
 ```
 
 ### Check which branch you're on
+
+!!! Info "Why"
+    - I would like to confirm which branch I am on
 
 ```sh
 git branch
@@ -219,13 +269,17 @@ git branch
 
 ### See all remotes
 
+!!! Info "Why"
+    - I would like to see which remotes I am pushing to
+
 ```sh
 git remote -v
 ```
 
 ### Checking which `.gitignore` is ignoring a file
 
-> Assuming there exists file `./path/to/file` that's ignored, how can we know which `.gitignore` is causing it to be excluded from Git?
+!!! Info "Why"
+    - I would like to know which `.gitignore` is causing a file to be ignored without any obvious reason
 
 ```sh
 cd `./path/to`;
