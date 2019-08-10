@@ -10,9 +10,11 @@ nav:
   - Wing Chun:
     - Forms: ./wing-chun/forms.md
   - Español:
-    - Los Verbos: ./español/los-verbos.md
-    - Los Numeros: ./español/los-numeros.md
+    - Los Numeros y Recuento: ./español/los-numeros-y-recuento.md
+    - Los Países y Las Nacionalidades: ./español/los-países-y-las-nacionalidades.md
+    - Las Referencias de Aprender: ./español/las-referencias-de-aprender.md
     - El Tiempo: ./español/el-tiempo.md
+    - Los Verbos: ./español/los-verbos.md
 theme: mkdocs
 markdown_extensions:
   - admonition

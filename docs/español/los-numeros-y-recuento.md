@@ -1,4 +1,17 @@
-# Los Numeros
+# Los Numeros y Recuento
+
+## Matematica
+
+| En Inglés | En Español |
+| --- | --- |
+| Add | Sumar |
+| Subtract | Restar |
+| Divide | Dividir |
+| Multiply | Multiplicar |
+| Power of | Al poder de ... |
+| Square root of | La raíz cuadrada de ... |
+
+## Menos que cero
 
 | Numero | En Ingles |
 | --- | --- |
@@ -9,6 +22,11 @@
 | 0.01 | Cero y uncentésimo |
 | 0.001 | Cero y unmilésimo |
 | 0.0001 | Cero comma cero cero cero uno |
+
+## Cero a treinta
+
+| Numero | En Ingles |
+| --- | --- |
 | 0 | Cero |
 | 1 | Uno |
 | 2 | Dos |
@@ -41,16 +59,33 @@
 | 29 | Veintinueve |
 | 30 | Treinta |
 | 31 | Treinta y uno |
+
+## Poder de diez
+
+| Numero | En Ingles |
+| --- | --- |
 | 40 | Cuarenta |
+| 4X | Cuarenta y X |
 | 50 | Cincuenta |
+| 5X | Cincuenta y X |
 | 60 | Sesenta |
+| 6X | Sesenta y X |
 | 70 | Setenta |
+| 7X | Setenta y X |
 | 80 | Ochenta |
+| 8X | Ochenta y X |
 | 90 | Noventa |
+| 9X | Noventa y X |
+
+## Poder de cien
+
+| Numero | En Ingles |
+| --- | --- |
 | 100 | Cien |
 | 101 | Ciento uno |
 | 110 | Ciento diez |
 | 111 | Ciento once |
+| 15X | Ciento cincuenta y X |
 | 200 | Doscientos |
 | 300 | Trescientos |
 | 400 | Cuatrocientos |
@@ -59,6 +94,11 @@
 | 700 | Setecientos |
 | 800 | Ochocientos |
 | 900 | Novecientos |
+
+## Más que poder de cien
+
+| Numero | En Ingles |
+| --- | --- |
 | 1,000 | Mil |
 | 1,001 | Mil uno |
 | 1,010 | Mil diez |
@@ -66,6 +106,7 @@
 | 1,101 | Mil ciento uno |
 | 1,110 | Mil ciento diez |
 | 1,111 | Mil ciento once |
+| 1,55X | Mil Quinitentos Cincuenta y X |
 | 10,000 | Diez mil |
 | 1,000,000 | Millón |
 | 1,000,000,000 | Mil millones |
