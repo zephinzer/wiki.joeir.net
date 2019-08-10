@@ -20,9 +20,16 @@ nav:
     - Las Referencias de Aprender: ./español/las-referencias-de-aprender.md
     - El Tiempo: ./español/el-tiempo.md
     - Los Verbos: ./español/los-verbos.md
-theme: material
+theme:
+  name: material
+  highlightjs: true
+  hljs_languages:
+    - sh
 markdown_extensions:
   - admonition
+  - codehilite
   - toc:
       permalink: true
+plugins:
+  - search
 dev_addr: 0.0.0.0:12345
