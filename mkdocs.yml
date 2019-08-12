@@ -10,44 +10,10 @@ google_analytics:
   - wiki.joeir.net
 nav:
   - Home: ./index.md
-  - Organisational Development:
-    - Overview: ./todo.md
-    - Intrapersonal: ./todo.md
-    - Interpersonal: ./todo.md
-    - Groups: ./todo.md
-    - Systems: ./todo.md
-  - Software Engineering:
-    - Overview: ./todo.md
-    - Product Team Roles:
-      - Developer: ./todo.md
-      - Operations: ./todo.md
-      - Quality Engineer: ./todo.md
-      - UX Designer: ./todo.md
-      - Scrum Master: ./todo.md
-      - Product Manager: ./todo.md
-      - Product Owner: ./todo.md
-    - Paradigms:
-      - Functional: ./todo.md
-      - Object Oriented: ./todo.md
-    - Development:
-      - Architecture:
-        - Monolith: ./todo.md
-        - Service Oriented: ./todo.md
-        - Microservices: ./todo.md
-        - Serverless: ./todo.md
-      - Naming Things: ./todo.md
-      - Testing: ./todo.md
-    - DevOps:
-      - Continuous Integration: ./todo.md
-      - Continuous Delivery: ./todo.md
-      - Environmnt Provisioning: ./todo.md
-      - Package Management: ./todo.md
-    - Operations:
-      - Infrastructure Provisioning: ./todo.md
-      - System Observability: ./todo.md
-    - Software Guides:
-      - Git: ./tools/git.md
-      - Kubernetes: ./tools/kubernetes.md
+  - DevOps:
+    - Git: ./devops/git.md
+    - Shell: ./devops/shell.md
+    - Kubernetes: ./tools/kubernetes.md
   - Wing Chun:
     - Forms:
       - Siu Lim Tau: ./wing-chun/forms.md
