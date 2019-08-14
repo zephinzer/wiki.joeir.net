@@ -11,9 +11,12 @@ google_analytics:
 nav:
   - Home: ./index.md
   - DevOps:
-    - Git: ./devops/git.md
-    - Shell: ./devops/shell.md
-    - Kubernetes: ./tools/kubernetes.md
+    - Continuous Integration: ./devops/continuous-integration.md
+    - Versioning: ./devops/versioning.md
+    - Tools:
+      - Git: ./devops/tools/git.md
+      - Kubernetes: ./tools/tools/kubernetes.md
+      - Shell: ./devops/tools/shell.md
   - Wing Chun:
     - Forms:
       - Siu Lim Tau: ./wing-chun/forms.md
