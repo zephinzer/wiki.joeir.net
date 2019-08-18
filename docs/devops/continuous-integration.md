@@ -1,14 +1,15 @@
 # Continuous Integration
 
-- [Continuous Integration](#Continuous-Integration)
-  - [Terms](#Terms)
-  - [Stages of CI](#Stages-of-CI)
-  - [Considerations](#Considerations)
-    - [Testing](#Testing)
-    - [Building](#Building)
-    - [Versioning](#Versioning)
-    - [Releasing](#Releasing)
-    - [Publishing](#Publishing)
+- [Continuous Integration](#continuous-integration)
+  - [Terms](#terms)
+  - [Stages of CI](#stages-of-ci)
+  - [Considerations](#considerations)
+    - [Testing](#testing)
+    - [Building](#building)
+    - [Versioning](#versioning)
+    - [Releasing](#releasing)
+    - [Publishing](#publishing)
+    - [Deploying](#deploying)
 
 ## Terms
 
@@ -22,11 +23,12 @@
 
 | Stage | Description |
 | ---|--- |
-| [Test](#Testing) | Run automated tests on code |
-| [Build](#Building) | Compile/package/bundle code for production |
-| [Version](#Versioning) | Creation of a version number for the next two stages |
-| [Release](#Releasing) | Pushing tagged/annotated/versioned code back into the same location |
-| [Publish](#Publishing) | Pushing code to downstream location for wider consumption |
+| [Test](#testing) | Run automated tests on code |
+| [Build](#building) | Compile/package/bundle code for production |
+| [Version](#versioning) | Creation of a version number for the next two stages |
+| [Release](#releasing) | Pushing tagged/annotated/versioned code back into the same location |
+| [Publish](#publishing) | Pushing code to downstream location for wider consumption |
+| [Deploy](#deploying) | Triggering the deployment of the current code |
 
 ## Considerations
 
@@ -44,3 +46,5 @@ When building CI pipelines always consider the following:
 ### Releasing
 
 ### Publishing
+
+### Deploying

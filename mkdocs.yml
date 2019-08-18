@@ -1,8 +1,7 @@
 # enlace de referencia: https://www.mkdocs.org/user-guide/configuration/
 site_name: wiki.joeir.net
 site_url: http://wiki.joeir.net
-repo_url: https://github.com/zephinzer/net.joeir.wiki.
-repo_name: GitHub
+repo_url: https://gitlab.com/zephinzer/net.joeir.wiki
 site_author: zephinzer
 site_description: Joseph's Wiki of Sorts
 google_analytics:
@@ -21,11 +20,12 @@ nav:
     - Forms:
       - Siu Lim Tau: ./wing-chun/forms.md
   - Español:
-    - Los Numeros y Recuento: ./español/los-numeros-y-recuento.md
-    - Los Países y Las Nacionalidades: ./español/los-países-y-las-nacionalidades.md
-    - Las Referencias de Aprender: ./español/las-referencias-de-aprender.md
+    - Numeros y Recuento: ./español/numeros-y-recuento.md
+    - Países y Nacionalidades: ./español/países-y-nacionalidades.md
+    - Referencias de Aprender: ./español/referencias-de-aprender.md
     - El Tiempo: ./español/el-tiempo.md
-    - Los Verbos: ./español/los-verbos.md
+    - Verbos: ./español/verbos.md
+    - Vocabulario: ./español/vocabulario.md
 theme:
   name: material
   highlightjs: true
