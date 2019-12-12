@@ -9,16 +9,9 @@ google_analytics:
   - wiki.joeir.net
 nav:
   - Home: ./index.md
-  - DevOps:
-    - Continuous Integration: ./devops/continuous-integration.md
-    - Versioning: ./devops/versioning.md
-    - Tools:
-      - Git: ./devops/tools/git.md
-      - Kubernetes: ./tools/tools/kubernetes.md
-      - Shell: ./devops/tools/shell.md
-  - Wing Chun:
-    - Forms:
-      - Siu Lim Tau: ./wing-chun/forms.md
+  - Golang: ./golang/index.md
+  - Kubernetes:
+    - Local Development: ./kubernetes/local_development.md
   - Español:
     - Numeros y Recuento: ./español/numeros-y-recuento.md
     - Países y Nacionalidades: ./español/países-y-nacionalidades.md
