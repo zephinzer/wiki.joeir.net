@@ -1,0 +1,1091 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Joseph's Wiki of Sorts">
+      
+      
+        <link rel="canonical" href="http://wiki.joeir.net/devops/tools/git/">
+      
+      
+        <meta name="author" content="zephinzer">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+    
+    
+      
+        <title>Git - wiki.joeir.net</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.1b62728e.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-142320208-2", "wiki.joeir.net")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="__gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#git" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://wiki.joeir.net" title="wiki.joeir.net" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              wiki.joeir.net
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Git
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://gitlab.com/zephinzer/net.joeir.wiki/" title="Go to repository" class="md-source" data-md-source="gitlab">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__gitlab" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitLab
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://wiki.joeir.net" title="wiki.joeir.net" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    wiki.joeir.net
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://gitlab.com/zephinzer/net.joeir.wiki/" title="Go to repository" class="md-source" data-md-source="gitlab">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__gitlab" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitLab
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../golang/" title="Golang" class="md-nav__link">
+      Golang
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Kubernetes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Kubernetes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../kubernetes/local_development/" title="Local Development" class="md-nav__link">
+      Local Development
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Español
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Español
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../español/numeros-y-recuento/" title="Numeros y Recuento" class="md-nav__link">
+      Numeros y Recuento
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../español/países-y-nacionalidades/" title="Países y Nacionalidades" class="md-nav__link">
+      Países y Nacionalidades
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../español/referencias-de-aprender/" title="Referencias de Aprender" class="md-nav__link">
+      Referencias de Aprender
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../español/el-tiempo/" title="El Tiempo" class="md-nav__link">
+      El Tiempo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../español/verbos/" title="Verbos" class="md-nav__link">
+      Verbos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../español/vocabulario/" title="Vocabulario" class="md-nav__link">
+      Vocabulario
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initialisation" class="md-nav__link">
+    Initialisation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloning-a-repository" class="md-nav__link">
+    Cloning a repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-repository" class="md-nav__link">
+    Creating a new repository
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remote-management" class="md-nav__link">
+    Remote management
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-git-remote" class="md-nav__link">
+    Adding a Git remote
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-the-git-remote" class="md-nav__link">
+    Updating the Git remote
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieving-changes" class="md-nav__link">
+    Retrieving changes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fetching" class="md-nav__link">
+    Fetching
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merging" class="md-nav__link">
+    Merging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pulling-fetching-merging" class="md-nav__link">
+    Pulling: Fetching + Merging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-with-rebase" class="md-nav__link">
+    Pull with Rebase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebase" class="md-nav__link">
+    Rebase
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-changes" class="md-nav__link">
+    Saving changes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stashing" class="md-nav__link">
+    Stashing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#staging" class="md-nav__link">
+    Staging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commiting" class="md-nav__link">
+    Commiting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commiting-without-any-changes" class="md-nav__link">
+    Commiting without any changes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifying-changes" class="md-nav__link">
+    Modifying changes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-file-to-a-previous-commit" class="md-nav__link">
+    Adding a file to a previous commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#squash-commit" class="md-nav__link">
+    Squash commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uncommit-last-commit" class="md-nav__link">
+    Uncommit last commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverting-a-commit" class="md-nav__link">
+    Reverting a commit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitting-changes" class="md-nav__link">
+    Submitting changes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pushing" class="md-nav__link">
+    Pushing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force-pushing" class="md-nav__link">
+    Force Pushing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assessing-changes" class="md-nav__link">
+    Assessing changes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#view-all-current-changes" class="md-nav__link">
+    View all current changes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-commit-history" class="md-nav__link">
+    View commit history
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-difference-between-commits" class="md-nav__link">
+    View difference between commits
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-repository-information" class="md-nav__link">
+    Viewing repository information
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#view-the-git-configuration" class="md-nav__link">
+    View the Git configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-which-branch-youre-on" class="md-nav__link">
+    Check which branch you're on
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-all-remotes" class="md-nav__link">
+    See all remotes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-which-gitignore-is-ignoring-a-file" class="md-nav__link">
+    Checking which .gitignore is ignoring a file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://gitlab.com/zephinzer/net.joeir.wiki/edit/master/docs/devops/tools/git.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="git">Git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h1>
+<p>Git is a source control management tool that helps to keep track of changes made to a code base.</p>
+<h2 id="initialisation">Initialisation<a class="headerlink" href="#initialisation" title="Permanent link">&para;</a></h2>
+<h3 id="cloning-a-repository">Cloning a repository<a class="headerlink" href="#cloning-a-repository" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to make a local copy of code from a public repository I found online.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="c1"># for http-based</span>
+git clone https://zephinzer@github.com/zephinzer/blog.joeir.net
+
+<span class="c1"># for ssh-based</span>
+git clone ssh://git@github.com/zephinzer/blog.joeir.net
+</pre></div>
+
+
+<h3 id="creating-a-new-repository">Creating a new repository<a class="headerlink" href="#creating-a-new-repository" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to initialise a new Git repository on my computer.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>git init
+</pre></div>
+
+
+<h2 id="remote-management">Remote management<a class="headerlink" href="#remote-management" title="Permanent link">&para;</a></h2>
+<h3 id="adding-a-git-remote">Adding a Git remote<a class="headerlink" href="#adding-a-git-remote" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to add a new remote named <code>origin</code> to my repository.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>git remote add origin ssh://git@github.com/zephinzer/blog.joeir.net
+</pre></div>
+
+
+<h3 id="updating-the-git-remote">Updating the Git remote<a class="headerlink" href="#updating-the-git-remote" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to update the URL for my remote named <code>origin</code> in my repository.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>git remote set-url origin ssh://git@github.com/zephinzer/blog.joeir.net
+</pre></div>
+
+
+<h2 id="retrieving-changes">Retrieving changes<a class="headerlink" href="#retrieving-changes" title="Permanent link">&para;</a></h2>
+<h3 id="fetching">Fetching<a class="headerlink" href="#fetching" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to get updates from the remote but I don't want to update my code yet.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>git fetch
+</pre></div>
+
+
+<h3 id="merging">Merging<a class="headerlink" href="#merging" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I have reviewed the changes I retrieved from the remote and I want to update my local code to match the remote's copy now.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>git merge HEAD
+</pre></div>
+
+
+<h3 id="pulling-fetching-merging">Pulling: Fetching + Merging<a class="headerlink" href="#pulling-fetching-merging" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to update my code so that it is the same as the remote's.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>git pull
+</pre></div>
+
+
+<h3 id="pull-with-rebase">Pull with Rebase<a class="headerlink" href="#pull-with-rebase" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to update my code by placing whatever's from the remote before my current changes so that it is the same as the remote's and I don't have a merge commit.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>git pull -r
+</pre></div>
+
+
+<h3 id="rebase">Rebase<a class="headerlink" href="#rebase" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to pull in changes from another branch that's available locally and place those changes before the changes I've committed.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="c1"># assuming we are on branch feature_x pulling in updates from master</span>
+git rebase master
+</pre></div>
+
+
+<h2 id="saving-changes">Saving changes<a class="headerlink" href="#saving-changes" title="Permanent link">&para;</a></h2>
+<h3 id="stashing">Stashing<a class="headerlink" href="#stashing" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to temporarily store my unstaged changes so that I can pull in the latest updates from the remote.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="c1"># put all unstaged changes into a stash</span>
+git stash
+
+<span class="c1"># checking stashed changes</span>
+git stash list
+
+<span class="c1"># popping the last stashed change</span>
+git stash pop
+</pre></div>
+
+
+<h3 id="staging">Staging<a class="headerlink" href="#staging" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to add file(s) that will be 'saved' during a commit.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="c1"># to stage all changes, run this from project root</span>
+git add .
+
+<span class="c1"># to stage only one file</span>
+git add ./path/to/changed_file
+</pre></div>
+
+
+<h3 id="commiting">Commiting<a class="headerlink" href="#commiting" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to save my changes to my local Git repository.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>git commit -m <span class="s1">&#39;some message&#39;</span>
+</pre></div>
+
+
+<h3 id="commiting-without-any-changes">Commiting without any changes<a class="headerlink" href="#commiting-without-any-changes" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to add a commit to my local repository without adding any files</li>
+<li>I would like to have a commit that can trigger a pipeline in the remote source control</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>git commit --allow-empty <span class="s1">&#39;some message&#39;</span>
+</pre></div>
+
+
+<h2 id="modifying-changes">Modifying changes<a class="headerlink" href="#modifying-changes" title="Permanent link">&para;</a></h2>
+<h3 id="adding-a-file-to-a-previous-commit">Adding a file to a previous commit<a class="headerlink" href="#adding-a-file-to-a-previous-commit" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I forgot to run <code>git add</code> on a file that should be in the previous commit.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="c1"># stage the missing file first</span>
+git add ./path/to/missed/file<span class="p">;</span>
+
+<span class="c1"># this will add the staged file to the previous commit</span>
+git commit --amend
+</pre></div>
+
+
+<h3 id="squash-commit">Squash commit<a class="headerlink" href="#squash-commit" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I have made 5 commits and I would like to compress them into a single commit so my Git history is cleaner.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="c1"># indicate `p` or `pick` for the head commit, and `s` or `squash` for the rest</span>
+git rebase -i HEAD~5
+</pre></div>
+
+
+<h3 id="uncommit-last-commit">Uncommit last commit<a class="headerlink" href="#uncommit-last-commit" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to reverse the last commit but leave changes I made intact</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="c1"># this will leave the committed files as staged</span>
+git reset --soft HEAD^
+
+<span class="c1"># this will also unstage all changes</span>
+git reset HEAD^
+</pre></div>
+
+
+<h3 id="reverting-a-commit">Reverting a commit<a class="headerlink" href="#reverting-a-commit" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to create a commit that reverses the changes in a certain commit with hash <code>${COMMIT_HASH}</code></li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="c1"># use `git log` to find the commit hash of the commit you wish to undo the effects of</span>
+git revert <span class="si">${</span><span class="nv">COMMIT_HASH</span><span class="si">}</span>
+</pre></div>
+
+
+<h2 id="submitting-changes">Submitting changes<a class="headerlink" href="#submitting-changes" title="Permanent link">&para;</a></h2>
+<h3 id="pushing">Pushing<a class="headerlink" href="#pushing" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like push all committed changes from my computer to the remote</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>git push
+</pre></div>
+
+
+<h3 id="force-pushing">Force Pushing<a class="headerlink" href="#force-pushing" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I have modified a commit locally and am unable to push normally to the remote since I rewrote history (<strong>WARNING</strong>: this will erase any changes others may have made between when the original commit was made, and your current commits)</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>git push -f
+</pre></div>
+
+
+<h2 id="assessing-changes">Assessing changes<a class="headerlink" href="#assessing-changes" title="Permanent link">&para;</a></h2>
+<h3 id="view-all-current-changes">View all current changes<a class="headerlink" href="#view-all-current-changes" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to see what files have been staged</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>git status
+</pre></div>
+
+
+<h3 id="view-commit-history">View commit history<a class="headerlink" href="#view-commit-history" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I want to do an interactive rebase (squashing) and I would like to see which commit I should rebase up till</li>
+<li>I want to see what changes have been made by other team members/developers</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="c1"># interactive browsing of git commits</span>
+git log
+
+<span class="c1"># output only the last 5 logs</span>
+git log -n <span class="m">5</span>
+</pre></div>
+
+
+<h3 id="view-difference-between-commits">View difference between commits<a class="headerlink" href="#view-difference-between-commits" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to check out what changes have been made between two commits</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="c1"># view file changes from HEAD to ${COMMIT_HASH}</span>
+git diff HEAD <span class="si">${</span><span class="nv">COMMIT_HASH</span><span class="si">}</span>
+</pre></div>
+
+
+<h2 id="viewing-repository-information">Viewing repository information<a class="headerlink" href="#viewing-repository-information" title="Permanent link">&para;</a></h2>
+<h3 id="view-the-git-configuration">View the Git configuration<a class="headerlink" href="#view-the-git-configuration" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to see who am I committing code as</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>git config -l
+</pre></div>
+
+
+<h3 id="check-which-branch-youre-on">Check which branch you're on<a class="headerlink" href="#check-which-branch-youre-on" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to confirm which branch I am on</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>git branch
+</pre></div>
+
+
+<h3 id="see-all-remotes">See all remotes<a class="headerlink" href="#see-all-remotes" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to see which remotes I am pushing to</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>git remote -v
+</pre></div>
+
+
+<h3 id="checking-which-gitignore-is-ignoring-a-file">Checking which <code>.gitignore</code> is ignoring a file<a class="headerlink" href="#checking-which-gitignore-is-ignoring-a-file" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to know which <code>.gitignore</code> is causing a file to be ignored without any obvious reason</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> <span class="sb">`</span>./path/to<span class="sb">`</span><span class="p">;</span>
+git check-ignore -v *<span class="p">;</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.a8b5e56f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+    
+  </body>
+</html>
