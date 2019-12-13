@@ -12,6 +12,18 @@ run: build
 build:
 	docker build --tag $(IMAGE_PATH):latest .
 
+deploy:
+	docker build \
+		--file ./tools/deployer/Dockerfile \
+		--tag dontpushme .
+	docker run \
+		--volume ~/.ssh/id_rsa:/root/.ssh/id_rsa \
+		-it dontpushme
+
+publish_from_container:
+	ssh -o FingerprintHash=sha256 -o StrictHostKeyChecking=no gitlab.com
+	make publish
+
 #####################################################
 
 serve:
@@ -20,7 +32,7 @@ serve:
 static:
 	mkdocs build -s -v -d $$(pwd)/site
 
-deploy:
+publish:
 	mkdocs gh-deploy
 
 ssh:
