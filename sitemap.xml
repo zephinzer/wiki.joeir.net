@@ -6,12 +6,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://wiki.joeir.net/dev/golang/</loc>
+     <loc>http://wiki.joeir.net/dev/git/</loc>
      <lastmod>2019-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://wiki.joeir.net/dev/node/</loc>
+     <loc>http://wiki.joeir.net/dev/golang/</loc>
      <lastmod>2019-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -21,7 +21,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://wiki.joeir.net/dev/git/</loc>
+     <loc>http://wiki.joeir.net/dev/node/</loc>
+     <lastmod>2019-12-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://wiki.joeir.net/dev/pki/</loc>
      <lastmod>2019-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -42,6 +47,11 @@
     </url>
     <url>
      <loc>http://wiki.joeir.net/wingchun/</loc>
+     <lastmod>2019-12-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://wiki.joeir.net/bahasa/angka/</loc>
      <lastmod>2019-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url>

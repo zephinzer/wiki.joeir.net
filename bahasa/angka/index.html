@@ -13,7 +13,7 @@
         <meta name="description" content="Joseph's Wiki of Sorts">
       
       
-        <link rel="canonical" href="http://wiki.joeir.net/devops/continuous-integration/">
+        <link rel="canonical" href="http://wiki.joeir.net/bahasa/angka/">
       
       
         <meta name="author" content="zephinzer">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Continuous Integration - wiki.joeir.net</title>
+        <title>Angka - wiki.joeir.net</title>
       
     
     
@@ -108,7 +108,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#continuous-integration" tabindex="1" class="md-skip">
+      <a href="#angka" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -134,7 +134,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Continuous Integration
+                Angka
               
             </span>
           
@@ -276,8 +276,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dev/golang/" title="Golang" class="md-nav__link">
-      Golang
+    <a href="../../dev/git/" title="Git" class="md-nav__link">
+      Git
     </a>
   </li>
 
@@ -288,8 +288,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dev/node/" title="Node" class="md-nav__link">
-      Node
+    <a href="../../dev/golang/" title="Golang" class="md-nav__link">
+      Golang
     </a>
   </li>
 
@@ -312,8 +312,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dev/git/" title="Git" class="md-nav__link">
-      Git
+    <a href="../../dev/node/" title="Node" class="md-nav__link">
+      Node
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dev/pki/" title="Public Key Infrastructure" class="md-nav__link">
+      Public Key Infrastructure
     </a>
   </li>
 
@@ -399,16 +411,92 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
-      Español
+      Bahasa
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        Bahasa
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Angka
+      </label>
+    
+    <a href="./" title="Angka" class="md-nav__link md-nav__link--active">
+      Angka
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nol-hingga-dua-puluh-satu" class="md-nav__link">
+    Nol hingga Dua Puluh Satu
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Español
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
         Español
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -512,71 +600,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#terms" class="md-nav__link">
-    Terms
+  <a href="#nol-hingga-dua-puluh-satu" class="md-nav__link">
+    Nol hingga Dua Puluh Satu
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stages-of-ci" class="md-nav__link">
-    Stages of CI
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#considerations" class="md-nav__link">
-    Considerations
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#testing" class="md-nav__link">
-    Testing
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#building" class="md-nav__link">
-    Building
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#versioning" class="md-nav__link">
-    Versioning
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#releasing" class="md-nav__link">
-    Releasing
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#publishing" class="md-nav__link">
-    Publishing
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deploying" class="md-nav__link">
-    Deploying
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -596,95 +622,109 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://gitlab.com/zephinzer/net.joeir.wiki/edit/master/docs/devops/continuous-integration.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://gitlab.com/zephinzer/net.joeir.wiki/edit/master/docs/bahasa/angka.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="continuous-integration">Continuous Integration<a class="headerlink" href="#continuous-integration" title="Permanent link">&para;</a></h1>
-<ul>
-<li><a href="#continuous-integration">Continuous Integration</a></li>
-<li><a href="#terms">Terms</a></li>
-<li><a href="#stages-of-ci">Stages of CI</a></li>
-<li><a href="#considerations">Considerations</a><ul>
-<li><a href="#testing">Testing</a></li>
-<li><a href="#building">Building</a></li>
-<li><a href="#versioning">Versioning</a></li>
-<li><a href="#releasing">Releasing</a></li>
-<li><a href="#publishing">Publishing</a></li>
-<li><a href="#deploying">Deploying</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="terms">Terms<a class="headerlink" href="#terms" title="Permanent link">&para;</a></h2>
+                <h1 id="angka">Angka<a class="headerlink" href="#angka" title="Permanent link">&para;</a></h1>
+<h2 id="nol-hingga-dua-puluh-satu">Nol hingga Dua Puluh Satu<a class="headerlink" href="#nol-hingga-dua-puluh-satu" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Term</th>
-<th>Description</th>
+<th>Di Inggris</th>
+<th>Di Bahasa</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Agent</td>
-<td>An atomic instance capable of running code</td>
+<td>0</td>
+<td>Nol</td>
 </tr>
 <tr>
-<td>Stage</td>
-<td>A collection of jobs that run in parallel</td>
+<td>1</td>
+<td>Satu</td>
 </tr>
 <tr>
-<td>Job</td>
-<td>A single script that's provisioned</td>
+<td>2</td>
+<td>Dua</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Tiga</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Empat</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Lima</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Enam</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Tujuh</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Lapan</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Sembilan</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Sepuluh</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Sebelas</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Duabelas</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Tigabelas</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Empat belas</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Lima belas</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Enam belas</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Tujug belas</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Lapan belas</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Sembilan belas</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Dua puluh</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Dua puluh satu</td>
 </tr>
 </tbody>
 </table>
-<h2 id="stages-of-ci">Stages of CI<a class="headerlink" href="#stages-of-ci" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Stage</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="#testing">Test</a></td>
-<td>Run automated tests on code</td>
-</tr>
-<tr>
-<td><a href="#building">Build</a></td>
-<td>Compile/package/bundle code for production</td>
-</tr>
-<tr>
-<td><a href="#versioning">Version</a></td>
-<td>Creation of a version number for the next two stages</td>
-</tr>
-<tr>
-<td><a href="#releasing">Release</a></td>
-<td>Pushing tagged/annotated/versioned code back into the same location</td>
-</tr>
-<tr>
-<td><a href="#publishing">Publish</a></td>
-<td>Pushing code to downstream location for wider consumption</td>
-</tr>
-<tr>
-<td><a href="#deploying">Deploy</a></td>
-<td>Triggering the deployment of the current code</td>
-</tr>
-</tbody>
-</table>
-<h2 id="considerations">Considerations<a class="headerlink" href="#considerations" title="Permanent link">&para;</a></h2>
-<p>When building CI pipelines always consider the following:
-- Are developers able to get feedback on what is within their control as soon as possible?
-- Do two simultaneous jobs running together affect each other?</p>
-<h3 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h3>
-<ul>
-<li></li>
-</ul>
-<h3 id="building">Building<a class="headerlink" href="#building" title="Permanent link">&para;</a></h3>
-<h3 id="versioning">Versioning<a class="headerlink" href="#versioning" title="Permanent link">&para;</a></h3>
-<h3 id="releasing">Releasing<a class="headerlink" href="#releasing" title="Permanent link">&para;</a></h3>
-<h3 id="publishing">Publishing<a class="headerlink" href="#publishing" title="Permanent link">&para;</a></h3>
-<h3 id="deploying">Deploying<a class="headerlink" href="#deploying" title="Permanent link">&para;</a></h3>
                 
                   
                 
@@ -701,6 +741,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../wingchun/" title="Wing Chun" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Wing Chun
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../español/numeros-y-recuento/" title="Numeros y Recuento" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Numeros y Recuento
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
