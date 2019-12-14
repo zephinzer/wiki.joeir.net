@@ -13,7 +13,7 @@
         <meta name="description" content="Joseph's Wiki of Sorts">
       
       
-        <link rel="canonical" href="http://wiki.joeir.net/devops/tools/git/">
+        <link rel="canonical" href="http://wiki.joeir.net/dev/git/">
       
       
         <meta name="author" content="zephinzer">
@@ -37,7 +37,7 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
     
     
@@ -46,12 +46,12 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
       
       
     
     
-      <script src="../../../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
@@ -60,7 +60,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
     
@@ -245,7 +245,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../.." title="Home" class="md-nav__link">
+    <a href="../.." title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -255,29 +255,19 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../../golang/" title="Golang" class="md-nav__link">
-      Golang
-    </a>
-  </li>
 
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
-    <label class="md-nav__link" for="nav-3">
-      Kubernetes
+    <label class="md-nav__link" for="nav-2">
+      Software Development
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        Kubernetes
+      <label class="md-nav__title" for="nav-2">
+        Software Development
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -288,9 +278,362 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../kubernetes/local_development/" title="Local Development" class="md-nav__link">
-      Local Development
+    <a href="../golang/" title="Golang" class="md-nav__link">
+      Golang
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../node/" title="Node" class="md-nav__link">
+      Node
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes/" title="Kubernetes" class="md-nav__link">
+      Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Git
+      </label>
+    
+    <a href="./" title="Git" class="md-nav__link md-nav__link--active">
+      Git
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initialisation" class="md-nav__link">
+    Initialisation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloning-a-repository" class="md-nav__link">
+    Cloning a repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-repository" class="md-nav__link">
+    Creating a new repository
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remote-management" class="md-nav__link">
+    Remote management
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-git-remote" class="md-nav__link">
+    Adding a Git remote
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-the-git-remote" class="md-nav__link">
+    Updating the Git remote
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieving-changes" class="md-nav__link">
+    Retrieving changes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fetching" class="md-nav__link">
+    Fetching
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merging" class="md-nav__link">
+    Merging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pulling-fetching-merging" class="md-nav__link">
+    Pulling: Fetching + Merging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-with-rebase" class="md-nav__link">
+    Pull with Rebase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebase" class="md-nav__link">
+    Rebase
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-changes" class="md-nav__link">
+    Saving changes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stashing" class="md-nav__link">
+    Stashing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#staging" class="md-nav__link">
+    Staging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commiting" class="md-nav__link">
+    Commiting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commiting-without-any-changes" class="md-nav__link">
+    Commiting without any changes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifying-changes" class="md-nav__link">
+    Modifying changes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-file-to-a-previous-commit" class="md-nav__link">
+    Adding a file to a previous commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#squash-commit" class="md-nav__link">
+    Squash commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uncommit-last-commit" class="md-nav__link">
+    Uncommit last commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverting-a-commit" class="md-nav__link">
+    Reverting a commit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitting-changes" class="md-nav__link">
+    Submitting changes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pushing" class="md-nav__link">
+    Pushing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force-pushing" class="md-nav__link">
+    Force Pushing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assessing-changes" class="md-nav__link">
+    Assessing changes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#view-all-current-changes" class="md-nav__link">
+    View all current changes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-commit-history" class="md-nav__link">
+    View commit history
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-difference-between-commits" class="md-nav__link">
+    View difference between commits
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-repository-information" class="md-nav__link">
+    Viewing repository information
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#view-the-git-configuration" class="md-nav__link">
+    View the Git configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-which-branch-youre-on" class="md-nav__link">
+    Check which branch you're on
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-all-remotes" class="md-nav__link">
+    See all remotes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-which-gitignore-is-ignoring-a-file" class="md-nav__link">
+    Checking which .gitignore is ignoring a file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -306,13 +649,85 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-3">
+      Organization Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Organization Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../od/psychological-safety/" title="Psychological Safety" class="md-nav__link">
+      Psychological Safety
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../od/interpersonal/" title="Interpersonal" class="md-nav__link">
+      Interpersonal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../od/intrapersonal/" title="Intrapersonal" class="md-nav__link">
+      Intrapersonal
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../wingchun/" title="Wing Chun" class="md-nav__link">
+      Wing Chun
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
       Español
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         Español
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -324,7 +739,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../español/numeros-y-recuento/" title="Numeros y Recuento" class="md-nav__link">
+    <a href="../../español/numeros-y-recuento/" title="Numeros y Recuento" class="md-nav__link">
       Numeros y Recuento
     </a>
   </li>
@@ -336,7 +751,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../español/países-y-nacionalidades/" title="Países y Nacionalidades" class="md-nav__link">
+    <a href="../../español/países-y-nacionalidades/" title="Países y Nacionalidades" class="md-nav__link">
       Países y Nacionalidades
     </a>
   </li>
@@ -348,7 +763,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../español/referencias-de-aprender/" title="Referencias de Aprender" class="md-nav__link">
+    <a href="../../español/referencias-de-aprender/" title="Referencias de Aprender" class="md-nav__link">
       Referencias de Aprender
     </a>
   </li>
@@ -360,7 +775,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../español/el-tiempo/" title="El Tiempo" class="md-nav__link">
+    <a href="../../español/el-tiempo/" title="El Tiempo" class="md-nav__link">
       El Tiempo
     </a>
   </li>
@@ -372,7 +787,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../español/verbos/" title="Verbos" class="md-nav__link">
+    <a href="../../español/verbos/" title="Verbos" class="md-nav__link">
       Verbos
     </a>
   </li>
@@ -384,7 +799,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../español/vocabulario/" title="Vocabulario" class="md-nav__link">
+    <a href="../../español/vocabulario/" title="Vocabulario" class="md-nav__link">
       Vocabulario
     </a>
   </li>
@@ -717,7 +1132,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://gitlab.com/zephinzer/net.joeir.wiki/edit/master/docs/devops/tools/git.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://gitlab.com/zephinzer/net.joeir.wiki/edit/master/docs/dev/git.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
                 <h1 id="git">Git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h1>
@@ -1065,6 +1480,41 @@ git check-ignore -v *<span class="p">;</span>
         
 <footer class="md-footer">
   
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../kubernetes/" title="Kubernetes" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Kubernetes
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../od/psychological-safety/" title="Psychological Safety" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Psychological Safety
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
@@ -1082,9 +1532,9 @@ git check-ignore -v *<span class="p">;</span>
       
     </div>
     
-      <script src="../../../assets/javascripts/application.a8b5e56f.js"></script>
+      <script src="../../assets/javascripts/application.a8b5e56f.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>
