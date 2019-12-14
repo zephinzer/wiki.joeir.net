@@ -1,3 +1,0 @@
-# Golang
-
-- [Recipes](./recipes.md)
