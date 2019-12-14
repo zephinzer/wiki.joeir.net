@@ -10,15 +10,18 @@ google_analytics:
 nav:
   - Home: ./index.md
   - Software Development:
-    - Golang: ./dev/golang.md
-    - Node: ./dev/node.md
-    - Kubernetes: ./dev/kubernetes.md
     - Git: ./dev/git.md
+    - Golang: ./dev/golang.md
+    - Kubernetes: ./dev/kubernetes.md
+    - Node: ./dev/node.md
+    - Public Key Infrastructure: ./dev/pki.md
   - Organization Development:
     - Psychological Safety: ./od/psychological-safety.md
     - Interpersonal: ./od/interpersonal.md
     - Intrapersonal: ./od/intrapersonal.md
   - Wing Chun: ./wingchun/index.md
+  - Bahasa:
+    - Angka: ./bahasa/angka.md
   - Español:
     - Numeros y Recuento: ./español/numeros-y-recuento.md
     - Países y Nacionalidades: ./español/países-y-nacionalidades.md

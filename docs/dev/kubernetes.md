@@ -8,34 +8,40 @@
 
 ## Resource Types Overview
 
-### Containers
-
-- Containers are the most atomic compute instance
-
-### Pod
-
-- A pod contains one or more containers
-- All containers can address each other via `localhost`
-- Every pod has a unique IP address
-
-### Replica Sets
-
-### Deployments
-
-### Services
-
-- 3 types of services: `LoadBalanced`, `NodePort`, `ClusterIP`
-
-### Ingress
-
 ### ConfigMap
 
 - Mountable as a volume in a Pod
+
+### Containers
+
+- Containers are the most atomic compute instance
+- Containers are basically sandboxed applications running in a Pod
+
+### Deployments
+
+### Ingress
+
+### Pod
+
+- A Pod contains one or more Containers
+- All Containers in a Pod can address each other via `localhost`
+- Every Pod has a unique IP address
+- Pods basically represent a virtual machine (VM)
+
+### Persistent Volume
+
+### Persistent Volume Claim
+
+### Replica Sets
 
 ### Secret
 
 - Mountable as a volume in a Pod
 - Base64 encoded, **not encrypted**
+
+### Services
+
+- 3 types of services: `LoadBalanced`, `NodePort`, `ClusterIP`
 
 - - -
 
