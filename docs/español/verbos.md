@@ -12,8 +12,12 @@
 
 | Infinitivo | En Inglés | Sustantivo/Adjetivo | En Inglés |
 | --- | --- | --- | --- |
+| Abrir | To open | - | - |
 | Beber | To drink | La bebida | Drink |
 | Comer | To eat | La comida | Food |
+| Descubrir | To discover | - | - |
+| Encantar | To love | - | - |
+| Encontrar | To find | - | - |
 | Ganar | To win | El/La ganador | Winner |
 | Gritar | To shout | El grito | Shout |
 | Ir | To go | - | - |
@@ -21,7 +25,8 @@
 | Pensar | To think | El pensamiento | Thought |
 | Perder | To lose | El perdedor | Loser |
 | Pintar | To paint | La pintura | Painting | 
+| Saber | To know | - | - |
 | Sentir | To feel | El sentimiento | Feeling |
 | Ser | To be | - | - |
 | Ver | To watch/see | - | - |
-| Viver | To live | La vida | Life |
+| Vivir | To live | La vida | Life |

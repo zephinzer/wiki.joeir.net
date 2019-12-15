@@ -1,7 +1,7 @@
 # enlace de referencia: https://www.mkdocs.org/user-guide/configuration/
 site_name: wiki.joeir.net
 site_url: http://wiki.joeir.net
-repo_url: https://gitlab.com/zephinzer/net.joeir.wiki
+repo_url: https://gitlab.com/zephinzer/wiki.joeir.net
 site_author: zephinzer
 site_description: Joseph's Wiki of Sorts
 google_analytics:
@@ -9,16 +9,16 @@ google_analytics:
   - wiki.joeir.net
 nav:
   - Home: ./index.md
-  - Software Development:
+  - Software Engineering:
     - Git: ./dev/git.md
     - Golang: ./dev/golang.md
     - Kubernetes: ./dev/kubernetes.md
     - Node: ./dev/node.md
     - Public Key Infrastructure: ./dev/pki.md
-  - Organization Development:
-    - Psychological Safety: ./od/psychological-safety.md
+  - OD/Coaching/Counselling:
     - Interpersonal: ./od/interpersonal.md
     - Intrapersonal: ./od/intrapersonal.md
+    - Psychological Safety: ./od/psychological-safety.md
   - Wing Chun: ./wingchun/index.md
   - Bahasa:
     - Angka: ./bahasa/angka.md

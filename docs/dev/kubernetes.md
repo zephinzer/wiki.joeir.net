@@ -3,8 +3,11 @@
 - [Resource Types Overview](#resource-types-overview)
 - [Local Development](#local-development)
 - [Useful Tools](#useful-tools)
+- [Community Events](#community-events)
+
 
 - - -
+
 
 ## Resource Types Overview
 
@@ -43,13 +46,21 @@
 
 - 3 types of services: `LoadBalanced`, `NodePort`, `ClusterIP`
 
+
 - - -
+
 
 ## Local Development
 
-The following documents options available to run Kubernetes on a local machine.
+The following documents options available to run Kubernetes on a local machine. Primarily, they are:
+
+- [Kubernetes-in-Docker (KIND)](#kubernetes-in-docker-kind)
+- [Microk8s](#microk8s)
+- [Minikube](#minikube)
 
 ### Kubernetes-in-Docker (KIND)
+
+- [Github Repository](https://github.com/kubernetes-sigs/kind)
 
 #### Simple Setup
 
@@ -76,7 +87,7 @@ nodes:
 - role: worker
 ```
 
-Run the following from the same directory as the `kind-config.yaml` file
+Run the following from the same directory as the `kind-config.yaml` file:
 
 ```sh
 kind create cluster --config ./kind-config.yaml;
@@ -84,14 +95,42 @@ kind create cluster --config ./kind-config.yaml;
 
 ### Microk8s
 
-`TODO`
+- [Main Website](https://microk8s.io/)
+- [Github Repository](https://github.com/ubuntu/microk8s)
 
 ### Minikube
 
-`TODO`
+- [Main Website](https://minikube.sigs.k8s.io/)
+- [Github Repository](https://github.com/kubernetes/minikube)
+
 
 - - -
 
+
 ## Useful Tools
 
+### CLI
+
 - [k9s](https://github.com/derailed/k9s)
+
+### VSCode
+
+| Name | Description | Link |
+| --- | --- | --- |
+| Docker | Adds syntax highlighting, commands, hover tips, and linting for Dockerfile and docker-compose files. | [https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+| Kubernetes | Develop, deploy and debug Kubernetes applications | [https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools](https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools) |
+
+
+- - -
+
+
+## Community Events
+
+### Global
+
+- [Kubecon North America](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/)
+- [Kubecon Europe](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/)
+
+### Singapore
+
+- [Singapore Kubernetes User Group](https://www.meetup.com/en-SG/Singapore-Kubernetes-User-Group/)

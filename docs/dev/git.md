@@ -1,10 +1,10 @@
 # Git
 
-Git is a source control management tool that helps to keep track of changes made to a code base.
+Git is a source control management tool that helps to keep track of changes made to a codebase.
 
 ## Initialisation
 
-### Cloning a repository
+### Clone a repository
 
 !!! Info "Why"
     - I would like to make a local copy of code from a public repository I found online.
@@ -17,7 +17,7 @@ git clone https://zephinzer@github.com/zephinzer/blog.joeir.net
 git clone ssh://git@github.com/zephinzer/blog.joeir.net
 ```
 
-### Creating a new repository
+### Create a new repository
 
 !!! Info "Why"
     - I would like to initialise a new Git repository on my computer.
@@ -28,7 +28,7 @@ git init
 
 ## Remote management
 
-### Adding a Git remote
+### Add a Git remote
 
 !!! Info "Why"
     - I would like to add a new remote named `origin` to my repository.
@@ -37,7 +37,7 @@ git init
 git remote add origin ssh://git@github.com/zephinzer/blog.joeir.net
 ```
 
-### Updating the Git remote
+### Update the Git remote
 
 !!! Info "Why"
     - I would like to update the URL for my remote named `origin` in my repository.
@@ -48,28 +48,34 @@ git remote set-url origin ssh://git@github.com/zephinzer/blog.joeir.net
 
 ## Retrieving changes
 
-### Fetching
+### Fetch changes
+
+Fetching retrieves the changes but **does not** merge the changes with your local copy.
 
 !!! Info "Why"
-    - I would like to get updates from the remote but I don't want to update my code yet.
+    I would like to get updates from the remote but I don't want to update my code yet.
 
 ```sh
 git fetch
 ```
 
-### Merging
+### Merge changes
+
+Merging takes the remote changes that have been fetched from the remote and merges them with your local copy.
 
 !!! Info "Why"
-    - I have reviewed the changes I retrieved from the remote and I want to update my local code to match the remote's copy now.
+    I have reviewed the changes I retrieved from the remote and I want to update my local code to match the remote's copy now.
 
 ```sh
 git merge HEAD
 ```
 
-### Pulling: Fetching + Merging
+### Pull changes
+
+Pulling basically does a fetch and merge.
 
 !!! Info "Why"
-    - I would like to update my code so that it is the same as the remote's.
+    I would like to update my code so that it is the same as the remote's.
 
 ```sh
 git pull
@@ -77,8 +83,10 @@ git pull
 
 ### Pull with Rebase
 
+Pulling with rebase does a fetch, but before merging in the remote changes, it rolls back to a state before all remote changes were made, applies the remote changes, and then applies your local changes.
+
 !!! Info "Why"
-    - I would like to update my code by placing whatever's from the remote before my current changes so that it is the same as the remote's and I don't have a merge commit.
+    I would like to update my code by placing whatever's from the remote before my current changes so that it is the same as the remote's and I don't have a merge commit.
 
 ```sh
 git pull -r

@@ -1,4 +1,4 @@
-# Organization Development: Intrapersonal
+# OD/Coaching/Counselling: Intrapersonal
 
 ## Erikson's Stages of Psychosocial Development
 

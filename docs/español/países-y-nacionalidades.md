@@ -16,6 +16,7 @@
 | Thailand | Tailanda | tailandés(a) |
 
 ## En Australia
+
 | En Inglés | En Español | Nationalidad |
 | --- | --- | --- |
 | Australia | Australia | australian(o/a) |
