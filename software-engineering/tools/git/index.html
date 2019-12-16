@@ -13,7 +13,7 @@
         <meta name="description" content="Joseph's Wiki of Sorts">
       
       
-        <link rel="canonical" href="http://wiki.joeir.net/dev/git/">
+        <link rel="canonical" href="http://wiki.joeir.net/software-engineering/tools/git/">
       
       
         <meta name="author" content="zephinzer">
@@ -37,8 +37,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
     
     
       
@@ -46,21 +46,21 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.1b62728e.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../../../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
     
@@ -108,7 +108,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#git" tabindex="1" class="md-skip">
+      <a href="#git-source-control-management-scm" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -245,7 +245,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Home" class="md-nav__link">
+    <a href="../../.." title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -276,6 +276,111 @@
           
           
 
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Concepts
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Concepts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../concepts/cloud-native/" title="Cloud-Native" class="md-nav__link">
+      Cloud-Native
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Languages & Runtimes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        Languages & Runtimes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../languages-runtimes/golang/" title="Golang" class="md-nav__link">
+      Golang
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../languages-runtimes/node/" title="Node" class="md-nav__link">
+      Node
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" checked>
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
   
 
 
@@ -286,330 +391,10 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Git
-      </label>
-    
     <a href="./" title="Git" class="md-nav__link md-nav__link--active">
       Git
     </a>
     
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#initialisation" class="md-nav__link">
-    Initialisation
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#clone-a-repository" class="md-nav__link">
-    Clone a repository
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-a-new-repository" class="md-nav__link">
-    Create a new repository
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remote-management" class="md-nav__link">
-    Remote management
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-a-git-remote" class="md-nav__link">
-    Add a Git remote
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-the-git-remote" class="md-nav__link">
-    Update the Git remote
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#retrieving-changes" class="md-nav__link">
-    Retrieving changes
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fetch-changes" class="md-nav__link">
-    Fetch changes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#merge-changes" class="md-nav__link">
-    Merge changes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pull-changes" class="md-nav__link">
-    Pull changes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pull-with-rebase" class="md-nav__link">
-    Pull with Rebase
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rebase" class="md-nav__link">
-    Rebase
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#saving-changes" class="md-nav__link">
-    Saving changes
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#stashing" class="md-nav__link">
-    Stashing
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#staging" class="md-nav__link">
-    Staging
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#commiting" class="md-nav__link">
-    Commiting
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#commiting-without-any-changes" class="md-nav__link">
-    Commiting without any changes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modifying-changes" class="md-nav__link">
-    Modifying changes
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adding-a-file-to-a-previous-commit" class="md-nav__link">
-    Adding a file to a previous commit
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#squash-commit" class="md-nav__link">
-    Squash commit
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#uncommit-last-commit" class="md-nav__link">
-    Uncommit last commit
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reverting-a-commit" class="md-nav__link">
-    Reverting a commit
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#submitting-changes" class="md-nav__link">
-    Submitting changes
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pushing" class="md-nav__link">
-    Pushing
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#force-pushing" class="md-nav__link">
-    Force Pushing
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assessing-changes" class="md-nav__link">
-    Assessing changes
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#view-all-current-changes" class="md-nav__link">
-    View all current changes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#view-commit-history" class="md-nav__link">
-    View commit history
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#view-difference-between-commits" class="md-nav__link">
-    View difference between commits
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#viewing-repository-information" class="md-nav__link">
-    Viewing repository information
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#view-the-git-configuration" class="md-nav__link">
-    View the Git configuration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#check-which-branch-youre-on" class="md-nav__link">
-    Check which branch you're on
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#see-all-remotes" class="md-nav__link">
-    See all remotes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#checking-which-gitignore-is-ignoring-a-file" class="md-nav__link">
-    Checking which .gitignore is ignoring a file
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../golang/" title="Golang" class="md-nav__link">
-      Golang
-    </a>
   </li>
 
         
@@ -625,15 +410,8 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../node/" title="Node" class="md-nav__link">
-      Node
-    </a>
+      </ul>
+    </nav>
   </li>
 
         
@@ -642,22 +420,70 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      Operating Systems
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        Operating Systems
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../pki/" title="Public Key Infrastructure" class="md-nav__link">
+    <a href="../../os/ubuntu/" title="Ubuntu" class="md-nav__link">
+      Ubuntu
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      System Administration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        System Administration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sysadmin/pki/" title="Public Key Infrastructure" class="md-nav__link">
       Public Key Infrastructure
     </a>
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../ubuntu/" title="Ubuntu" class="md-nav__link">
-      Ubuntu
-    </a>
+      </ul>
+    </nav>
   </li>
 
         
@@ -691,7 +517,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../od/interpersonal/" title="Interpersonal" class="md-nav__link">
+    <a href="../../../od/interpersonal/" title="Interpersonal" class="md-nav__link">
       Interpersonal
     </a>
   </li>
@@ -703,7 +529,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../od/intrapersonal/" title="Intrapersonal" class="md-nav__link">
+    <a href="../../../od/intrapersonal/" title="Intrapersonal" class="md-nav__link">
       Intrapersonal
     </a>
   </li>
@@ -715,7 +541,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../od/psychological-safety/" title="Psychological Safety" class="md-nav__link">
+    <a href="../../../od/psychological-safety/" title="Psychological Safety" class="md-nav__link">
       Psychological Safety
     </a>
   </li>
@@ -732,7 +558,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../wingchun/" title="Wing Chun" class="md-nav__link">
+    <a href="../../../wingchun/" title="Wing Chun" class="md-nav__link">
       Wing Chun
     </a>
   </li>
@@ -763,8 +589,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../bahasa/angka/" title="Angka" class="md-nav__link">
+    <a href="../../../bahasa/angka/" title="Angka" class="md-nav__link">
       Angka
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../bahasa/warna/" title="Warna" class="md-nav__link">
+      Warna
     </a>
   </li>
 
@@ -799,43 +637,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../español/numeros-y-recuento/" title="Numeros y Recuento" class="md-nav__link">
-      Numeros y Recuento
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../español/países-y-nacionalidades/" title="Países y Nacionalidades" class="md-nav__link">
-      Países y Nacionalidades
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../español/referencias-de-aprender/" title="Referencias de Aprender" class="md-nav__link">
-      Referencias de Aprender
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../español/el-tiempo/" title="El Tiempo" class="md-nav__link">
+    <a href="../../../español/el-tiempo/" title="El Tiempo" class="md-nav__link">
       El Tiempo
     </a>
   </li>
@@ -847,7 +649,55 @@
 
 
   <li class="md-nav__item">
-    <a href="../../español/verbos/" title="Verbos" class="md-nav__link">
+    <a href="../../../español/la-familia/" title="La Familia" class="md-nav__link">
+      La Familia
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../español/numeros-y-recuento/" title="Numeros y Recuento" class="md-nav__link">
+      Numeros y Recuento
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../español/países-y-nacionalidades/" title="Países y Nacionalidades" class="md-nav__link">
+      Países y Nacionalidades
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../español/referencias-de-aprender/" title="Referencias de Aprender" class="md-nav__link">
+      Referencias de Aprender
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../español/verbos/" title="Verbos" class="md-nav__link">
       Verbos
     </a>
   </li>
@@ -859,7 +709,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../español/vocabulario/" title="Vocabulario" class="md-nav__link">
+    <a href="../../../español/vocabulario/" title="Vocabulario" class="md-nav__link">
       Vocabulario
     </a>
   </li>
@@ -887,301 +737,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#initialisation" class="md-nav__link">
-    Initialisation
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#clone-a-repository" class="md-nav__link">
-    Clone a repository
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-a-new-repository" class="md-nav__link">
-    Create a new repository
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remote-management" class="md-nav__link">
-    Remote management
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-a-git-remote" class="md-nav__link">
-    Add a Git remote
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-the-git-remote" class="md-nav__link">
-    Update the Git remote
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#retrieving-changes" class="md-nav__link">
-    Retrieving changes
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fetch-changes" class="md-nav__link">
-    Fetch changes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#merge-changes" class="md-nav__link">
-    Merge changes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pull-changes" class="md-nav__link">
-    Pull changes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pull-with-rebase" class="md-nav__link">
-    Pull with Rebase
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rebase" class="md-nav__link">
-    Rebase
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#saving-changes" class="md-nav__link">
-    Saving changes
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#stashing" class="md-nav__link">
-    Stashing
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#staging" class="md-nav__link">
-    Staging
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#commiting" class="md-nav__link">
-    Commiting
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#commiting-without-any-changes" class="md-nav__link">
-    Commiting without any changes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modifying-changes" class="md-nav__link">
-    Modifying changes
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adding-a-file-to-a-previous-commit" class="md-nav__link">
-    Adding a file to a previous commit
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#squash-commit" class="md-nav__link">
-    Squash commit
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#uncommit-last-commit" class="md-nav__link">
-    Uncommit last commit
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reverting-a-commit" class="md-nav__link">
-    Reverting a commit
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#submitting-changes" class="md-nav__link">
-    Submitting changes
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pushing" class="md-nav__link">
-    Pushing
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#force-pushing" class="md-nav__link">
-    Force Pushing
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assessing-changes" class="md-nav__link">
-    Assessing changes
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#view-all-current-changes" class="md-nav__link">
-    View all current changes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#view-commit-history" class="md-nav__link">
-    View commit history
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#view-difference-between-commits" class="md-nav__link">
-    View difference between commits
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#viewing-repository-information" class="md-nav__link">
-    Viewing repository information
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#view-the-git-configuration" class="md-nav__link">
-    View the Git configuration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#check-which-branch-youre-on" class="md-nav__link">
-    Check which branch you're on
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#see-all-remotes" class="md-nav__link">
-    See all remotes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#checking-which-gitignore-is-ignoring-a-file" class="md-nav__link">
-    Checking which .gitignore is ignoring a file
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1192,13 +747,87 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://gitlab.com/zephinzer/wiki.joeir.net/edit/master/docs/dev/git.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://gitlab.com/zephinzer/wiki.joeir.net/edit/master/docs/software-engineering/tools/git.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="git">Git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h1>
+                <h1 id="git-source-control-management-scm">Git Source Control Management (SCM)<a class="headerlink" href="#git-source-control-management-scm" title="Permanent link">&para;</a></h1>
 <p>Git is a source control management tool that helps to keep track of changes made to a codebase.</p>
-<h2 id="initialisation">Initialisation<a class="headerlink" href="#initialisation" title="Permanent link">&para;</a></h2>
-<h3 id="clone-a-repository">Clone a repository<a class="headerlink" href="#clone-a-repository" title="Permanent link">&para;</a></h3>
+<p>This page provides an overview of some useful concepts and commands.</p>
+<ul>
+<li><a href="#git-source-control-management-scm">Git Source Control Management (SCM)</a></li>
+<li><a href="#git-branching-models">Git Branching Models</a></li>
+<li><a href="#gitflow">GitFlow</a></li>
+<li><a href="#trunk-based-development">Trunk-Based Development</a></li>
+<li><a href="#initialisation">Initialisation</a></li>
+<li><a href="#clone-a-repository">Clone a repository</a></li>
+<li><a href="#create-a-new-repository">Create a new repository</a></li>
+<li><a href="#remote-management">Remote management</a></li>
+<li><a href="#add-a-git-remote">Add a Git remote</a></li>
+<li><a href="#update-the-git-remote">Update the Git remote</a></li>
+<li><a href="#retrieving-changes">Retrieving changes</a></li>
+<li><a href="#fetch-changes">Fetch changes</a></li>
+<li><a href="#merge-changes">Merge changes</a></li>
+<li><a href="#pull-changes">Pull changes</a></li>
+<li><a href="#pull-with-rebase">Pull with Rebase</a></li>
+<li><a href="#rebase">Rebase</a></li>
+<li><a href="#saving-changes">Saving changes</a></li>
+<li><a href="#stashing">Stashing</a></li>
+<li><a href="#staging">Staging</a></li>
+<li><a href="#commiting">Commiting</a></li>
+<li><a href="#commiting-without-any-changes">Commiting without any changes</a></li>
+<li><a href="#modifying-changes">Modifying changes</a></li>
+<li><a href="#adding-a-file-to-a-previous-commit">Adding a file to a previous commit</a></li>
+<li><a href="#squash-commit">Squash commit</a></li>
+<li><a href="#uncommit-last-commit">Uncommit last commit</a></li>
+<li><a href="#reverting-a-commit">Reverting a commit</a></li>
+<li><a href="#submitting-changes">Submitting changes</a></li>
+<li><a href="#pushing">Pushing</a></li>
+<li><a href="#force-pushing">Force Pushing</a></li>
+<li><a href="#assessing-changes">Assessing changes</a></li>
+<li><a href="#view-all-current-changes">View all current changes</a></li>
+<li><a href="#view-commit-history">View commit history</a></li>
+<li><a href="#view-difference-between-commits">View difference between commits</a></li>
+<li><a href="#viewing-repository-information">Viewing repository information</a></li>
+<li><a href="#view-the-git-configuration">View the Git configuration</a></li>
+<li><a href="#check-which-branch-youre-on">Check which branch you're on</a></li>
+<li><a href="#see-all-remotes">See all remotes</a></li>
+<li><a href="#checking-which-gitignore-is-ignoring-a-file">Checking which .gitignore is ignoring a file</a></li>
+</ul>
+<h1 id="git-branching-models">Git Branching Models<a class="headerlink" href="#git-branching-models" title="Permanent link">&para;</a></h1>
+<h2 id="gitflow">GitFlow<a class="headerlink" href="#gitflow" title="Permanent link">&para;</a></h2>
+<p>GitFlow is a branching model for Git created by Vincent Driessen.</p>
+<ul>
+<li>Generally seen in more traditional enterprise software development where process and stability is prioritised over agility (think Waterfall)</li>
+<li>5 types of branches:</li>
+<li><code>master</code> branch</li>
+<li><code>hotfix</code> branch </li>
+<li><code>release</code> branch</li>
+<li><code>develop</code> branch </li>
+<li>
+<p><code>feature</code> branch </p>
+</li>
+<li>
+<p><a href="https://datasift.github.io/gitflow/IntroducingGitFlow.html">https://datasift.github.io/gitflow/IntroducingGitFlow.html</a></p>
+</li>
+</ul>
+<h2 id="trunk-based-development">Trunk-Based Development<a class="headerlink" href="#trunk-based-development" title="Permanent link">&para;</a></h2>
+<p>Trunk-Based Development is a branching model where developers commit and push to the <code>master</code> branch continuously.</p>
+<ul>
+<li>Generally seen in more modern software development teams where process and stability is deprioritised over business agility (think Agile)</li>
+<li>Typically seen with Continuous Delivery (CD) pipelines</li>
+<li>Usually requires the following to successfully implement/reap full benefits:</li>
+<li>Agile Software Development Lifecycle (SDLC)</li>
+<li>Service-oriented architectures (SOA)</li>
+<li>Observability instrumentation</li>
+<li>
+<p>Feature toggling</p>
+</li>
+<li>
+<p><a href="https://trunkbaseddevelopment.com/">https://trunkbaseddevelopment.com/</a></p>
+</li>
+</ul>
+<h1 id="initialisation">Initialisation<a class="headerlink" href="#initialisation" title="Permanent link">&para;</a></h1>
+<h2 id="clone-a-repository">Clone a repository<a class="headerlink" href="#clone-a-repository" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1213,7 +842,7 @@ git clone ssh://git@github.com/zephinzer/blog.joeir.net
 </pre></div>
 
 
-<h3 id="create-a-new-repository">Create a new repository<a class="headerlink" href="#create-a-new-repository" title="Permanent link">&para;</a></h3>
+<h2 id="create-a-new-repository">Create a new repository<a class="headerlink" href="#create-a-new-repository" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1224,8 +853,8 @@ git clone ssh://git@github.com/zephinzer/blog.joeir.net
 </pre></div>
 
 
-<h2 id="remote-management">Remote management<a class="headerlink" href="#remote-management" title="Permanent link">&para;</a></h2>
-<h3 id="add-a-git-remote">Add a Git remote<a class="headerlink" href="#add-a-git-remote" title="Permanent link">&para;</a></h3>
+<h1 id="remote-management">Remote management<a class="headerlink" href="#remote-management" title="Permanent link">&para;</a></h1>
+<h2 id="add-a-git-remote">Add a Git remote<a class="headerlink" href="#add-a-git-remote" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1236,7 +865,7 @@ git clone ssh://git@github.com/zephinzer/blog.joeir.net
 </pre></div>
 
 
-<h3 id="update-the-git-remote">Update the Git remote<a class="headerlink" href="#update-the-git-remote" title="Permanent link">&para;</a></h3>
+<h2 id="update-the-git-remote">Update the Git remote<a class="headerlink" href="#update-the-git-remote" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1247,8 +876,8 @@ git clone ssh://git@github.com/zephinzer/blog.joeir.net
 </pre></div>
 
 
-<h2 id="retrieving-changes">Retrieving changes<a class="headerlink" href="#retrieving-changes" title="Permanent link">&para;</a></h2>
-<h3 id="fetch-changes">Fetch changes<a class="headerlink" href="#fetch-changes" title="Permanent link">&para;</a></h3>
+<h1 id="retrieving-changes">Retrieving changes<a class="headerlink" href="#retrieving-changes" title="Permanent link">&para;</a></h1>
+<h2 id="fetch-changes">Fetch changes<a class="headerlink" href="#fetch-changes" title="Permanent link">&para;</a></h2>
 <p>Fetching retrieves the changes but <strong>does not</strong> merge the changes with your local copy.</p>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
@@ -1258,7 +887,7 @@ git clone ssh://git@github.com/zephinzer/blog.joeir.net
 </pre></div>
 
 
-<h3 id="merge-changes">Merge changes<a class="headerlink" href="#merge-changes" title="Permanent link">&para;</a></h3>
+<h2 id="merge-changes">Merge changes<a class="headerlink" href="#merge-changes" title="Permanent link">&para;</a></h2>
 <p>Merging takes the remote changes that have been fetched from the remote and merges them with your local copy.</p>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
@@ -1268,7 +897,7 @@ git clone ssh://git@github.com/zephinzer/blog.joeir.net
 </pre></div>
 
 
-<h3 id="pull-changes">Pull changes<a class="headerlink" href="#pull-changes" title="Permanent link">&para;</a></h3>
+<h2 id="pull-changes">Pull changes<a class="headerlink" href="#pull-changes" title="Permanent link">&para;</a></h2>
 <p>Pulling basically does a fetch and merge.</p>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
@@ -1278,7 +907,7 @@ git clone ssh://git@github.com/zephinzer/blog.joeir.net
 </pre></div>
 
 
-<h3 id="pull-with-rebase">Pull with Rebase<a class="headerlink" href="#pull-with-rebase" title="Permanent link">&para;</a></h3>
+<h2 id="pull-with-rebase">Pull with Rebase<a class="headerlink" href="#pull-with-rebase" title="Permanent link">&para;</a></h2>
 <p>Pulling with rebase does a fetch, but before merging in the remote changes, it rolls back to a state before all remote changes were made, applies the remote changes, and then applies your local changes.</p>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
@@ -1288,7 +917,7 @@ git clone ssh://git@github.com/zephinzer/blog.joeir.net
 </pre></div>
 
 
-<h3 id="rebase">Rebase<a class="headerlink" href="#rebase" title="Permanent link">&para;</a></h3>
+<h2 id="rebase">Rebase<a class="headerlink" href="#rebase" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1300,8 +929,8 @@ git rebase master
 </pre></div>
 
 
-<h2 id="saving-changes">Saving changes<a class="headerlink" href="#saving-changes" title="Permanent link">&para;</a></h2>
-<h3 id="stashing">Stashing<a class="headerlink" href="#stashing" title="Permanent link">&para;</a></h3>
+<h1 id="saving-changes">Saving changes<a class="headerlink" href="#saving-changes" title="Permanent link">&para;</a></h1>
+<h2 id="stashing">Stashing<a class="headerlink" href="#stashing" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1319,7 +948,7 @@ git stash pop
 </pre></div>
 
 
-<h3 id="staging">Staging<a class="headerlink" href="#staging" title="Permanent link">&para;</a></h3>
+<h2 id="staging">Staging<a class="headerlink" href="#staging" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1334,7 +963,7 @@ git add ./path/to/changed_file
 </pre></div>
 
 
-<h3 id="commiting">Commiting<a class="headerlink" href="#commiting" title="Permanent link">&para;</a></h3>
+<h2 id="commiting">Commiting<a class="headerlink" href="#commiting" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1345,7 +974,7 @@ git add ./path/to/changed_file
 </pre></div>
 
 
-<h3 id="commiting-without-any-changes">Commiting without any changes<a class="headerlink" href="#commiting-without-any-changes" title="Permanent link">&para;</a></h3>
+<h2 id="commiting-without-any-changes">Commiting without any changes<a class="headerlink" href="#commiting-without-any-changes" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1357,8 +986,8 @@ git add ./path/to/changed_file
 </pre></div>
 
 
-<h2 id="modifying-changes">Modifying changes<a class="headerlink" href="#modifying-changes" title="Permanent link">&para;</a></h2>
-<h3 id="adding-a-file-to-a-previous-commit">Adding a file to a previous commit<a class="headerlink" href="#adding-a-file-to-a-previous-commit" title="Permanent link">&para;</a></h3>
+<h1 id="modifying-changes">Modifying changes<a class="headerlink" href="#modifying-changes" title="Permanent link">&para;</a></h1>
+<h2 id="adding-a-file-to-a-previous-commit">Adding a file to a previous commit<a class="headerlink" href="#adding-a-file-to-a-previous-commit" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1373,7 +1002,7 @@ git commit --amend
 </pre></div>
 
 
-<h3 id="squash-commit">Squash commit<a class="headerlink" href="#squash-commit" title="Permanent link">&para;</a></h3>
+<h2 id="squash-commit">Squash commit<a class="headerlink" href="#squash-commit" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1385,7 +1014,7 @@ git rebase -i HEAD~5
 </pre></div>
 
 
-<h3 id="uncommit-last-commit">Uncommit last commit<a class="headerlink" href="#uncommit-last-commit" title="Permanent link">&para;</a></h3>
+<h2 id="uncommit-last-commit">Uncommit last commit<a class="headerlink" href="#uncommit-last-commit" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1400,7 +1029,7 @@ git reset HEAD^
 </pre></div>
 
 
-<h3 id="reverting-a-commit">Reverting a commit<a class="headerlink" href="#reverting-a-commit" title="Permanent link">&para;</a></h3>
+<h2 id="reverting-a-commit">Reverting a commit<a class="headerlink" href="#reverting-a-commit" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1412,8 +1041,8 @@ git revert <span class="si">${</span><span class="nv">COMMIT_HASH</span><span cl
 </pre></div>
 
 
-<h2 id="submitting-changes">Submitting changes<a class="headerlink" href="#submitting-changes" title="Permanent link">&para;</a></h2>
-<h3 id="pushing">Pushing<a class="headerlink" href="#pushing" title="Permanent link">&para;</a></h3>
+<h1 id="submitting-changes">Submitting changes<a class="headerlink" href="#submitting-changes" title="Permanent link">&para;</a></h1>
+<h2 id="pushing">Pushing<a class="headerlink" href="#pushing" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1424,7 +1053,7 @@ git revert <span class="si">${</span><span class="nv">COMMIT_HASH</span><span cl
 </pre></div>
 
 
-<h3 id="force-pushing">Force Pushing<a class="headerlink" href="#force-pushing" title="Permanent link">&para;</a></h3>
+<h2 id="force-pushing">Force Pushing<a class="headerlink" href="#force-pushing" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1435,8 +1064,8 @@ git revert <span class="si">${</span><span class="nv">COMMIT_HASH</span><span cl
 </pre></div>
 
 
-<h2 id="assessing-changes">Assessing changes<a class="headerlink" href="#assessing-changes" title="Permanent link">&para;</a></h2>
-<h3 id="view-all-current-changes">View all current changes<a class="headerlink" href="#view-all-current-changes" title="Permanent link">&para;</a></h3>
+<h1 id="assessing-changes">Assessing changes<a class="headerlink" href="#assessing-changes" title="Permanent link">&para;</a></h1>
+<h2 id="view-all-current-changes">View all current changes<a class="headerlink" href="#view-all-current-changes" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1447,7 +1076,7 @@ git revert <span class="si">${</span><span class="nv">COMMIT_HASH</span><span cl
 </pre></div>
 
 
-<h3 id="view-commit-history">View commit history<a class="headerlink" href="#view-commit-history" title="Permanent link">&para;</a></h3>
+<h2 id="view-commit-history">View commit history<a class="headerlink" href="#view-commit-history" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1463,7 +1092,7 @@ git log -n <span class="m">5</span>
 </pre></div>
 
 
-<h3 id="view-difference-between-commits">View difference between commits<a class="headerlink" href="#view-difference-between-commits" title="Permanent link">&para;</a></h3>
+<h2 id="view-difference-between-commits">View difference between commits<a class="headerlink" href="#view-difference-between-commits" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1475,8 +1104,8 @@ git diff HEAD <span class="si">${</span><span class="nv">COMMIT_HASH</span><span
 </pre></div>
 
 
-<h2 id="viewing-repository-information">Viewing repository information<a class="headerlink" href="#viewing-repository-information" title="Permanent link">&para;</a></h2>
-<h3 id="view-the-git-configuration">View the Git configuration<a class="headerlink" href="#view-the-git-configuration" title="Permanent link">&para;</a></h3>
+<h1 id="viewing-repository-information">Viewing repository information<a class="headerlink" href="#viewing-repository-information" title="Permanent link">&para;</a></h1>
+<h2 id="view-the-git-configuration">View the Git configuration<a class="headerlink" href="#view-the-git-configuration" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1487,7 +1116,7 @@ git diff HEAD <span class="si">${</span><span class="nv">COMMIT_HASH</span><span
 </pre></div>
 
 
-<h3 id="check-which-branch-youre-on">Check which branch you're on<a class="headerlink" href="#check-which-branch-youre-on" title="Permanent link">&para;</a></h3>
+<h2 id="check-which-branch-youre-on">Check which branch you're on<a class="headerlink" href="#check-which-branch-youre-on" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1498,7 +1127,7 @@ git diff HEAD <span class="si">${</span><span class="nv">COMMIT_HASH</span><span
 </pre></div>
 
 
-<h3 id="see-all-remotes">See all remotes<a class="headerlink" href="#see-all-remotes" title="Permanent link">&para;</a></h3>
+<h2 id="see-all-remotes">See all remotes<a class="headerlink" href="#see-all-remotes" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1509,7 +1138,7 @@ git diff HEAD <span class="si">${</span><span class="nv">COMMIT_HASH</span><span
 </pre></div>
 
 
-<h3 id="checking-which-gitignore-is-ignoring-a-file">Checking which <code>.gitignore</code> is ignoring a file<a class="headerlink" href="#checking-which-gitignore-is-ignoring-a-file" title="Permanent link">&para;</a></h3>
+<h2 id="checking-which-gitignore-is-ignoring-a-file">Checking which <code>.gitignore</code> is ignoring a file<a class="headerlink" href="#checking-which-gitignore-is-ignoring-a-file" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Why</p>
 <ul>
@@ -1521,7 +1150,6 @@ git check-ignore -v *<span class="p">;</span>
 </pre></div>
                 
                   
-                
                 
               
               
@@ -1540,7 +1168,7 @@ git check-ignore -v *<span class="p">;</span>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../languages-runtimes/node/" title="Node" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1549,19 +1177,19 @@ git check-ignore -v *<span class="p">;</span>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Node
               </span>
             </div>
           </a>
         
         
-          <a href="../golang/" title="Golang" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../kubernetes/" title="Kubernetes" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Golang
+                Kubernetes
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1589,9 +1217,9 @@ git check-ignore -v *<span class="p">;</span>
       
     </div>
     
-      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../../../assets/javascripts/application.a8b5e56f.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
     
   </body>
