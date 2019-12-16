@@ -15,6 +15,7 @@ nav:
     - Kubernetes: ./dev/kubernetes.md
     - Node: ./dev/node.md
     - Public Key Infrastructure: ./dev/pki.md
+    - Ubuntu: ./dev/ubuntu.md
   - OD/Coaching/Counselling:
     - Interpersonal: ./od/interpersonal.md
     - Intrapersonal: ./od/intrapersonal.md
