@@ -13,6 +13,7 @@ build:
 	docker build --tag $(IMAGE_PATH):latest .
 
 deploy:
+	git fetch origin gh-pages
 	docker build \
 		--file ./tools/deployer/Dockerfile \
 		--tag dontpushme .
