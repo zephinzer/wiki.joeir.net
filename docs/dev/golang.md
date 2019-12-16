@@ -21,6 +21,7 @@ Go is an open source programming language that makes it easy to build simple, re
 - [Useful Packages](#useful-packages)
 - [Useful Scripts](#useful-scripts)
 - [Useful Tools](#useful-tools)
+- [An Optimised Dockerfile](#an-optimised-dockerfile)
 - [Community Events](#community-events)
 
 
@@ -89,6 +90,12 @@ go test -cover -coverprofile c.out ./...;
 CGO_ENABLED=0 go build -a -ldflags "-extldflags 'static'" ./cmd/_
 ```
 
+### Strip Symbols/Debugging Information
+
+```sh
+CGO_ENABLED=0 go build -ldflags "-s -w" ./cmd/_
+```
+
 
 - - -
 
@@ -98,6 +105,33 @@ CGO_ENABLED=0 go build -a -ldflags "-extldflags 'static'" ./cmd/_
 | Name | Description | Link |
 | --- | --- | --- | 
 | Go | Rich Go language support for Visual Studio Code | [https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go](https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go) |
+
+
+- - -
+
+
+## An Optimised Dockerfile
+
+The following assumes that the script `make bin` will create a primary binary at `./bin/app`
+
+```dockerfile
+FROM golang:1.13-alpine3.10 AS base
+ARG BIN_NAME="app"
+RUN apk update --no-cache
+RUN apk upgrade --no-cache
+RUN apk add --no-cache make upx ca-certificates
+WORKDIR /build
+COPY . /build
+RUN make bin
+RUN upx /build/bin/${BIN_NAME} -o /build/bin/${BIN_NAME}_upxed
+
+FROM scratch AS final
+ARG BIN_NAME="app"
+COPY --from=base /usr/share/ca-certificates /usr/share/ca-certificates
+COPY --from=base /etc/passwd /etc/passwd
+COPY --from=base /build/bin/${BIN_NAME}_upxed /app
+ENTRYPOINT ["/app"]
+```
 
 
 - - -
