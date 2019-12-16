@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: template
+data:
+  some.json: |
+    {
+      "hello": "world",
+      "i": 1,
+      "to": "k8s"
+    }
+  some.yaml: |
+    hello: world
+    i: 1
+    to: k8s

@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: template
+  labels:
+    app: template
+    type: deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: echoserver
+      type: pod
+  template:
+    metadata:
+      name: echoserver
+      labels:
+        name: echoserver
+        type: pod
+    spec:
+      containers:
+      - name: echoserver
+        image: zephinzer/demo-echoserver:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: pod-http
+          containerPort: 11111
+          protocol: TCP
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 11111
+            httpHeaders:
+            - name: X-Kubernetes
+              value: LivenessProbe
+          initialDelaySeconds: 15
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /readyz
+            port: 11111
+            httpHeaders:
+            - name: X-Kubernetes
+              value: LivenessProbe
+          initialDelaySeconds: 15
+          periodSeconds: 5
+        resources:
+          limits:
+            cpu: 60m
+            memory: 20Mi
+          requests:
+            cpu: 50m
+            memory: 10Mi

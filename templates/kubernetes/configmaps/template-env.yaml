@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: template
+data:
+  CONFIG_VALUE_ONE: "1"
+  CONFIG_VALUE_TWO: "two"
+  CONFIG_VALUE_BOOL: "true"

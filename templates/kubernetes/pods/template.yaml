@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: echoserver
+  labels:
+    name: echoserver
+    type: template
+spec:
+  containers:
+  - name: echoserver
+    image: zephinzer/demo-echoserver:latest
+    imagePullPolicy: IfNotPresent
+    ports:
+    - name: main-http
+      containerPort: 11111
+      protocol: TCP
+    resources:
+      limit:
+        cpu: 60m
+        memory: 20Mi
+      request:
+        cpu: 50m
+        memory: 10Mi

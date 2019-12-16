@@ -93,6 +93,12 @@ Run the following from the same directory as the `kind-config.yaml` file:
 kind create cluster --config ./kind-config.yaml;
 ```
 
+#### Loading Local Image Into Cluster
+
+```sh
+kind load docker-image ___;
+```
+
 ### Microk8s
 
 - [Main Website](https://microk8s.io/)

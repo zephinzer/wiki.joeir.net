@@ -16,6 +16,7 @@
 | Beber | To drink | La bebida | Drink |
 | Comer | To eat | La comida | Food |
 | Descubrir | To discover | - | - |
+| Dormir | To sleep | - | - |
 | Encantar | To love | - | - |
 | Encontrar | To find | - | - |
 | Ganar | To win | El/La ganador | Winner |
