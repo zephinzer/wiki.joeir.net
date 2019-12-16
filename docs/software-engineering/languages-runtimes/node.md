@@ -1,6 +1,16 @@
-# Node.js
+# Software Engineering / Node.js
 
-## Decision Patterns
+- [Software Engineering / Node.js](#software-engineering--nodejs)
+- [Decision Patterns](#decision-patterns)
+- [Useful Packages](#useful-packages)
+- [Useful Scripts](#useful-scripts)
+- [Community Events](#community-events)
+  - [Singapore](#singapore)
+
+- - -
+
+
+# Decision Patterns
 
 - First class functions
 - No native classes
@@ -12,7 +22,7 @@
 - - -
 
 
-## Useful Packages
+# Useful Packages
 
 | Name | Category | URL |
 | --- | --- | --- |
@@ -28,15 +38,15 @@
 - - -
 
 
-## Useful Scripts
+# Useful Scripts
 
 
 - - -
 
 
-## Community Events
+# Community Events
 
-### Singapore
+## Singapore
 
 - [JSConf](https://jsconf.asia)
 - [Talk.js](https://www.meetup.com/en-SG/Singapore-JS)

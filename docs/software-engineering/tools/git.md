@@ -1,10 +1,81 @@
-# Git
+# Git Source Control Management (SCM)
 
 Git is a source control management tool that helps to keep track of changes made to a codebase.
 
-## Initialisation
+This page provides an overview of some useful concepts and commands.
 
-### Clone a repository
+- [Git Source Control Management (SCM)](#git-source-control-management-scm)
+- [Git Branching Models](#git-branching-models)
+  - [GitFlow](#gitflow)
+  - [Trunk-Based Development](#trunk-based-development)
+- [Initialisation](#initialisation)
+  - [Clone a repository](#clone-a-repository)
+  - [Create a new repository](#create-a-new-repository)
+- [Remote management](#remote-management)
+  - [Add a Git remote](#add-a-git-remote)
+  - [Update the Git remote](#update-the-git-remote)
+- [Retrieving changes](#retrieving-changes)
+  - [Fetch changes](#fetch-changes)
+  - [Merge changes](#merge-changes)
+  - [Pull changes](#pull-changes)
+  - [Pull with Rebase](#pull-with-rebase)
+  - [Rebase](#rebase)
+- [Saving changes](#saving-changes)
+  - [Stashing](#stashing)
+  - [Staging](#staging)
+  - [Commiting](#commiting)
+  - [Commiting without any changes](#commiting-without-any-changes)
+- [Modifying changes](#modifying-changes)
+  - [Adding a file to a previous commit](#adding-a-file-to-a-previous-commit)
+  - [Squash commit](#squash-commit)
+  - [Uncommit last commit](#uncommit-last-commit)
+  - [Reverting a commit](#reverting-a-commit)
+- [Submitting changes](#submitting-changes)
+  - [Pushing](#pushing)
+  - [Force Pushing](#force-pushing)
+- [Assessing changes](#assessing-changes)
+  - [View all current changes](#view-all-current-changes)
+  - [View commit history](#view-commit-history)
+  - [View difference between commits](#view-difference-between-commits)
+- [Viewing repository information](#viewing-repository-information)
+  - [View the Git configuration](#view-the-git-configuration)
+  - [Check which branch you're on](#check-which-branch-youre-on)
+  - [See all remotes](#see-all-remotes)
+  - [Checking which .gitignore is ignoring a file](#checking-which-gitignore-is-ignoring-a-file)
+
+# Git Branching Models
+
+## GitFlow
+
+GitFlow is a branching model for Git created by Vincent Driessen.
+
+- Generally seen in more traditional enterprise software development where process and stability is prioritised over agility (think Waterfall)
+- 5 types of branches:
+  - `master` branch
+  - `hotfix` branch 
+  - `release` branch
+  - `develop` branch 
+  - `feature` branch 
+
+- [https://datasift.github.io/gitflow/IntroducingGitFlow.html](https://datasift.github.io/gitflow/IntroducingGitFlow.html)
+
+## Trunk-Based Development
+
+Trunk-Based Development is a branching model where developers commit and push to the `master` branch continuously.
+
+- Generally seen in more modern software development teams where process and stability is deprioritised over business agility (think Agile)
+- Typically seen with Continuous Delivery (CD) pipelines
+- Usually requires the following to successfully implement/reap full benefits:
+  - Agile Software Development Lifecycle (SDLC)
+  - Service-oriented architectures (SOA)
+  - Observability instrumentation
+  - Feature toggling
+
+- [https://trunkbaseddevelopment.com/](https://trunkbaseddevelopment.com/)
+
+# Initialisation
+
+## Clone a repository
 
 !!! Info "Why"
     - I would like to make a local copy of code from a public repository I found online.
@@ -17,7 +88,7 @@ git clone https://zephinzer@github.com/zephinzer/blog.joeir.net
 git clone ssh://git@github.com/zephinzer/blog.joeir.net
 ```
 
-### Create a new repository
+## Create a new repository
 
 !!! Info "Why"
     - I would like to initialise a new Git repository on my computer.
@@ -26,9 +97,9 @@ git clone ssh://git@github.com/zephinzer/blog.joeir.net
 git init
 ```
 
-## Remote management
+# Remote management
 
-### Add a Git remote
+## Add a Git remote
 
 !!! Info "Why"
     - I would like to add a new remote named `origin` to my repository.
@@ -37,7 +108,7 @@ git init
 git remote add origin ssh://git@github.com/zephinzer/blog.joeir.net
 ```
 
-### Update the Git remote
+## Update the Git remote
 
 !!! Info "Why"
     - I would like to update the URL for my remote named `origin` in my repository.
@@ -46,9 +117,9 @@ git remote add origin ssh://git@github.com/zephinzer/blog.joeir.net
 git remote set-url origin ssh://git@github.com/zephinzer/blog.joeir.net
 ```
 
-## Retrieving changes
+# Retrieving changes
 
-### Fetch changes
+## Fetch changes
 
 Fetching retrieves the changes but **does not** merge the changes with your local copy.
 
@@ -59,7 +130,7 @@ Fetching retrieves the changes but **does not** merge the changes with your loca
 git fetch
 ```
 
-### Merge changes
+## Merge changes
 
 Merging takes the remote changes that have been fetched from the remote and merges them with your local copy.
 
@@ -70,7 +141,7 @@ Merging takes the remote changes that have been fetched from the remote and merg
 git merge HEAD
 ```
 
-### Pull changes
+## Pull changes
 
 Pulling basically does a fetch and merge.
 
@@ -81,7 +152,7 @@ Pulling basically does a fetch and merge.
 git pull
 ```
 
-### Pull with Rebase
+## Pull with Rebase
 
 Pulling with rebase does a fetch, but before merging in the remote changes, it rolls back to a state before all remote changes were made, applies the remote changes, and then applies your local changes.
 
@@ -92,7 +163,7 @@ Pulling with rebase does a fetch, but before merging in the remote changes, it r
 git pull -r
 ```
 
-### Rebase
+## Rebase
 
 !!! Info "Why"
     - I would like to pull in changes from another branch that's available locally and place those changes before the changes I've committed.
@@ -102,9 +173,9 @@ git pull -r
 git rebase master
 ```
 
-## Saving changes
+# Saving changes
 
-### Stashing
+## Stashing
 
 !!! Info "Why"
     - I would like to temporarily store my unstaged changes so that I can pull in the latest updates from the remote.
@@ -120,7 +191,7 @@ git stash list
 git stash pop
 ```
 
-### Staging
+## Staging
 
 !!! Info "Why"
     - I would like to add file(s) that will be 'saved' during a commit.
@@ -133,7 +204,7 @@ git add .
 git add ./path/to/changed_file
 ```
 
-### Commiting
+## Commiting
 
 !!! Info "Why"
     - I would like to save my changes to my local Git repository.
@@ -142,7 +213,7 @@ git add ./path/to/changed_file
 git commit -m 'some message'
 ```
 
-### Commiting without any changes
+## Commiting without any changes
 
 !!! Info "Why"
     - I would like to add a commit to my local repository without adding any files
@@ -152,9 +223,9 @@ git commit -m 'some message'
 git commit --allow-empty 'some message'
 ```
 
-## Modifying changes
+# Modifying changes
 
-### Adding a file to a previous commit
+## Adding a file to a previous commit
 
 !!! Info "Why"
     - I forgot to run `git add` on a file that should be in the previous commit.
@@ -167,7 +238,7 @@ git add ./path/to/missed/file;
 git commit --amend
 ```
 
-### Squash commit
+## Squash commit
 
 !!! Info "Why"
     - I have made 5 commits and I would like to compress them into a single commit so my Git history is cleaner.
@@ -177,7 +248,7 @@ git commit --amend
 git rebase -i HEAD~5
 ```
 
-### Uncommit last commit
+## Uncommit last commit
 
 !!! Info "Why"
     - I would like to reverse the last commit but leave changes I made intact
@@ -190,7 +261,7 @@ git reset --soft HEAD^
 git reset HEAD^
 ```
 
-### Reverting a commit
+## Reverting a commit
 
 !!! Info "Why"
     - I would like to create a commit that reverses the changes in a certain commit with hash `${COMMIT_HASH}`
@@ -200,9 +271,9 @@ git reset HEAD^
 git revert ${COMMIT_HASH}
 ```
 
-## Submitting changes
+# Submitting changes
 
-### Pushing
+## Pushing
 
 !!! Info "Why"
     - I would like push all committed changes from my computer to the remote
@@ -211,7 +282,7 @@ git revert ${COMMIT_HASH}
 git push
 ```
 
-### Force Pushing
+## Force Pushing
 
 !!! Info "Why"
     - I have modified a commit locally and am unable to push normally to the remote since I rewrote history (**WARNING**: this will erase any changes others may have made between when the original commit was made, and your current commits)
@@ -220,9 +291,9 @@ git push
 git push -f
 ```
 
-## Assessing changes
+# Assessing changes
 
-### View all current changes
+## View all current changes
 
 !!! Info "Why"
     - I would like to see what files have been staged
@@ -231,7 +302,7 @@ git push -f
 git status
 ```
 
-### View commit history
+## View commit history
 
 !!! Info "Why"
     - I want to do an interactive rebase (squashing) and I would like to see which commit I should rebase up till
@@ -245,7 +316,7 @@ git log
 git log -n 5
 ```
 
-### View difference between commits
+## View difference between commits
 
 !!! Info "Why"
     - I would like to check out what changes have been made between two commits
@@ -255,9 +326,9 @@ git log -n 5
 git diff HEAD ${COMMIT_HASH}
 ```
 
-## Viewing repository information
+# Viewing repository information
 
-### View the Git configuration
+## View the Git configuration
 
 !!! Info "Why"
     - I would like to see who am I committing code as
@@ -266,7 +337,7 @@ git diff HEAD ${COMMIT_HASH}
 git config -l
 ```
 
-### Check which branch you're on
+## Check which branch you're on
 
 !!! Info "Why"
     - I would like to confirm which branch I am on
@@ -275,7 +346,7 @@ git config -l
 git branch
 ```
 
-### See all remotes
+## See all remotes
 
 !!! Info "Why"
     - I would like to see which remotes I am pushing to
@@ -284,7 +355,7 @@ git branch
 git remote -v
 ```
 
-### Checking which `.gitignore` is ignoring a file
+## Checking which `.gitignore` is ignoring a file
 
 !!! Info "Why"
     - I would like to know which `.gitignore` is causing a file to be ignored without any obvious reason

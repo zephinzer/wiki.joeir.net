@@ -10,12 +10,16 @@ google_analytics:
 nav:
   - Home: ./index.md
   - Software Engineering:
-    - Git: ./dev/git.md
-    - Golang: ./dev/golang.md
-    - Kubernetes: ./dev/kubernetes.md
-    - Node: ./dev/node.md
-    - Public Key Infrastructure: ./dev/pki.md
-    - Ubuntu: ./dev/ubuntu.md
+    - Languages & Runtimes:
+      - Golang: ./software-engineering/languages-runtimes/golang.md
+      - Node: ./software-engineering/languages-runtimes/node.md
+    - Tools:
+      - Git: ./software-engineering/tools/git.md
+      - Kubernetes: ./software-engineering/tools/kubernetes.md
+    - Operating Systems:
+      - Ubuntu: ./software-engineering/os/ubuntu.md
+    - System Administration:
+      - Public Key Infrastructure: ./software-engineering/sysadmin/pki.md
   - OD/Coaching/Counselling:
     - Interpersonal: ./od/interpersonal.md
     - Intrapersonal: ./od/intrapersonal.md

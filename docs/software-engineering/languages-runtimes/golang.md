@@ -1,12 +1,28 @@
-# Golang
+# Software Engineering / Golang
 
 Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
+
+- [Software Engineering / Golang](#software-engineering--golang)
+- [Links](#links)
+- [Decision Patterns](#decision-patterns)
+- [Useful Packages](#useful-packages)
+- [Useful Scripts](#useful-scripts)
+  - [Installing Dependencies](#installing-dependencies)
+  - [Updating Dependencies](#updating-dependencies)
+  - [Running Commands](#running-commands)
+  - [Running Tests](#running-tests)
+  - [Static Build](#static-build)
+  - [Strip Symbols/Debugging Information](#strip-symbolsdebugging-information)
+- [Useful Tools](#useful-tools)
+- [An Optimised Dockerfile](#an-optimised-dockerfile)
+- [Community Events](#community-events)
+  - [Singapore](#singapore)
 
 
 - - -
 
 
-## Links
+# Links
 
 - [Main website](https://golang.org/)
 - [Wikipedia](https://en.wikipedia.org/wiki/Go_(programming_language))
@@ -15,20 +31,7 @@ Go is an open source programming language that makes it easy to build simple, re
 - - -
 
 
-## Table of Content
-
-- [Decision Patterns](#decision-patterns)
-- [Useful Packages](#useful-packages)
-- [Useful Scripts](#useful-scripts)
-- [Useful Tools](#useful-tools)
-- [An Optimised Dockerfile](#an-optimised-dockerfile)
-- [Community Events](#community-events)
-
-
-- - -
-
-
-## Decision Patterns
+# Decision Patterns
 
 - First class functions
 - Support for native classes
@@ -43,7 +46,7 @@ Go is an open source programming language that makes it easy to build simple, re
 - - -
 
 
-## Useful Packages
+# Useful Packages
 
 | Name | Category | URL |
 | --- | --- | --- |
@@ -58,39 +61,39 @@ Go is an open source programming language that makes it easy to build simple, re
 - - -
 
 
-## Useful Scripts
+# Useful Scripts
 
-### Dependency Installation
+## Installing Dependencies
 
 ```sh
 go mod vendor -v
 ```
 
-### Dependency Updating
+## Updating Dependencies
 
 ```sh
 go mod tidy -v
 ```
 
-### Running Commands
+## Running Commands
 
 ```sh
 go run ./cmd/_;
 ```
 
-### Running Tests
+## Running Tests
 
 ```sh
 go test -cover -coverprofile c.out ./...;
 ```
 
-### Static Build
+## Static Build
 
 ```sh
 CGO_ENABLED=0 go build -a -ldflags "-extldflags 'static'" ./cmd/_
 ```
 
-### Strip Symbols/Debugging Information
+## Strip Symbols/Debugging Information
 
 ```sh
 CGO_ENABLED=0 go build -ldflags "-s -w" ./cmd/_
@@ -100,7 +103,7 @@ CGO_ENABLED=0 go build -ldflags "-s -w" ./cmd/_
 - - -
 
 
-## Useful Tools
+# Useful Tools
 
 | Name | Description | Link |
 | --- | --- | --- | 
@@ -110,7 +113,7 @@ CGO_ENABLED=0 go build -ldflags "-s -w" ./cmd/_
 - - -
 
 
-## An Optimised Dockerfile
+# An Optimised Dockerfile
 
 The following assumes that the script `make bin` will create a primary binary at `./bin/app`
 
@@ -137,9 +140,9 @@ ENTRYPOINT ["/app"]
 - - -
 
 
-## Community Events
+# Community Events
 
-### Singapore
+## Singapore
 
 - [GopherCon](https://gophercon.sg)
 - [GoSG](https://www.meetup.com/en-SG/golangsg/)

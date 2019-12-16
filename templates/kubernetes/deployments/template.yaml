@@ -31,7 +31,7 @@ spec:
             path: /healthz
             port: 11111
             httpHeaders:
-            - name: X-Kubernetes
+            - name: X-Healthcheck
               value: LivenessProbe
           initialDelaySeconds: 15
           periodSeconds: 5
@@ -40,8 +40,8 @@ spec:
             path: /readyz
             port: 11111
             httpHeaders:
-            - name: X-Kubernetes
-              value: LivenessProbe
+            - name: X-Healthcheck
+              value: ReadinessProbe
           initialDelaySeconds: 15
           periodSeconds: 5
         resources:
