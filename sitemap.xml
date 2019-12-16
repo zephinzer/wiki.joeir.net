@@ -2,87 +2,92 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>http://wiki.joeir.net/</loc>
-     <lastmod>2019-12-15</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/dev/git/</loc>
-     <lastmod>2019-12-15</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/dev/golang/</loc>
-     <lastmod>2019-12-15</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/dev/kubernetes/</loc>
-     <lastmod>2019-12-15</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/dev/node/</loc>
-     <lastmod>2019-12-15</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/dev/pki/</loc>
-     <lastmod>2019-12-15</lastmod>
+     <lastmod>2019-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://wiki.joeir.net/dev/ubuntu/</loc>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/od/interpersonal/</loc>
-     <lastmod>2019-12-15</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/od/intrapersonal/</loc>
-     <lastmod>2019-12-15</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/od/psychological-safety/</loc>
-     <lastmod>2019-12-15</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/wingchun/</loc>
-     <lastmod>2019-12-15</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/bahasa/angka/</loc>
-     <lastmod>2019-12-15</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/español/numeros-y-recuento/</loc>
-     <lastmod>2019-12-15</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/español/países-y-nacionalidades/</loc>
-     <lastmod>2019-12-15</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/español/referencias-de-aprender/</loc>
-     <lastmod>2019-12-15</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/español/el-tiempo/</loc>
-     <lastmod>2019-12-15</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/español/verbos/</loc>
-     <lastmod>2019-12-15</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/español/vocabulario/</loc>
-     <lastmod>2019-12-15</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
