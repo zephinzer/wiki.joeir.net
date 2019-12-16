@@ -1,4 +1,4 @@
-# Angka
+# Bahasa Indonesia / Angka
 
 ## Nol hingga Dua Puluh Satu
 

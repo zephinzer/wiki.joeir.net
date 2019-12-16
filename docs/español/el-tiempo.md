@@ -50,10 +50,10 @@
 | --- | --- |
 | Lunes | Monday |
 | Martes | Tuesday |
-| Miercoles | Wednesday |
+| Miércoles | Wednesday |
 | Jueves | Thursday |
 | Viernes | Friday |
-| Sabado | Saturday |
+| Sábado | Saturday |
 | Domingo | Sunday |
 
 ## Months

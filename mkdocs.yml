@@ -10,6 +10,8 @@ google_analytics:
 nav:
   - Home: ./index.md
   - Software Engineering:
+    - Concepts:
+      - Cloud-Native: ./software-engineering/concepts/cloud-native.md
     - Languages & Runtimes:
       - Golang: ./software-engineering/languages-runtimes/golang.md
       - Node: ./software-engineering/languages-runtimes/node.md
@@ -27,11 +29,13 @@ nav:
   - Wing Chun: ./wingchun/index.md
   - Bahasa:
     - Angka: ./bahasa/angka.md
+    - Warna: ./bahasa/warna.md
   - Español:
+    - El Tiempo: ./español/el-tiempo.md
+    - La Familia: ./español/la-familia.md
     - Numeros y Recuento: ./español/numeros-y-recuento.md
     - Países y Nacionalidades: ./español/países-y-nacionalidades.md
     - Referencias de Aprender: ./español/referencias-de-aprender.md
-    - El Tiempo: ./español/el-tiempo.md
     - Verbos: ./español/verbos.md
     - Vocabulario: ./español/vocabulario.md
 theme:
