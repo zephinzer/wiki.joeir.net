@@ -11,6 +11,7 @@
 | Pink | Merah muda |
 | Brown | Cokelat |
 | Black | Hitam |
+| Grey |  |
 | White | Putih |
 | Gold | Emas |
 | Silver | Perak |

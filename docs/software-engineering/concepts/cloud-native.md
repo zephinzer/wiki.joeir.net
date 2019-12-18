@@ -1,83 +1,66 @@
-# Software Engineering / Cloud-Native
+# Software Engineering - Cloud-Native
 
-- [Software Engineering / Cloud-Native](#software-engineering--cloud-native)
-- [Why](#why)
-  - [Contributing Factors](#contributing-factors)
-  - [Conclusion](#conclusion)
-- [An Exploration](#an-exploration)
-  - [Business](#business)
-  - [Human](#human)
-  - [Culture](#culture)
-  - [Code](#code)
-  - [Architecture](#architecture)
-  - [Testing](#testing)
-  - [Delivery](#delivery)
-  - [Process](#process)
-- [An Experience](#an-experience)
-- [Some Measurements](#some-measurements)
-- [Further Reading](#further-reading)
-  - [Web Resources](#web-resources)
-  - [Paperbacks](#paperbacks)
-
-# Why
+## Why
 
 - Axiom: Cloud-Native brings value
 - Corollary: Value is best represented as money
 
-## Contributing Factors
+### Contributing Factors
 
-1. Large increase in number of internet-connected people
-2. Improvements in computing and network performance
-  
-## Conclusion
+#### Increase in number of internet-connected people
+
+#### Increase in computing power to serve customers
 
 **Cloud-Native solves a scaling problem**
 
-# An Exploration
+## An Exploration of Value
 
-## Business
+### Code
 
-> *"If it doesn't make money, I'm not going to do it"*
+- Clean code
+- Refactoring
+- Gardener over architect
 
-- Feedback-driven development
-
-## Human
-
-> *"I don't know what I want"*
-
--
-
-## Culture
-
-> *"Work life balance yo"*
-
-- DevOps
-
-
-## Code
-
-
-
-- Continuous Integration (CI)
-
-## Architecture
+### Architecture
 
 - Domain Driven Design
 - Service Oriented Architecture
+- Microservices
 
-## Testing
+### Testing
 
+- Continuous Integration (CI)
 - Contract-Driven Testing
-- Testing in Production
 
-## Delivery
+### Delivery
 
-> *"You build it, you deploy it"*
-
-- Iterative development
+- Iterative development (Agile)
 - Continuous Delivery (CD)
 
-## Process
+### Security
+
+- Shift-Left
+- Zero-Trust
+
+### Infrastructure
+
+- Infrastructure-as-Code
+
+### Operations
+
+- Rolling deployments
+- Canary deployments
+- System observability
+- Testing in production
+
+### Culture
+
+- Psychological safety
+- Dev(Sec?)Ops
+
+- - -
+
+# Things in the Cloud
 
 # An Experience
 
@@ -87,7 +70,7 @@
 
 ## Web Resources
 
-
+- [The Twelve-Factor App](https://12factor.net/)
 
 ## Paperbacks
 
