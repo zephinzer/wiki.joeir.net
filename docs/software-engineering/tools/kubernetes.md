@@ -1,50 +1,73 @@
 # Kubernetes
 
 - [Kubernetes](#kubernetes)
-- [Resource Types Overview](#resource-types-overview)
-  - [ConfigMap](#configmap)
-    - [ConfigMap template for environment variables injection](#configmap-template-for-environment-variables-injection)
-    - [ConfigMap template for volume mounting](#configmap-template-for-volume-mounting)
-  - [Containers](#containers)
-  - [Deployments](#deployments)
-    - [Template for a Deployment resource type](#template-for-a-deployment-resource-type)
-  - [Ingress](#ingress)
-    - [Template for an Ingress resource type](#template-for-an-ingress-resource-type)
-  - [Persistent Volume](#persistent-volume)
-  - [Persistent Volume Claim](#persistent-volume-claim)
-  - [Pod](#pod)
-    - [Template for a static pod](#template-for-a-static-pod)
-  - [Replica Sets](#replica-sets)
-  - [Secret](#secret)
-    - [Template for an opaque secret](#template-for-an-opaque-secret)
-  - [Services](#services)
-    - [Template for a service](#template-for-a-service)
-- [Local Development](#local-development)
-  - [Kubernetes-in-Docker (KIND)](#kubernetes-in-docker-kind)
-    - [Simple Setup](#simple-setup)
-    - [Named Cluster](#named-cluster)
-    - [Multi-Node Cluster Configuration](#multi-node-cluster-configuration)
-    - [Loading Local Image Into Cluster](#loading-local-image-into-cluster)
-  - [Microk8s](#microk8s)
-  - [Minikube](#minikube)
-- [Useful Tools](#useful-tools)
-  - [CLI](#cli)
-  - [VSCode](#vscode)
-- [Community Events](#community-events)
-  - [Global](#global)
-  - [Singapore](#singapore)
+  - [Installation](#installation)
+    - [Installation on Ubuntu](#installation-on-ubuntu)
+  - [Resource Types Overview](#resource-types-overview)
+    - [ConfigMap](#configmap)
+      - [ConfigMap template for environment variables injection](#configmap-template-for-environment-variables-injection)
+      - [ConfigMap template for volume mounting](#configmap-template-for-volume-mounting)
+    - [Containers](#containers)
+    - [Deployments](#deployments)
+      - [Template for a Deployment resource type](#template-for-a-deployment-resource-type)
+    - [Ingress](#ingress)
+      - [Template for an Ingress resource type](#template-for-an-ingress-resource-type)
+    - [Persistent Volume](#persistent-volume)
+    - [Persistent Volume Claim](#persistent-volume-claim)
+    - [Pod](#pod)
+      - [Template for a static pod](#template-for-a-static-pod)
+    - [Replica Sets](#replica-sets)
+    - [Secret](#secret)
+      - [Template for an opaque secret](#template-for-an-opaque-secret)
+    - [Services](#services)
+      - [Template for a service](#template-for-a-service)
+  - [Local Development](#local-development)
+    - [Kubernetes-in-Docker (KIND)](#kubernetes-in-docker-kind)
+      - [Simple Setup](#simple-setup)
+      - [Named Cluster](#named-cluster)
+      - [Multi-Node Cluster Configuration](#multi-node-cluster-configuration)
+      - [Loading Local Image Into Cluster](#loading-local-image-into-cluster)
+    - [Microk8s](#microk8s)
+    - [Minikube](#minikube)
+  - [Useful Tools](#useful-tools)
+    - [CLI](#cli)
+    - [VSCode](#vscode)
+  - [Community Events](#community-events)
+    - [Global](#global)
+    - [Singapore](#singapore)
 
 
 - - -
 
+## Installation
 
-# Resource Types Overview
+### Installation on Ubuntu
 
-## ConfigMap
+```sh
+# add the gpg key
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add;
+
+# add the ppa
+sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main";
+
+# install kubectl
+sudo apt-get install kubectl;
+
+# install kubeadm
+sudo apt-get install kubeadm;
+```
+
+If the above instructions fail, you can find the instructions for Ubuntu 18.04 here: [https://vitux.com/install-and-deploy-kubernetes-on-ubuntu/](https://vitux.com/install-and-deploy-kubernetes-on-ubuntu/)
+
+
+
+## Resource Types Overview
+
+### ConfigMap
 
 - Mountable as a volume in a Pod
 
-### ConfigMap template for environment variables injection
+#### ConfigMap template for environment variables injection
 
 ```yaml
 apiVersion: v1
@@ -57,7 +80,7 @@ data:
   CONFIG_VALUE_BOOL: "true"
 ```
 
-### ConfigMap template for volume mounting
+#### ConfigMap template for volume mounting
 
 ```yaml
 apiVersion: v1
@@ -77,14 +100,14 @@ data:
     to: k8s
 ```
 
-## Containers
+### Containers
 
 - Containers are the most atomic compute instance
 - Containers are basically sandboxed applications running in a Pod
 
-## Deployments
+### Deployments
 
-### Template for a Deployment resource type
+#### Template for a Deployment resource type
 
 ```yaml
 apiVersion: apps/v1
@@ -142,9 +165,9 @@ spec:
             memory: 10Mi
 ```
 
-## Ingress
+### Ingress
 
-### Template for an Ingress resource type
+#### Template for an Ingress resource type
 
 ```yaml
 apiVersion: extensions/v1beta1
@@ -162,18 +185,18 @@ spec:
           servicePort: 11111
 ```
 
-## Persistent Volume
+### Persistent Volume
 
-## Persistent Volume Claim
+### Persistent Volume Claim
 
-## Pod
+### Pod
 
 - A Pod contains one or more Containers
 - All Containers in a Pod can address each other via `localhost`
 - Every Pod has a unique IP address
 - Pods basically represent a virtual machine (VM)
 
-### Template for a static pod
+#### Template for a static pod
 
 ```yaml
 apiVersion: v1
@@ -201,14 +224,14 @@ spec:
         memory: 10Mi
 ```
 
-## Replica Sets
+### Replica Sets
 
-## Secret
+### Secret
 
 - Mountable as a volume in a Pod
 - Base64 encoded, **not encrypted**
 
-### Template for an opaque secret
+#### Template for an opaque secret
 
 ```yaml
 apiVersion: v1
@@ -222,11 +245,11 @@ data:
   SECRET_VALUE_BOOL: dHJ1ZQ==
 ```
 
-## Services
+### Services
 
 - 3 `type`s of services: `LoadBalancer`, `NodePort`, `ClusterIP`
 
-### Template for a service
+#### Template for a service
 
 ```yaml
 apiVersion: v1
@@ -252,7 +275,7 @@ spec:
 - - -
 
 
-# Local Development
+## Local Development
 
 The following documents options available to run Kubernetes on a local machine. Primarily, they are:
 
@@ -260,23 +283,23 @@ The following documents options available to run Kubernetes on a local machine. 
 - [Microk8s](#microk8s)
 - [Minikube](#minikube)
 
-## Kubernetes-in-Docker (KIND)
+### Kubernetes-in-Docker (KIND)
 
 - [Github Repository](https://github.com/kubernetes-sigs/kind)
 
-### Simple Setup
+#### Simple Setup
 
 ```sh
 kind create cluster;
 ```
 
-### Named Cluster
+#### Named Cluster
 
 ```sh
 kind create cluster --name mycluster;
 ```
 
-### Multi-Node Cluster Configuration
+#### Multi-Node Cluster Configuration
 
 Place the following in a `kind-config.yaml` file:
 
@@ -295,18 +318,18 @@ Run the following from the same directory as the `kind-config.yaml` file:
 kind create cluster --config ./kind-config.yaml;
 ```
 
-### Loading Local Image Into Cluster
+#### Loading Local Image Into Cluster
 
 ```sh
 kind load docker-image ___;
 ```
 
-## Microk8s
+### Microk8s
 
 - [Main Website](https://microk8s.io/)
 - [Github Repository](https://github.com/ubuntu/microk8s)
 
-## Minikube
+### Minikube
 
 - [Main Website](https://minikube.sigs.k8s.io/)
 - [Github Repository](https://github.com/kubernetes/minikube)
@@ -315,13 +338,13 @@ kind load docker-image ___;
 - - -
 
 
-# Useful Tools
+## Useful Tools
 
-## CLI
+### CLI
 
 - [k9s](https://github.com/derailed/k9s)
 
-## VSCode
+### VSCode
 
 | Name | Description | Link |
 | --- | --- | --- |
@@ -332,13 +355,13 @@ kind load docker-image ___;
 - - -
 
 
-# Community Events
+## Community Events
 
-## Global
+### Global
 
 - [Kubecon North America](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/)
 - [Kubecon Europe](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/)
 
-## Singapore
+### Singapore
 
 - [Singapore Kubernetes User Group](https://www.meetup.com/en-SG/Singapore-Kubernetes-User-Group/)

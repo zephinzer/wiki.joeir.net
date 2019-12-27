@@ -17,6 +17,7 @@ nav:
       - Node: ./software-engineering/languages-runtimes/node.md
     - Tools:
       - Git: ./software-engineering/tools/git.md
+      - Docker: ./software-engineering/tools/docker.md
       - Kubernetes: ./software-engineering/tools/kubernetes.md
     - Operating Systems:
       - Ubuntu: ./software-engineering/os/ubuntu.md
