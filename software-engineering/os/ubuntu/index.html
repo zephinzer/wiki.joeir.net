@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -56,7 +56,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -393,6 +393,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../tools/docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../tools/kubernetes/" title="Kubernetes" class="md-nav__link">
       Kubernetes
     </a>
@@ -439,9 +451,45 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Ubuntu
+      </label>
+    
     <a href="./" title="Ubuntu" class="md-nav__link md-nav__link--active">
       Ubuntu
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-live-usb-stick" class="md-nav__link">
+    Creating a Live USB Stick
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-commands-youll-run" class="md-nav__link">
+    Common commands you'll run
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -737,6 +785,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-live-usb-stick" class="md-nav__link">
+    Creating a Live USB Stick
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-commands-youll-run" class="md-nav__link">
+    Common commands you'll run
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -754,8 +825,9 @@
 <ul>
 <li><a href="#software-engineering--ubuntu">Software Engineering / Ubuntu</a></li>
 <li><a href="#creating-a-live-usb-stick">Creating a Live USB Stick</a></li>
+<li><a href="#common-commands-youll-run">Common commands you'll run</a></li>
 </ul>
-<h1 id="creating-a-live-usb-stick">Creating a Live USB Stick<a class="headerlink" href="#creating-a-live-usb-stick" title="Permanent link">&para;</a></h1>
+<h2 id="creating-a-live-usb-stick">Creating a Live USB Stick<a class="headerlink" href="#creating-a-live-usb-stick" title="Permanent link">&para;</a></h2>
 <p>Get the Ubuntu ISO image from:</p>
 <p><a href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a></p>
 <p>Plug in a USB stick and run the following to get the mount path:</p>
@@ -775,8 +847,27 @@ sudo dd <span class="nv">bs</span><span class="o">=</span>4M <span class="k">if<
 <span class="c1"># for ubuntu 19.04</span>
 sudo dd <span class="nv">bs</span><span class="o">=</span>4M <span class="k">if</span><span class="o">=</span>~/Downloads/ubuntu-19.04-desktop-amd64.iso <span class="nv">of</span><span class="o">=</span>/dev/sdb1 <span class="nv">status</span><span class="o">=</span>progress <span class="nv">oflag</span><span class="o">=</span>sync<span class="p">;</span>
 </pre></div>
+
+
+<h2 id="common-commands-youll-run">Common commands you'll run<a class="headerlink" href="#common-commands-youll-run" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="c1"># list all local repositories (ppas)</span>
+sudo apt policy<span class="p">;</span>
+
+<span class="c1"># update existing repository (ppa) metadata</span>
+sudo apt-get update<span class="p">;</span>
+
+<span class="c1"># installing new software</span>
+sudo apt-get install ...<span class="p">;</span>
+
+<span class="c1"># removing existing software</span>
+sudo apt-get uninstall ...<span class="p">;</span>
+
+<span class="c1"># remove existing software and all files</span>
+sudo apt-get purge ...<span class="p">;</span>
+</pre></div>
                 
                   
+                
                 
               
               
@@ -844,7 +935,7 @@ sudo dd <span class="nv">bs</span><span class="o">=</span>4M <span class="k">if<
       
     </div>
     
-      <script src="../../../assets/javascripts/application.a8b5e56f.js"></script>
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
