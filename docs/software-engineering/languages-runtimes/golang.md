@@ -146,9 +146,13 @@ GOOS=windows GOARCH=386 \
 
 #### Variable Injection Build
 
+The following assumes the presence of the variables `commitHash`, `version`, and `buildTimestamp` in the `main` package:
+
 ```sh
 go build \
-  -ldflags '-X main.varName=1'
+  -ldflags "-X main.commitHash=$(git rev-parse --verify HEAD) \
+    -X main.version=$(git describe --tag $(git rev-list --tags --max-count=1)) \
+    -X main.buildTimestamp=$(date +'%Y%m%d%H%M%S')" \
   -o ./bin/command \
   ./cmd/command;
 ```
