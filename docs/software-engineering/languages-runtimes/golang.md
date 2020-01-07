@@ -3,26 +3,34 @@
 Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
 
 - [Software Engineering / Golang](#software-engineering--golang)
-- [Links](#links)
-- [Decision Patterns](#decision-patterns)
-- [Useful Packages](#useful-packages)
-- [Useful Scripts](#useful-scripts)
-  - [Installing Dependencies](#installing-dependencies)
-  - [Updating Dependencies](#updating-dependencies)
-  - [Running Commands](#running-commands)
-  - [Running Tests](#running-tests)
-  - [Static Build](#static-build)
-  - [Strip Symbols/Debugging Information](#strip-symbolsdebugging-information)
-- [Useful Tools](#useful-tools)
-- [An Optimised Dockerfile](#an-optimised-dockerfile)
-- [Community Events](#community-events)
-  - [Singapore](#singapore)
+  - [Links](#links)
+  - [Decision Patterns](#decision-patterns)
+  - [Useful Packages](#useful-packages)
+  - [Useful Scripts](#useful-scripts)
+    - [System Administration](#system-administration)
+      - [Environment Checking](#environment-checking)
+    - [Development](#development)
+      - [Installing Dependencies](#installing-dependencies)
+      - [Updating Dependencies](#updating-dependencies)
+      - [Running Commands](#running-commands)
+      - [Running Tests](#running-tests)
+    - [Building](#building)
+      - [Basic Build](#basic-build)
+      - [Static Build](#static-build)
+      - [Symbols Stripped Build](#symbols-stripped-build)
+      - [Cross-Platform Build](#cross-platform-build)
+      - [Variable Injection Build](#variable-injection-build)
+      - [Windows-GUI Build](#windows-gui-build)
+  - [Dockerfile Recipes](#dockerfile-recipes)
+  - [Useful Tools](#useful-tools)
+  - [Community Events](#community-events)
+    - [Singapore](#singapore)
 
 
 - - -
 
 
-# Links
+## Links
 
 - [Main website](https://golang.org/)
 - [Wikipedia](https://en.wikipedia.org/wiki/Go_(programming_language))
@@ -31,7 +39,7 @@ Go is an open source programming language that makes it easy to build simple, re
 - - -
 
 
-# Decision Patterns
+## Decision Patterns
 
 - First class functions
 - Support for native classes
@@ -46,12 +54,13 @@ Go is an open source programming language that makes it easy to build simple, re
 - - -
 
 
-# Useful Packages
+## Useful Packages
 
-| Name | Category | URL |
+| Name | Description | URL |
 | --- | --- | --- |
 | Cobra | CLI framework | [https://github.com/spf13/cobra](https://github.com/spf13/cobra) |
 | Gorilla Mux | HTTP request multiplexer | [https://github.com/gorilla/mux](https://github.com/gorilla/mux) |
+| Litter | `console.log` for Go | [https://github.com/sanity-io/litter](https://github.com/sanity-io/litter) |
 | Logrus | Logging | [https://github.com/sirupsen/logrus](https://github.com/sirupsen/logrus) |
 | UUID | Unique ID generator | [https://github.com/google/uuid](https://github.com/google/uuid) |
 | Testify | Testing framework | [https://github.com/stretchr/testify](https://github.com/stretchr/testify) |
@@ -61,59 +70,104 @@ Go is an open source programming language that makes it easy to build simple, re
 - - -
 
 
-# Useful Scripts
+## Useful Scripts
 
-## Installing Dependencies
+### System Administration
 
-```sh
-go mod vendor -v
-```
-
-## Updating Dependencies
+#### Environment Checking
 
 ```sh
-go mod tidy -v
+go env
 ```
 
-## Running Commands
+### Development
+
+#### Installing Dependencies
 
 ```sh
-go run ./cmd/_;
+go mod vendor -v;
 ```
 
-## Running Tests
+#### Updating Dependencies
+
+```sh
+go mod tidy -v;
+```
+
+#### Running Commands
+
+```sh
+go run ./cmd/command;
+```
+
+#### Running Tests
 
 ```sh
 go test -cover -coverprofile c.out ./...;
 ```
 
-## Static Build
+### Building
+
+The following formulae expects that an invoker runs these from the root directory given a project layout as specificied at [https://github.com/golang-standards/project-layout](https://github.com/golang-standards/project-layout).
+
+#### Basic Build
 
 ```sh
-CGO_ENABLED=0 go build -a -ldflags "-extldflags 'static'" ./cmd/_
+go build -o ./bin/command ./cmd/command
 ```
 
-## Strip Symbols/Debugging Information
+#### Static Build
 
 ```sh
-CGO_ENABLED=0 go build -ldflags "-s -w" ./cmd/_
+CGO_ENABLED=0 \
+  go build \
+  -ldflags "-extldflags 'static'" \
+  -o ./bin/command \
+  ./cmd/command;
+```
+
+#### Symbols Stripped Build
+
+```sh
+go build \
+  -ldflags "-s -w" \
+  -o ./bin/command \
+  ./cmd/command;
+```
+
+#### Cross-Platform Build
+
+```sh
+GOOS=windows GOARCH=386 \
+  go build \
+  -o ./bin/command \
+  ./cmd/command;
+```
+
+#### Variable Injection Build
+
+```sh
+go build \
+  -ldflags '-X main.varName=1'
+  -o ./bin/command \
+  ./cmd/command;
+```
+
+#### Windows-GUI Build
+
+```sh
+GOOS=windows GOARCH=386 \
+  go build \
+  -ldflags '-H=windowsgui' \
+  -o ./bin/command \
+  ./cmd/command;
 ```
 
 
 - - -
 
 
-# Useful Tools
-
-| Name | Description | Link |
-| --- | --- | --- | 
-| Go | Rich Go language support for Visual Studio Code | [https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go](https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go) |
-
-
-- - -
-
-
-# An Optimised Dockerfile
+## Dockerfile Recipes
 
 The following assumes that the script `make bin` will create a primary binary at `./bin/app`
 
@@ -140,9 +194,19 @@ ENTRYPOINT ["/app"]
 - - -
 
 
-# Community Events
+## Useful Tools
 
-## Singapore
+| Name | Description | Link |
+| --- | --- | --- | 
+| Go | Rich Go language support for Visual Studio Code | [https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go](https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go) |
+
+
+- - -
+
+
+## Community Events
+
+### Singapore
 
 - [GopherCon](https://gophercon.sg)
 - [GoSG](https://www.meetup.com/en-SG/golangsg/)
