@@ -18,6 +18,7 @@ nav:
     - Tools:
       - Git: ./software-engineering/tools/git.md
       - Docker: ./software-engineering/tools/docker.md
+      - Gitlab CI: ./software-engineering/tools/gitlab-ci.md
       - Kubernetes: ./software-engineering/tools/kubernetes.md
     - Operating Systems:
       - Ubuntu: ./software-engineering/os/ubuntu.md
