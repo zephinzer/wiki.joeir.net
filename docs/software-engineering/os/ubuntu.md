@@ -3,6 +3,20 @@
 - [Software Engineering / Ubuntu](#software-engineering--ubuntu)
   - [Creating a Live USB Stick](#creating-a-live-usb-stick)
   - [Common commands you'll run](#common-commands-youll-run)
+  - [Common stuff to install](#common-stuff-to-install)
+    - [Basic Tools](#basic-tools)
+      - [Spotify](#spotify)
+      - [Telegram](#telegram)
+    - [Development Tools](#development-tools)
+      - [Golang](#golang)
+      - [Kubectl](#kubectl)
+      - [Node Version Manager (NVM)](#node-version-manager-nvm)
+      - [Postman](#postman)
+      - [VSCodium](#vscodium)
+      - [Yarn](#yarn)
+    - [Sysadmin/Security/Network Tools](#sysadminsecuritynetwork-tools)
+      - [NMap](#nmap)
+      - [Sysdig](#sysdig)
 
 ## Creating a Live USB Stick
 
@@ -49,4 +63,104 @@ sudo apt-get uninstall ...;
 
 # remove existing software and all files
 sudo apt-get purge ...;
+```
+
+## Common stuff to install
+
+### Basic Tools
+
+#### Spotify
+
+```sh
+sudo snap install spotify;
+```
+
+#### Telegram
+
+```sh
+sudo snap install telegram-desktop
+```
+
+### Development Tools
+
+If you're doing development work, the following sets up a nice base environment:
+
+```sh
+sudo apt-get update;
+
+# common tools installation
+sudo apt-get install curl git jq vim python-pip;
+
+# run following and set to vim
+sudo update-alternatives --config editor;
+```
+
+#### Golang
+
+```sh
+sudo add-apt-repository ppa:longsleep/golang-backports;
+sudo apt-get update;
+sudo apt-get install golang-go;
+```
+
+#### Kubectl
+
+```sh
+sudo apt-get update && sudo apt-get install -y apt-transport-https;
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -;
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list;
+sudo apt-get update;
+sudo apt-get install -y kubectl;
+```
+
+#### Node Version Manager (NVM)
+
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash;
+nvm install lts/argon;
+nvm install lts/boron;
+nvm install lts/carbon;
+nvm install lts/dubnium;
+nvm install lts/erbium;
+```
+
+#### Postman
+
+```sh
+sudo snap install postman;
+```
+
+#### VSCodium
+
+```sh
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add -;
+echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list;
+sudo apt-get update;
+sudo apt-get install codium;
+
+# reference: https://vscodium.com/
+```
+
+#### Yarn
+
+```sh
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -;
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list;
+sudo apt-get update;
+sudo apt-get install yarn;
+```
+
+### Sysadmin/Security/Network Tools
+
+#### NMap
+
+
+
+#### Sysdig
+
+```sh
+curl -s https://s3.amazonaws.com/download.draios.com/DRAIOS-GPG-KEY.public | sudo apt-key add -;
+sudo curl -s -o /etc/apt/sources.list.d/draios.list https://s3.amazonaws.com/download.draios.com/stable/deb/draios.list  
+sudo apt-get update;
+sudo apt-get install sysdig;
 ```
