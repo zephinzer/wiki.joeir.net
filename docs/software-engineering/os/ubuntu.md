@@ -5,7 +5,6 @@
   - [Common commands you'll run](#common-commands-youll-run)
   - [Common stuff to install](#common-stuff-to-install)
     - [Basic Tools](#basic-tools)
-      - [Iridium Browser](#iridium-browser)
       - [Spotify](#spotify)
         - [Via Snap](#via-snap)
         - [Via PPA](#via-ppa)
@@ -71,20 +70,6 @@ sudo apt-get purge ...;
 ## Common stuff to install
 
 ### Basic Tools
-
-#### Iridium Browser
-
-Iridium is Google's Chrome without the Google integrations.
-
-```sh
-wget -qO - https://downloads.iridiumbrowser.de/ubuntu/iridium-release-sign-01.pub|sudo apt-key add -;
-cat <<EOF | sudo tee /etc/apt/sources.list.d/iridium-browser.list
-deb [arch=amd64] https://downloads.iridiumbrowser.de/deb/ stable main
-#deb-src https://downloads.iridiumbrowser.de/deb/ stable main
-EOF;
-sudo apt-get update;
-sudo apt-get install iridium-browser;
-```
 
 #### Spotify
 
