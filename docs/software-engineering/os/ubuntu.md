@@ -5,7 +5,10 @@
   - [Common commands you'll run](#common-commands-youll-run)
   - [Common stuff to install](#common-stuff-to-install)
     - [Basic Tools](#basic-tools)
+      - [Iridium Browser](#iridium-browser)
       - [Spotify](#spotify)
+        - [Via Snap](#via-snap)
+        - [Via PPA](#via-ppa)
       - [Telegram](#telegram)
     - [Development Tools](#development-tools)
       - [Golang](#golang)
@@ -69,10 +72,38 @@ sudo apt-get purge ...;
 
 ### Basic Tools
 
-#### Spotify
+#### Iridium Browser
+
+Iridium is Google's Chrome without the Google integrations.
 
 ```sh
-sudo snap install spotify;
+wget -qO - https://downloads.iridiumbrowser.de/ubuntu/iridium-release-sign-01.pub|sudo apt-key add -;
+cat <<EOF | sudo tee /etc/apt/sources.list.d/iridium-browser.list
+deb [arch=amd64] https://downloads.iridiumbrowser.de/deb/ stable main
+#deb-src https://downloads.iridiumbrowser.de/deb/ stable main
+EOF;
+sudo apt-get update;
+sudo apt-get install iridium-browser;
+```
+
+#### Spotify
+
+##### Via Snap
+
+!!! Warn
+    Spotify exists as a Snap package but if you have a VPN, Spotify will fail to connect
+
+```sh
+sudo snap install spotify
+```
+
+##### Via PPA
+
+```sh
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 4773BD5E130D1D45;
+echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list;
+sudo apt-get update;
+sudo apt-get install spotify;
 ```
 
 #### Telegram
@@ -131,6 +162,8 @@ sudo snap install postman;
 ```
 
 #### VSCodium
+
+VSCodium is VSCode without Micro$oft's analytics.
 
 ```sh
 wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add -;
