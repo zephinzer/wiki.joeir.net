@@ -2,112 +2,117 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>http://wiki.joeir.net/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/software-engineering/concepts/cloud-native/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/software-engineering/languages-runtimes/golang/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/software-engineering/languages-runtimes/node/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/software-engineering/tools/git/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/software-engineering/tools/docker/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://wiki.joeir.net/software-engineering/tools/gitlab-ci/</loc>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/software-engineering/tools/kubernetes/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/software-engineering/os/ubuntu/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/software-engineering/sysadmin/pki/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/od/interpersonal/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/od/intrapersonal/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/od/psychological-safety/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/wingchun/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/bahasa/angka/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/bahasa/warna/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/español/el-tiempo/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/español/la-familia/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/español/numeros-y-recuento/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/español/países-y-nacionalidades/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/español/referencias-de-aprender/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/español/verbos/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://wiki.joeir.net/español/vocabulario/</loc>
-     <lastmod>2020-01-09</lastmod>
+     <lastmod>2020-01-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
