@@ -10,6 +10,7 @@
         - [Via PPA](#via-ppa)
       - [Telegram](#telegram)
     - [Development Tools](#development-tools)
+      - [AWS CLI](#aws-cli)
       - [Golang](#golang)
       - [Kubectl](#kubectl)
       - [Node Version Manager (NVM)](#node-version-manager-nvm)
@@ -111,6 +112,12 @@ sudo apt-get install curl git jq vim python-pip;
 sudo update-alternatives --config editor;
 ```
 
+#### AWS CLI
+
+```sh
+sudo apt-get install awscli;
+```
+
 #### Golang
 
 ```sh
@@ -170,9 +177,19 @@ sudo apt-get install yarn;
 
 ### Sysadmin/Security/Network Tools
 
+The following sets up essential
+
+```sh
+sudo apt-get update;
+sudo apt-get install iperf net-tools openssl traceroute;
+```
+
 #### NMap
 
-
+```sh
+sudo apt-get update;
+sudo apt-get install nmap;
+```
 
 #### Sysdig
 
