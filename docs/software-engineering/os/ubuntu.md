@@ -11,6 +11,7 @@
       - [Telegram](#telegram)
     - [Development Tools](#development-tools)
       - [AWS CLI](#aws-cli)
+      - [Direnv](#direnv)
       - [Golang](#golang)
       - [Kubectl](#kubectl)
       - [Node Version Manager (NVM)](#node-version-manager-nvm)
@@ -116,6 +117,12 @@ sudo update-alternatives --config editor;
 
 ```sh
 sudo apt-get install awscli;
+```
+
+#### Direnv
+
+```sh
+sudo apt-get install direnv;
 ```
 
 #### Golang
