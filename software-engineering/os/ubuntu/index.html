@@ -504,6 +504,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#user-management" class="md-nav__link">
+    User management
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#changing-nautilus-sidebar-directories" class="md-nav__link">
     Changing Nautilus sidebar directories
   </a>
@@ -530,6 +537,13 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chrome" class="md-nav__link">
+    Chrome
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#spotify" class="md-nav__link">
@@ -653,6 +667,13 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#htop" class="md-nav__link">
+    HTop
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#nmap" class="md-nav__link">
@@ -1006,6 +1027,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#user-management" class="md-nav__link">
+    User management
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#changing-nautilus-sidebar-directories" class="md-nav__link">
     Changing Nautilus sidebar directories
   </a>
@@ -1032,6 +1060,13 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chrome" class="md-nav__link">
+    Chrome
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#spotify" class="md-nav__link">
@@ -1157,6 +1192,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#htop" class="md-nav__link">
+    HTop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#nmap" class="md-nav__link">
     NMap
   </a>
@@ -1205,11 +1247,13 @@
 <li><a href="#creating-a-live-usb-stick">Creating a Live USB Stick</a></li>
 <li><a href="#some-things-you-might-wanna-do">Some things you might wanna do</a><ul>
 <li><a href="#installinglisting-repository-packages">Installing/Listing repository packages</a></li>
+<li><a href="#user-management">User management</a></li>
 <li><a href="#changing-nautilus-sidebar-directories">Changing Nautilus sidebar directories</a></li>
 </ul>
 </li>
 <li><a href="#common-stuff-to-install">Common stuff to install</a><ul>
 <li><a href="#basic-tools">Basic Tools</a></li>
+<li><a href="#chrome">Chrome</a></li>
 <li><a href="#spotify">Spotify</a><ul>
 <li><a href="#via-snap">Via Snap</a></li>
 <li><a href="#via-ppa">Via PPA</a></li>
@@ -1227,6 +1271,7 @@
 <li><a href="#vscodium">VSCodium</a></li>
 <li><a href="#yarn">Yarn</a></li>
 <li><a href="#sysadminsecuritynetwork-tools">Sysadmin/Security/Network Tools</a></li>
+<li><a href="#htop">HTop</a></li>
 <li><a href="#nmap">NMap</a></li>
 <li><a href="#sysdig">Sysdig</a></li>
 </ul>
@@ -1273,6 +1318,24 @@ sudo apt-get purge ...<span class="p">;</span>
 </pre></div>
 
 
+<h3 id="user-management">User management<a class="headerlink" href="#user-management" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="c1"># add user to a group</span>
+sudo usermod -a -G group user
+
+<span class="c1"># create group</span>
+sudo newgroup group
+
+<span class="c1"># list all users</span>
+sudo cat /etc/passwd
+
+<span class="c1"># list all groups</span>
+sudo cat /etc/group
+
+<span class="c1"># check which groups you are in</span>
+id
+</pre></div>
+
+
 <h3 id="changing-nautilus-sidebar-directories">Changing Nautilus sidebar directories<a class="headerlink" href="#changing-nautilus-sidebar-directories" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Open the file located at <code>~/.config/user-dirs.dirs</code></li>
@@ -1284,6 +1347,14 @@ sudo apt-get purge ...<span class="p">;</span>
 </ol>
 <h2 id="common-stuff-to-install">Common stuff to install<a class="headerlink" href="#common-stuff-to-install" title="Permanent link">&para;</a></h2>
 <h3 id="basic-tools">Basic Tools<a class="headerlink" href="#basic-tools" title="Permanent link">&para;</a></h3>
+<h4 id="chrome">Chrome<a class="headerlink" href="#chrome" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>wget -q -O - https://dl.google.com/linux/linux_signing_key.pub <span class="p">|</span> sudo apt-key add -<span class="p">;</span>
+sudo sh -c <span class="s1">&#39;echo &quot;deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main&quot; &gt;&gt; /etc/apt/sources.list.d/google.list&#39;</span><span class="p">;</span>
+sudo apt-get update<span class="p">;</span>
+sudo apt-get install google-chrome-stable<span class="p">;</span>
+</pre></div>
+
+
 <h4 id="spotify">Spotify<a class="headerlink" href="#spotify" title="Permanent link">&para;</a></h4>
 <h5 id="via-snap">Via Snap<a class="headerlink" href="#via-snap" title="Permanent link">&para;</a></h5>
 <div class="admonition warn">
@@ -1407,9 +1478,15 @@ sudo apt-get install yarn<span class="p">;</span>
 
 
 <h3 id="sysadminsecuritynetwork-tools">Sysadmin/Security/Network Tools<a class="headerlink" href="#sysadminsecuritynetwork-tools" title="Permanent link">&para;</a></h3>
-<p>The following sets up essential</p>
+<p>The following sets up essential tools:</p>
 <div class="codehilite"><pre><span></span>sudo apt-get update<span class="p">;</span>
 sudo apt-get install iperf net-tools openssl traceroute<span class="p">;</span>
+</pre></div>
+
+
+<h4 id="htop">HTop<a class="headerlink" href="#htop" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>sudo apt-get update<span class="p">;</span>
+sudo apt-get install htop<span class="p">;</span>
 </pre></div>
 
 
