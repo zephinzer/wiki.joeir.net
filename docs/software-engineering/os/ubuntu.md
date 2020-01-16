@@ -4,6 +4,7 @@
   - [Creating a Live USB Stick](#creating-a-live-usb-stick)
   - [Some things you might wanna do](#some-things-you-might-wanna-do)
     - [Installing/Listing repository packages](#installinglisting-repository-packages)
+    - [User management](#user-management)
     - [Changing Nautilus sidebar directories](#changing-nautilus-sidebar-directories)
   - [Common stuff to install](#common-stuff-to-install)
     - [Basic Tools](#basic-tools)
@@ -74,6 +75,25 @@ sudo apt-get uninstall ...;
 
 # remove existing software and all files
 sudo apt-get purge ...;
+```
+
+### User management
+
+```sh
+# add user to a group
+sudo usermod -a -G group user
+
+# create group
+sudo newgroup group
+
+# list all users
+sudo cat /etc/passwd
+
+# list all groups
+sudo cat /etc/group
+
+# check which groups you are in
+id
 ```
 
 ### Changing Nautilus sidebar directories
