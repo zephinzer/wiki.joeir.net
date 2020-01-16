@@ -489,9 +489,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-commands-youll-run" class="md-nav__link">
-    Common commands you'll run
+  <a href="#some-things-you-might-wanna-do" class="md-nav__link">
+    Some things you might wanna do
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installinglisting-repository-packages" class="md-nav__link">
+    Installing/Listing repository packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-nautilus-sidebar-directories" class="md-nav__link">
+    Changing Nautilus sidebar directories
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -557,6 +577,27 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-cli" class="md-nav__link">
+    AWS CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#direnv" class="md-nav__link">
+    Direnv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#golang" class="md-nav__link">
@@ -950,9 +991,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-commands-youll-run" class="md-nav__link">
-    Common commands you'll run
+  <a href="#some-things-you-might-wanna-do" class="md-nav__link">
+    Some things you might wanna do
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installinglisting-repository-packages" class="md-nav__link">
+    Installing/Listing repository packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-nautilus-sidebar-directories" class="md-nav__link">
+    Changing Nautilus sidebar directories
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1018,6 +1079,27 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-cli" class="md-nav__link">
+    AWS CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#direnv" class="md-nav__link">
+    Direnv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#golang" class="md-nav__link">
@@ -1121,7 +1203,11 @@
 <ul>
 <li><a href="#software-engineering--ubuntu">Software Engineering / Ubuntu</a></li>
 <li><a href="#creating-a-live-usb-stick">Creating a Live USB Stick</a></li>
-<li><a href="#common-commands-youll-run">Common commands you'll run</a></li>
+<li><a href="#some-things-you-might-wanna-do">Some things you might wanna do</a><ul>
+<li><a href="#installinglisting-repository-packages">Installing/Listing repository packages</a></li>
+<li><a href="#changing-nautilus-sidebar-directories">Changing Nautilus sidebar directories</a></li>
+</ul>
+</li>
 <li><a href="#common-stuff-to-install">Common stuff to install</a><ul>
 <li><a href="#basic-tools">Basic Tools</a></li>
 <li><a href="#spotify">Spotify</a><ul>
@@ -1131,6 +1217,9 @@
 </li>
 <li><a href="#telegram">Telegram</a></li>
 <li><a href="#development-tools">Development Tools</a></li>
+<li><a href="#aws-cli">AWS CLI</a></li>
+<li><a href="#direnv">Direnv</a></li>
+<li><a href="#docker">Docker</a></li>
 <li><a href="#golang">Golang</a></li>
 <li><a href="#kubectl">Kubectl</a></li>
 <li><a href="#node-version-manager-nvm">Node Version Manager (NVM)</a></li>
@@ -1165,7 +1254,8 @@ sudo dd <span class="nv">bs</span><span class="o">=</span>4M <span class="k">if<
 </pre></div>
 
 
-<h2 id="common-commands-youll-run">Common commands you'll run<a class="headerlink" href="#common-commands-youll-run" title="Permanent link">&para;</a></h2>
+<h2 id="some-things-you-might-wanna-do">Some things you might wanna do<a class="headerlink" href="#some-things-you-might-wanna-do" title="Permanent link">&para;</a></h2>
+<h3 id="installinglisting-repository-packages">Installing/Listing repository packages<a class="headerlink" href="#installinglisting-repository-packages" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="c1"># list all local repositories (ppas)</span>
 sudo apt policy<span class="p">;</span>
 
@@ -1183,6 +1273,15 @@ sudo apt-get purge ...<span class="p">;</span>
 </pre></div>
 
 
+<h3 id="changing-nautilus-sidebar-directories">Changing Nautilus sidebar directories<a class="headerlink" href="#changing-nautilus-sidebar-directories" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open the file located at <code>~/.config/user-dirs.dirs</code></li>
+<li>You should see various lines like <code>XDG_${DIRTYPE}_DIR="$HOME/..."</code></li>
+<li>Modify those lines as per the <code>${DIRTYPE}</code> to your desired directory (Nautilus loads those directories from these settings)</li>
+<li>Add a file at <code>~/.config/user-dirs.conf</code> with the content: <code>enabled=false</code> (this makes sure that the defaults aren't reloaded on re-login)</li>
+<li>To trigger a system update, run <code>xdg-user-dirs-update</code>. Any directories that cannot be found will be set to <code>$HOME</code>, all others will now be set to your specified path</li>
+<li>To trigger the Nautilus update, run <code>xdg-user-dirs-gtk-update</code>, then logout and log back in</li>
+</ol>
 <h2 id="common-stuff-to-install">Common stuff to install<a class="headerlink" href="#common-stuff-to-install" title="Permanent link">&para;</a></h2>
 <h3 id="basic-tools">Basic Tools<a class="headerlink" href="#basic-tools" title="Permanent link">&para;</a></h3>
 <h4 id="spotify">Spotify<a class="headerlink" href="#spotify" title="Permanent link">&para;</a></h4>
@@ -1199,7 +1298,7 @@ sudo apt-get purge ...<span class="p">;</span>
 <div class="codehilite"><pre><span></span>sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 4773BD5E130D1D45<span class="p">;</span>
 <span class="nb">echo</span> deb http://repository.spotify.com stable non-free <span class="p">|</span> sudo tee /etc/apt/sources.list.d/spotify.list<span class="p">;</span>
 sudo apt-get update<span class="p">;</span>
-sudo apt-get install spotify<span class="p">;</span>
+sudo apt-get install spotify-client<span class="p">;</span>
 </pre></div>
 
 
@@ -1217,6 +1316,43 @@ sudo apt-get install curl git jq vim python-pip<span class="p">;</span>
 
 <span class="c1"># run following and set to vim</span>
 sudo update-alternatives --config editor<span class="p">;</span>
+</pre></div>
+
+
+<h4 id="aws-cli">AWS CLI<a class="headerlink" href="#aws-cli" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>sudo apt-get install awscli<span class="p">;</span>
+</pre></div>
+
+
+<h4 id="direnv">Direnv<a class="headerlink" href="#direnv" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>sudo apt-get install direnv<span class="p">;</span>
+</pre></div>
+
+
+<h4 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>sudo apt-get update<span class="p">;</span>
+sudo apt-get install <span class="se">\</span>
+    apt-transport-https <span class="se">\</span>
+    ca-certificates <span class="se">\</span>
+    curl <span class="se">\</span>
+    gnupg-agent <span class="se">\</span>
+    software-properties-common <span class="se">\</span>
+    uidmap<span class="p">;</span>
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span class="p">|</span> sudo apt-key add -<span class="p">;</span>
+sudo apt-key fingerprint 0EBFCD88<span class="p">;</span>
+sudo add-apt-repository <span class="se">\</span>
+   <span class="s2">&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span>
+<span class="s2">   </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2"> \</span>
+<span class="s2">   stable&quot;</span><span class="p">;</span>
+sudo apt-get update<span class="p">;</span>
+sudo apt-get install docker-ce docker-ce-cli containerd.io<span class="p">;</span>
+
+<span class="c1"># following starts the docker daemon on startup</span>
+sudo systemctl <span class="nb">enable</span> docker<span class="p">;</span>
+
+<span class="c1"># following is only if you want to run Docker as a normal user</span>
+sudo usermod -a -G docker <span class="k">$(</span>whoami<span class="k">)</span><span class="p">;</span>
+<span class="c1"># you&#39;ll need to logout for the os to re-evaluate the group permissions, then check if you can run</span>
 </pre></div>
 
 
@@ -1271,7 +1407,18 @@ sudo apt-get install yarn<span class="p">;</span>
 
 
 <h3 id="sysadminsecuritynetwork-tools">Sysadmin/Security/Network Tools<a class="headerlink" href="#sysadminsecuritynetwork-tools" title="Permanent link">&para;</a></h3>
+<p>The following sets up essential</p>
+<div class="codehilite"><pre><span></span>sudo apt-get update<span class="p">;</span>
+sudo apt-get install iperf net-tools openssl traceroute<span class="p">;</span>
+</pre></div>
+
+
 <h4 id="nmap">NMap<a class="headerlink" href="#nmap" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>sudo apt-get update<span class="p">;</span>
+sudo apt-get install nmap<span class="p">;</span>
+</pre></div>
+
+
 <h4 id="sysdig">Sysdig<a class="headerlink" href="#sysdig" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span>curl -s https://s3.amazonaws.com/download.draios.com/DRAIOS-GPG-KEY.public <span class="p">|</span> sudo apt-key add -<span class="p">;</span>
 sudo curl -s -o /etc/apt/sources.list.d/draios.list https://s3.amazonaws.com/download.draios.com/stable/deb/draios.list  
