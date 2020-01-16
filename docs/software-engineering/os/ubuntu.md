@@ -7,6 +7,7 @@
     - [Changing Nautilus sidebar directories](#changing-nautilus-sidebar-directories)
   - [Common stuff to install](#common-stuff-to-install)
     - [Basic Tools](#basic-tools)
+      - [Chrome](#chrome)
       - [Spotify](#spotify)
         - [Via Snap](#via-snap)
         - [Via PPA](#via-ppa)
@@ -22,6 +23,7 @@
       - [VSCodium](#vscodium)
       - [Yarn](#yarn)
     - [Sysadmin/Security/Network Tools](#sysadminsecuritynetwork-tools)
+      - [HTop](#htop)
       - [NMap](#nmap)
       - [Sysdig](#sysdig)
 
@@ -86,6 +88,15 @@ sudo apt-get purge ...;
 ## Common stuff to install
 
 ### Basic Tools
+
+#### Chrome
+
+```sh
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -;
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list';
+sudo apt-get update;
+sudo apt-get install google-chrome-stable;
+```
 
 #### Spotify
 
@@ -226,11 +237,18 @@ sudo apt-get install yarn;
 
 ### Sysadmin/Security/Network Tools
 
-The following sets up essential
+The following sets up essential tools:
 
 ```sh
 sudo apt-get update;
 sudo apt-get install iperf net-tools openssl traceroute;
+```
+
+#### HTop
+
+```sh
+sudo apt-get update;
+sudo apt-get install htop;
 ```
 
 #### NMap
