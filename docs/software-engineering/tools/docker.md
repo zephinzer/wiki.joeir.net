@@ -25,7 +25,7 @@ sudo apt-get install \
     uidmap;
 
 # add docker's gpg key
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -;
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -;~~~~
 
 # verify gpg key is there
 sudo apt-key fingerprint 0EBFCD88;

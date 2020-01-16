@@ -2,7 +2,9 @@
 
 - [Software Engineering / Ubuntu](#software-engineering--ubuntu)
   - [Creating a Live USB Stick](#creating-a-live-usb-stick)
-  - [Common commands you'll run](#common-commands-youll-run)
+  - [Some things you might wanna do](#some-things-you-might-wanna-do)
+    - [Installing/Listing repository packages](#installinglisting-repository-packages)
+    - [Changing Nautilus sidebar directories](#changing-nautilus-sidebar-directories)
   - [Common stuff to install](#common-stuff-to-install)
     - [Basic Tools](#basic-tools)
       - [Spotify](#spotify)
@@ -12,6 +14,7 @@
     - [Development Tools](#development-tools)
       - [AWS CLI](#aws-cli)
       - [Direnv](#direnv)
+      - [Docker](#docker)
       - [Golang](#golang)
       - [Kubectl](#kubectl)
       - [Node Version Manager (NVM)](#node-version-manager-nvm)
@@ -50,7 +53,9 @@ sudo dd bs=4M if=~/Downloads/ubuntu-18.04.3-desktop-amd64.iso of=/dev/sdb1 statu
 sudo dd bs=4M if=~/Downloads/ubuntu-19.04-desktop-amd64.iso of=/dev/sdb1 status=progress oflag=sync;
 ```
 
-## Common commands you'll run
+## Some things you might wanna do
+
+### Installing/Listing repository packages
 
 ```sh
 # list all local repositories (ppas)
@@ -68,6 +73,15 @@ sudo apt-get uninstall ...;
 # remove existing software and all files
 sudo apt-get purge ...;
 ```
+
+### Changing Nautilus sidebar directories
+
+1. Open the file located at `~/.config/user-dirs.dirs`
+2. You should see various lines like `XDG_${DIRTYPE}_DIR="$HOME/..."`
+3. Modify those lines as per the `${DIRTYPE}` to your desired directory (Nautilus loads those directories from these settings)
+4. Add a file at `~/.config/user-dirs.conf` with the content: `enabled=false` (this makes sure that the defaults aren't reloaded on re-login)
+5. To trigger a system update, run `xdg-user-dirs-update`. Any directories that cannot be found will be set to `$HOME`, all others will now be set to your specified path
+6. To trigger the Nautilus update, run `xdg-user-dirs-gtk-update`, then logout and log back in
 
 ## Common stuff to install
 
@@ -123,6 +137,34 @@ sudo apt-get install awscli;
 
 ```sh
 sudo apt-get install direnv;
+```
+
+#### Docker
+
+```sh
+sudo apt-get update;
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common \
+    uidmap;
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -;
+sudo apt-key fingerprint 0EBFCD88;
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable";
+sudo apt-get update;
+sudo apt-get install docker-ce docker-ce-cli containerd.io;
+
+# following starts the docker daemon on startup
+sudo systemctl enable docker;
+
+# following is only if you want to run Docker as a normal user
+sudo usermod -a -G docker $(whoami);
+# you'll need to logout for the os to re-evaluate the group permissions, then check if you can run
 ```
 
 #### Golang
