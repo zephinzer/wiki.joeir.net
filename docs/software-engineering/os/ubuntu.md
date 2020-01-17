@@ -8,10 +8,11 @@
     - [Changing Nautilus sidebar directories](#changing-nautilus-sidebar-directories)
   - [Common stuff to install](#common-stuff-to-install)
     - [Basic Tools](#basic-tools)
+      - [Albert Launcher](#albert-launcher)
       - [Chrome](#chrome)
       - [Spotify](#spotify)
-        - [Via Snap](#via-snap)
-        - [Via PPA](#via-ppa)
+        - [Spotify via Snap](#spotify-via-snap)
+        - [Spotify via PPA](#spotify-via-ppa)
       - [Telegram](#telegram)
     - [Development Tools](#development-tools)
       - [AWS CLI](#aws-cli)
@@ -109,6 +110,19 @@ id
 
 ### Basic Tools
 
+#### Albert Launcher
+
+```sh
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /' > /etc/apt/sources.list.d/home:manuelschneid3r.list";
+wget -q -O - https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_18.04/Release.key | sudo apt-key add -;
+sudo apt-get update;
+sudo apt-get install albert;
+```
+
+> Website: [https://albertlauncher.github.io/](https://albertlauncher.github.io/)
+>
+> Reference: [https://software.opensuse.org/download.html?project=home:manuelschneid3r&package=albert](https://software.opensuse.org/download.html?project=home:manuelschneid3r&package=albert)
+
 #### Chrome
 
 ```sh
@@ -120,7 +134,7 @@ sudo apt-get install google-chrome-stable;
 
 #### Spotify
 
-##### Via Snap
+##### Spotify via Snap
 
 !!! Warn
     Spotify exists as a Snap package but if you have a VPN, Spotify will fail to connect
@@ -129,7 +143,7 @@ sudo apt-get install google-chrome-stable;
 sudo snap install spotify
 ```
 
-##### Via PPA
+##### Spotify via PPA
 
 ```sh
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 4773BD5E130D1D45;
