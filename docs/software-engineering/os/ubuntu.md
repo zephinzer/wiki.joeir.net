@@ -5,6 +5,7 @@
   - [Some things you might wanna do](#some-things-you-might-wanna-do)
     - [Installing/Listing repository packages](#installinglisting-repository-packages)
     - [User management](#user-management)
+    - [Swapfile](#swapfile)
     - [Changing Nautilus sidebar directories](#changing-nautilus-sidebar-directories)
   - [Common stuff to install](#common-stuff-to-install)
     - [Basic Tools](#basic-tools)
@@ -95,6 +96,17 @@ sudo cat /etc/group
 
 # check which groups you are in
 id
+```
+
+### Swapfile
+
+```sh
+sudo swapnon --show;
+sudo fallocate -l 1G /swapfile;
+sudo chmod 600 /swapfile;
+sudo mkswap /swapfile;
+sudo swapon /swapfile;
+sudo cp /etc/fstab /etc/fstab.bak;
 ```
 
 ### Changing Nautilus sidebar directories
@@ -234,6 +246,8 @@ sudo apt-get install -y kubectl;
 
 ```sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash;
+
+# choose your poison
 nvm install lts/argon;
 nvm install lts/boron;
 nvm install lts/carbon;
