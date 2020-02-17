@@ -20,6 +20,7 @@ nav:
       - Docker: ./software-engineering/tools/docker.md
       - Gitlab CI: ./software-engineering/tools/gitlab-ci.md
       - Kubernetes: ./software-engineering/tools/kubernetes.md
+      - Nginx: ./software-engineering/tools/nginx.md
     - Operating Systems:
       - Ubuntu: ./software-engineering/os/ubuntu.md
     - System Administration:
