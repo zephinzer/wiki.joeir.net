@@ -200,7 +200,32 @@ ENTRYPOINT ["/app"]
 
 ## Makefile Recipes
 
-
+```Makefile
+deps:
+	go mod vendor -v
+	go mod tidy -v
+run:
+	go run ./cmd/$(CMD_ROOT)
+test:
+	go test -v ./... -cover -coverprofile c.out
+build:
+	CGO_ENABLED=0 \
+	go build \
+		-v \
+		-o ./bin/$(CMD_ROOT)_$$(go env GOOS)_$$(go env GOARCH)${BIN_EXT} \
+		./cmd/$(CMD_ROOT)
+build_production:
+	CGO_ENABLED=0 \
+	go build \
+		-a -v \
+		-ldflags "-X main.Commit=$$(git rev-parse --verify HEAD) \
+			-X main.Version=$$(git describe --tag $$(git rev-list --tags --max-count=1)) \
+			-X main.Timestamp=$$(date +'%Y%m%d%H%M%S') \
+			-extldflags 'static' \
+			-s -w" \
+		-o ./bin/$(CMD_ROOT)_$$(go env GOOS)_$$(go env GOARCH)${BIN_EXT} \
+		./cmd/$(CMD_ROOT)
+```
 
 - - -
 
