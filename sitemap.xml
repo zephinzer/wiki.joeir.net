@@ -81,12 +81,22 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://wiki.joeir.net/bahasa/angka/</loc>
+     <loc></loc>
+     
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://wiki.joeir.net/bahasa/locations/</loc>
      <lastmod>2020-03-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://wiki.joeir.net/bahasa/warna/</loc>
+     <loc></loc>
+     
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://wiki.joeir.net/bahasa/titles/</loc>
      <lastmod>2020-03-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
