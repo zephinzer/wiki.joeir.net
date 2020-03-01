@@ -22,6 +22,7 @@ Go is an open source programming language that makes it easy to build simple, re
       - [Variable Injection Build](#variable-injection-build)
       - [Windows-GUI Build](#windows-gui-build)
   - [Dockerfile Recipes](#dockerfile-recipes)
+  - [Makefile Recipes](#makefile-recipes)
   - [Useful Tools](#useful-tools)
   - [Community Events](#community-events)
     - [Singapore](#singapore)
@@ -193,6 +194,12 @@ COPY --from=base /etc/passwd /etc/passwd
 COPY --from=base /build/bin/${BIN_NAME}_upxed /app
 ENTRYPOINT ["/app"]
 ```
+
+
+- - -
+
+## Makefile Recipes
+
 
 
 - - -
