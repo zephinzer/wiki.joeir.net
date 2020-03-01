@@ -1438,6 +1438,33 @@
 
 <hr />
 <h2 id="makefile-recipes">Makefile Recipes<a class="headerlink" href="#makefile-recipes" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="nf">deps</span><span class="o">:</span>
+    go mod vendor -v
+    go mod tidy -v
+<span class="nf">run</span><span class="o">:</span>
+    go run ./cmd/<span class="k">$(</span>CMD_ROOT<span class="k">)</span>
+<span class="nf">test</span><span class="o">:</span>
+    go <span class="nb">test</span> -v ./... -cover -coverprofile c.out
+<span class="nf">build</span><span class="o">:</span>
+    <span class="nv">CGO_ENABLED</span><span class="o">=</span><span class="m">0</span> <span class="se">\</span>
+    go build <span class="se">\</span>
+        -v <span class="se">\</span>
+        -o ./bin/<span class="k">$(</span>CMD_ROOT<span class="k">)</span>_<span class="nv">$$</span><span class="o">(</span>go env GOOS<span class="o">)</span>_<span class="nv">$$</span><span class="o">(</span>go env GOARCH<span class="o">)</span><span class="si">${</span><span class="nv">BIN_EXT</span><span class="si">}</span> <span class="se">\</span>
+        ./cmd/<span class="k">$(</span>CMD_ROOT<span class="k">)</span>
+<span class="nf">build_production</span><span class="o">:</span>
+    <span class="nv">CGO_ENABLED</span><span class="o">=</span><span class="m">0</span> <span class="se">\</span>
+    go build <span class="se">\</span>
+        -a -v <span class="se">\</span>
+        -ldflags <span class="s2">&quot;-X main.Commit=</span><span class="nv">$$</span><span class="s2">(git rev-parse --verify HEAD) \</span>
+<span class="s2">            -X main.Version=</span><span class="nv">$$</span><span class="s2">(git describe --tag </span><span class="nv">$$</span><span class="s2">(git rev-list --tags --max-count=1)) \</span>
+<span class="s2">            -X main.Timestamp=</span><span class="nv">$$</span><span class="s2">(date +&#39;%Y%m%d%H%M%S&#39;) \</span>
+<span class="s2">            -extldflags &#39;static&#39; \</span>
+<span class="s2">            -s -w&quot;</span> <span class="se">\</span>
+        -o ./bin/<span class="k">$(</span>CMD_ROOT<span class="k">)</span>_<span class="nv">$$</span><span class="o">(</span>go env GOOS<span class="o">)</span>_<span class="nv">$$</span><span class="o">(</span>go env GOARCH<span class="o">)</span><span class="si">${</span><span class="nv">BIN_EXT</span><span class="si">}</span> <span class="se">\</span>
+        ./cmd/<span class="k">$(</span>CMD_ROOT<span class="k">)</span>
+</pre></div>
+
+
 <hr />
 <h2 id="useful-tools">Useful Tools<a class="headerlink" href="#useful-tools" title="Permanent link">&para;</a></h2>
 <table>
