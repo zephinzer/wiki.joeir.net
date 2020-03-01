@@ -33,8 +33,10 @@ nav:
     - Psychological Safety: ./od/psychological-safety.md
   - Wing Chun: ./wingchun/index.md
   - Bahasa:
-    - Angka: ./bahasa/angka.md
-    - Warna: ./bahasa/warna.md
+    - Colours: ./bahasa/warna.md
+    - Locations: ./bahasa/locations.md
+    - Numbers: ./bahasa/angka.md
+    - Titles: ./bahasa/titles.md
   - Español:
     - El Tiempo: ./español/el-tiempo.md
     - La Familia: ./español/la-familia.md
