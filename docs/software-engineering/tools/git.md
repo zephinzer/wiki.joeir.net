@@ -1,10 +1,10 @@
-# Git Source Control Management (SCM)
+# Software Engineering / Tools / Git Source Control Management (SCM)
 
 Git is a source control management tool that helps to keep track of changes made to a codebase.
 
 This page provides an overview of some useful concepts and commands.
 
-- [Git Source Control Management (SCM)](#git-source-control-management-scm)
+- [Software Engineering / Tools / Git Source Control Management (SCM)](#software-engineering--tools--git-source-control-management-scm)
 - [Git Branching Models](#git-branching-models)
   - [GitFlow](#gitflow)
   - [Trunk-Based Development](#trunk-based-development)

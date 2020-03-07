@@ -26,6 +26,7 @@ nav:
     - Operating Systems:
       - Ubuntu: ./software-engineering/os/ubuntu.md
     - System Administration:
+      - GPG Keys: ./software-engineering/sysadmin/gpg.md
       - Public Key Infrastructure: ./software-engineering/sysadmin/pki.md
   - OD/Coaching/Counselling:
     - Interpersonal: ./od/interpersonal.md
