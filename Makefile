@@ -15,9 +15,9 @@ build:
 deploy:
 	git fetch origin gh-pages
 	docker build \
-		--file ./tools/deployer/Dockerfile \
 		--tag dontpushme .
 	docker run \
+		--volume ~/.ssh/known_hosts:/root/.ssh/known_hosts \
 		--volume ~/.ssh/id_rsa:/root/.ssh/id_rsa \
 		-it dontpushme
 

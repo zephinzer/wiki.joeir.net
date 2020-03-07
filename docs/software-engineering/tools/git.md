@@ -5,6 +5,8 @@ Git is a source control management tool that helps to keep track of changes made
 This page provides an overview of some useful concepts and commands.
 
 - [Software Engineering / Tools / Git Source Control Management (SCM)](#software-engineering--tools--git-source-control-management-scm)
+- [Installation](#installation)
+  - [Installation on Ubuntu 16.04](#installation-on-ubuntu-1604)
 - [Git Branching Models](#git-branching-models)
   - [GitFlow](#gitflow)
   - [Trunk-Based Development](#trunk-based-development)
@@ -42,6 +44,16 @@ This page provides an overview of some useful concepts and commands.
   - [Check which branch you're on](#check-which-branch-youre-on)
   - [See all remotes](#see-all-remotes)
   - [Checking which .gitignore is ignoring a file](#checking-which-gitignore-is-ignoring-a-file)
+
+# Installation
+
+## Installation on Ubuntu 16.04
+
+```sh
+sudo add-apt-repository ppa:git-core/ppa;
+sudo apt-get update;
+sudo apt-get install git;
+```
 
 # Git Branching Models
 

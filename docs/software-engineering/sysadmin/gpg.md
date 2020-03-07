@@ -1,5 +1,14 @@
 # Software Engineering / System Administration / GPG Keys
 
+- [Software Engineering / System Administration / GPG Keys](#software-engineering--system-administration--gpg-keys)
+  - [Checking for existing keys](#checking-for-existing-keys)
+  - [Generating a new key](#generating-a-new-key)
+    - [Generating a new key with Ubuntu 16.04](#generating-a-new-key-with-ubuntu-1604)
+  - [Exporting public key](#exporting-public-key)
+  - [Adding GPG keys to platforms](#adding-gpg-keys-to-platforms)
+    - [Adding GPG keys to Gitlab](#adding-gpg-keys-to-gitlab)
+    - [Adding GPG keys to Github](#adding-gpg-keys-to-github)
+
 ## Checking for existing keys
 
 ```sh
@@ -8,7 +17,7 @@ gpg --list-secret-keys --keyid-format LONG
 
 ## Generating a new key
 
-### Ubuntu 16.04
+### Generating a new key with Ubuntu 16.04
 
 ```sh
 gpg --gen-key
@@ -52,3 +61,13 @@ gpg --armor --export F4CC39BBD49A12D8
 # ...
 # -----END PGP PUBLIC KEY BLOCK-----
 ```
+
+## Adding GPG keys to platforms
+
+### Adding GPG keys to Gitlab
+
+Login to Gitlab and visit [https://gitlab.com/profile/gpg_keys](https://gitlab.com/profile/gpg_keys). Run the steps in [Exporting public key](#exporting-public-key) and paste the exported public key block in.
+
+### Adding GPG keys to Github
+
+Login to Github and visit [https://github.com/settings/keys](https://github.com/settings/keys). Run the steps in [Exporting public key](#exporting-public-key) and paste the exported public key block in.
