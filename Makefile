@@ -19,7 +19,9 @@ deploy:
 	docker run \
 		--volume ~/.ssh/known_hosts:/root/.ssh/known_hosts \
 		--volume ~/.ssh/id_rsa:/root/.ssh/id_rsa \
-		-it dontpushme
+		--volume $$(pwd):/app \
+		-it dontpushme \
+		gh-deploy
 
 publish_from_container:
 	ssh -o FingerprintHash=sha256 -o StrictHostKeyChecking=no gitlab.com
