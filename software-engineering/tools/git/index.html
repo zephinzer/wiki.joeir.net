@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -56,7 +56,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -863,6 +863,8 @@
 <p>This page provides an overview of some useful concepts and commands.</p>
 <ul>
 <li><a href="#software-engineering--tools--git-source-control-management-scm">Software Engineering / Tools / Git Source Control Management (SCM)</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#installation-on-ubuntu-1604">Installation on Ubuntu 16.04</a></li>
 <li><a href="#git-branching-models">Git Branching Models</a></li>
 <li><a href="#gitflow">GitFlow</a></li>
 <li><a href="#trunk-based-development">Trunk-Based Development</a></li>
@@ -901,6 +903,14 @@
 <li><a href="#see-all-remotes">See all remotes</a></li>
 <li><a href="#checking-which-gitignore-is-ignoring-a-file">Checking which .gitignore is ignoring a file</a></li>
 </ul>
+<h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
+<h2 id="installation-on-ubuntu-1604">Installation on Ubuntu 16.04<a class="headerlink" href="#installation-on-ubuntu-1604" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>sudo add-apt-repository ppa:git-core/ppa<span class="p">;</span>
+sudo apt-get update<span class="p">;</span>
+sudo apt-get install git<span class="p">;</span>
+</pre></div>
+
+
 <h1 id="git-branching-models">Git Branching Models<a class="headerlink" href="#git-branching-models" title="Permanent link">&para;</a></h1>
 <h2 id="gitflow">GitFlow<a class="headerlink" href="#gitflow" title="Permanent link">&para;</a></h2>
 <p>GitFlow is a branching model for Git created by Vincent Driessen.</p>
@@ -1259,6 +1269,7 @@ git check-ignore -v *<span class="p">;</span>
                 
                   
                 
+                
               
               
                 
@@ -1325,7 +1336,7 @@ git check-ignore -v *<span class="p">;</span>
       
     </div>
     
-      <script src="../../../assets/javascripts/application.a8b5e56f.js"></script>
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       

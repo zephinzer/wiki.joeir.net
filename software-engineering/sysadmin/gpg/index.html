@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -56,7 +56,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -581,8 +581,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ubuntu-1604" class="md-nav__link">
-    Ubuntu 16.04
+  <a href="#generating-a-new-key-with-ubuntu" class="md-nav__link">
+    Generating a new key with Ubuntu
   </a>
   
 </li>
@@ -596,6 +596,33 @@
   <a href="#exporting-public-key" class="md-nav__link">
     Exporting public key
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-gpg-keys-to-platforms" class="md-nav__link">
+    Adding GPG keys to platforms
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-gpg-keys-to-gitlab" class="md-nav__link">
+    Adding GPG keys to Gitlab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-gpg-keys-to-github" class="md-nav__link">
+    Adding GPG keys to Github
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -920,8 +947,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ubuntu-1604" class="md-nav__link">
-    Ubuntu 16.04
+  <a href="#generating-a-new-key-with-ubuntu" class="md-nav__link">
+    Generating a new key with Ubuntu
   </a>
   
 </li>
@@ -935,6 +962,33 @@
   <a href="#exporting-public-key" class="md-nav__link">
     Exporting public key
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-gpg-keys-to-platforms" class="md-nav__link">
+    Adding GPG keys to platforms
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-gpg-keys-to-gitlab" class="md-nav__link">
+    Adding GPG keys to Gitlab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-gpg-keys-to-github" class="md-nav__link">
+    Adding GPG keys to Github
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -958,55 +1012,56 @@
                 
                 
                 <h1 id="software-engineering-system-administration-gpg-keys">Software Engineering / System Administration / GPG Keys<a class="headerlink" href="#software-engineering-system-administration-gpg-keys" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="#software-engineering--system-administration--gpg-keys">Software Engineering / System Administration / GPG Keys</a></li>
+<li><a href="#checking-for-existing-keys">Checking for existing keys</a></li>
+<li><a href="#generating-a-new-key">Generating a new key</a><ul>
+<li><a href="#generating-a-new-key-with-ubuntu">Generating a new key with Ubuntu</a></li>
+</ul>
+</li>
+<li><a href="#exporting-public-key">Exporting public key</a></li>
+<li><a href="#adding-gpg-keys-to-platforms">Adding GPG keys to platforms</a><ul>
+<li><a href="#adding-gpg-keys-to-gitlab">Adding GPG keys to Gitlab</a></li>
+<li><a href="#adding-gpg-keys-to-github">Adding GPG keys to Github</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="checking-for-existing-keys">Checking for existing keys<a class="headerlink" href="#checking-for-existing-keys" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span>gpg --list-secret-keys --keyid-format LONG
 </pre></div>
 
 
 <h2 id="generating-a-new-key">Generating a new key<a class="headerlink" href="#generating-a-new-key" title="Permanent link">&para;</a></h2>
-<h3 id="ubuntu-1604">Ubuntu 16.04<a class="headerlink" href="#ubuntu-1604" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>gpg --gen-key
-<span class="c1"># Please select what kind of key you want:</span>
-<span class="c1">#    (1) RSA and RSA (default)</span>
-<span class="c1">#    (2) DSA and Elgamal</span>
-<span class="c1">#    (3) DSA (sign only)</span>
-<span class="c1">#    (4) RSA (sign only)</span>
-<span class="c1"># &gt; 1</span>
-<span class="c1">#</span>
-<span class="c1"># RSA keys may be between 1024 and 4096 bits long.</span>
-<span class="c1"># What keysize do you want? (2048)</span>
-<span class="c1"># &gt; 4096</span>
-<span class="c1">#</span>
-<span class="c1"># Requested keysize is 4096 bits</span>
-<span class="c1"># Please specify how long the key should be valid.</span>
-<span class="c1">#          0 = key does not expire</span>
-<span class="c1">#       &lt;n&gt;  = key expires in n days</span>
-<span class="c1">#       &lt;n&gt;w = key expires in n weeks</span>
-<span class="c1">#       &lt;n&gt;m = key expires in n months</span>
-<span class="c1">#       &lt;n&gt;y = key expires in n years</span>
-<span class="c1"># &gt; 1y</span>
-<span class="c1">#</span>
-<span class="c1"># You need a user ID to identify your key; the software constructs the user ID</span>
-<span class="c1"># from the Real Name, Comment and Email Address in this form:</span>
-<span class="c1">#     &quot;Heinrich Heine (Der Dichter) &lt;heinrichh@duesseldorf.de&gt;&quot;</span>
-<span class="c1"># </span>
-<span class="c1"># Real name: Joseph Matthias Goh</span>
-<span class="c1"># Email address: zephinzer@users.noreply.github.com</span>
-<span class="c1"># Comment: @zephinzer</span>
+<h3 id="generating-a-new-key-with-ubuntu">Generating a new key with Ubuntu<a class="headerlink" href="#generating-a-new-key-with-ubuntu" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="c1"># on 18.04</span>
+gpg --full-gen-key<span class="p">;</span>
+
+<span class="c1"># on 16.04</span>
+gpg --gen-key<span class="p">;</span>
 </pre></div>
 
 
 <h2 id="exporting-public-key">Exporting public key<a class="headerlink" href="#exporting-public-key" title="Permanent link">&para;</a></h2>
+<p>Use cases:
+1. <a href="#adding-gpg-keys-to-platforms">Adding GPG keys to platforms</a></p>
 <div class="codehilite"><pre><span></span>gpg --list-secret-keys --keyid-format LONG <span class="p">|</span> grep -A1 sec
 <span class="c1"># example assuming the above command returns:</span>
-<span class="c1">#   sec   4096R/F4CC39BBD49A12D8 2020-01-07 [expires: 2021-01-07]</span>
-gpg --armor --export F4CC39BBD49A12D8
+<span class="c1">#   sec   4096R/C4CC3911D49AB2D8 2020-01-07 [expires: 2021-01-07]</span>
+gpg --armor --export C4CC3911D49AB2D8
 <span class="c1"># -----BEGIN PGP PUBLIC KEY BLOCK-----</span>
 <span class="c1"># ...</span>
 <span class="c1"># -----END PGP PUBLIC KEY BLOCK-----</span>
 </pre></div>
+
+
+<h2 id="adding-gpg-keys-to-platforms">Adding GPG keys to platforms<a class="headerlink" href="#adding-gpg-keys-to-platforms" title="Permanent link">&para;</a></h2>
+<h3 id="adding-gpg-keys-to-gitlab">Adding GPG keys to Gitlab<a class="headerlink" href="#adding-gpg-keys-to-gitlab" title="Permanent link">&para;</a></h3>
+<p>Login to Gitlab and visit <a href="https://gitlab.com/profile/gpg_keys">https://gitlab.com/profile/gpg_keys</a>. Run the steps in <a href="#exporting-public-key">Exporting public key</a> and paste the exported public key block in.</p>
+<h3 id="adding-gpg-keys-to-github">Adding GPG keys to Github<a class="headerlink" href="#adding-gpg-keys-to-github" title="Permanent link">&para;</a></h3>
+<p>Login to Github and visit <a href="https://github.com/settings/keys">https://github.com/settings/keys</a>. Run the steps in <a href="#exporting-public-key">Exporting public key</a> and paste the exported public key block in.</p>
                 
                   
+                
                 
               
               
@@ -1074,7 +1129,7 @@ gpg --armor --export F4CC39BBD49A12D8
       
     </div>
     
-      <script src="../../../assets/javascripts/application.a8b5e56f.js"></script>
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
