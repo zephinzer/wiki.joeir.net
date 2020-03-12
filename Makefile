@@ -13,14 +13,16 @@ build:
 	docker build --tag $(IMAGE_PATH):latest .
 
 deploy:
+	git fetch
 	git fetch origin gh-pages
 	docker build \
-		--tag dontpushme .
-	docker run \
-		--volume ~/.ssh/known_hosts:/root/.ssh/known_hosts \
-		--volume ~/.ssh/id_rsa:/root/.ssh/id_rsa \
+		--build-arg USER_ID=$$(id -u) \
+		--tag wiki-joeir-net/dontpushme .
+	docker run -it \
+		--volume ~/.ssh:/home/$$(id -u)/.ssh \
 		--volume $$(pwd):/app \
-		-it dontpushme \
+		--user $$(id -u) \
+		wiki-joeir-net/dontpushme \
 		gh-deploy
 
 publish_from_container:
