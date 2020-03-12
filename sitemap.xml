@@ -91,8 +91,13 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>http://wiki.joeir.net/bahasa/colours/</loc>
+     <lastmod>2020-03-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://wiki.joeir.net/bahasa/feelings/</loc>
+     <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
@@ -101,8 +106,8 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>http://wiki.joeir.net/bahasa/numbers/</loc>
+     <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
