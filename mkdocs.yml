@@ -14,6 +14,8 @@ nav:
       - Comptency Frameworks: ./software-engineering/comptency-frameworks.md
     - Concepts:
       - Cloud-Native: ./software-engineering/concepts/cloud-native.md
+    - Databases:
+      - MySQL: ./software-engineering/databases/mysql.md
     - Languages & Runtimes:
       - Golang: ./software-engineering/languages-runtimes/golang.md
       - Node: ./software-engineering/languages-runtimes/node.md
