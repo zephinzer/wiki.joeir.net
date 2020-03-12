@@ -1,4 +1,4 @@
-> [Software Engineering](../..) / [Databases](..)
+> Software Engineering / Databases
 
 # MySQL
 

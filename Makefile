@@ -13,8 +13,7 @@ build:
 	docker build --tag $(IMAGE_PATH):latest .
 
 deploy:
-	git fetch
-	git fetch origin gh-pages
+	git fetch & git fetch origin gh-pages & wait
 	docker build \
 		--build-arg USER_ID=$$(id -u) \
 		--tag wiki-joeir-net/dontpushme .

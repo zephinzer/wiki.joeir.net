@@ -11,7 +11,7 @@ nav:
   - Home: ./index.md
   - Software Engineering:
     - Career and Organisation:
-      - Comptency Frameworks: ./software-engineering/comptency-frameworks.md
+      - Comptency Frameworks: ./software-engineering/career-and-organisation/competency-frameworks.md
     - Concepts:
       - Cloud-Native: ./software-engineering/concepts/cloud-native.md
     - Databases:
