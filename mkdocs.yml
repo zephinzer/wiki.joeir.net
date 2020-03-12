@@ -14,6 +14,8 @@ nav:
       - Comptency Frameworks: ./software-engineering/career-and-organisation/competency-frameworks.md
     - Concepts:
       - Cloud-Native: ./software-engineering/concepts/cloud-native.md
+    - Content Management System:
+      - Wordpress: ./software-engineering/cms/wordpress.md
     - Databases:
       - MySQL: ./software-engineering/databases/mysql.md
     - Languages & Runtimes:
