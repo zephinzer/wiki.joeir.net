@@ -32,6 +32,8 @@ nav:
     - System Administration:
       - GPG Keys: ./software-engineering/sysadmin/gpg.md
       - Public Key Infrastructure: ./software-engineering/sysadmin/pki.md
+  - Money:
+    - Singapore Saving Bonds (SSB) Rates: ./money/ssb/rates.md
   - OD/Coaching/Counselling:
     - Interpersonal: ./od/interpersonal.md
     - Intrapersonal: ./od/intrapersonal.md
@@ -56,6 +58,8 @@ theme:
   highlightjs: true
   hljs_languages:
     - sh
+    - golang
+    - js
 markdown_extensions:
   - admonition
   - codehilite
