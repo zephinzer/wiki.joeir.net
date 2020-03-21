@@ -3,6 +3,8 @@
 Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
 
 - [Software Engineering / Golang](#software-engineering--golang)
+  - [Installation](#installation)
+    - [Installation on Ubuntu](#installation-on-ubuntu)
   - [Links](#links)
   - [Decision Patterns](#decision-patterns)
   - [Useful Packages](#useful-packages)
@@ -26,6 +28,19 @@ Go is an open source programming language that makes it easy to build simple, re
   - [Useful Tools](#useful-tools)
   - [Community Events](#community-events)
     - [Singapore](#singapore)
+
+- - -
+
+
+## Installation
+
+### Installation on Ubuntu
+
+```sh
+sudo add-apt-repository ppa:longsleep/golang-backports;
+sudo apt update;
+sudo apt install golang-go;
+```
 
 
 - - -
