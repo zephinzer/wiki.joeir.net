@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -56,7 +56,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -1023,20 +1023,20 @@ docker <span class="nb">exec</span> -it usvc_mysql mysql -uroot -ptoor -h127.0.0
 
 <h2 id="docker-compose-setup">Docker-Compose Setup<a class="headerlink" href="#docker-compose-setup" title="Permanent link">&para;</a></h2>
 <p>The following creates a MySQL database instance inside a Docker-Compose setup:</p>
-<div class="codehilite"><pre><span></span><span class="nt">version</span><span class="p">:</span> <span class="s">&quot;3.5&quot;</span>
-<span class="nt">services</span><span class="p">:</span>
-  <span class="nt">mysql</span><span class="p">:</span>
-    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysql:5.7</span>
-    <span class="nt">container_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">usvc_mysql</span>
-    <span class="nt">deploy</span><span class="p">:</span>
-      <span class="nt">resources</span><span class="p">:</span>
-        <span class="nt">limits</span><span class="p">:</span>
-          <span class="nt">cpus</span><span class="p">:</span> <span class="s">&#39;0.4&#39;</span>
-          <span class="nt">memory</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">64Mi</span>
-        <span class="nt">reservations</span><span class="p">:</span>
-          <span class="nt">cpus</span><span class="p">:</span> <span class="s">&#39;0.2&#39;</span>
-          <span class="nt">memory</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">32Mi</span>
-    <span class="nt">command</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="s">&quot;3.5&quot;</span>
+<span class="l l-Scalar l-Scalar-Plain">services</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">mysql</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mysql:5.7</span>
+    <span class="l l-Scalar l-Scalar-Plain">container_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">usvc_mysql</span>
+    <span class="l l-Scalar l-Scalar-Plain">deploy</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">resources</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">limits</span><span class="p p-Indicator">:</span>
+          <span class="l l-Scalar l-Scalar-Plain">cpus</span><span class="p p-Indicator">:</span> <span class="s">&#39;0.4&#39;</span>
+          <span class="l l-Scalar l-Scalar-Plain">memory</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">64Mi</span>
+        <span class="l l-Scalar l-Scalar-Plain">reservations</span><span class="p p-Indicator">:</span>
+          <span class="l l-Scalar l-Scalar-Plain">cpus</span><span class="p p-Indicator">:</span> <span class="s">&#39;0.2&#39;</span>
+          <span class="l l-Scalar l-Scalar-Plain">memory</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">32Mi</span>
+    <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span>
       <span class="p p-Indicator">-</span> <span class="s">&quot;mysqld&quot;</span>
       <span class="p p-Indicator">-</span> <span class="s">&quot;--sql-mode=STRICT_ALL_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,NO_AUTO_VALUE_ON_ZERO&quot;</span>
       <span class="p p-Indicator">-</span> <span class="s">&quot;--init-connect=SET</span><span class="nv"> </span><span class="s">collation_connection</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">utf8mb4_unicode_ci&quot;</span>
@@ -1046,18 +1046,18 @@ docker <span class="nb">exec</span> -it usvc_mysql mysql -uroot -ptoor -h127.0.0
       <span class="p p-Indicator">-</span> <span class="s">&quot;--collation-server=utf8mb4_unicode_ci&quot;</span>
       <span class="p p-Indicator">-</span> <span class="s">&quot;--event-scheduler=ON&quot;</span>
       <span class="p p-Indicator">-</span> <span class="s">&quot;--default-time-zone=+00:00&quot;</span>
-    <span class="nt">environment</span><span class="p">:</span>
-      <span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">password</span>
-      <span class="nt">MYSQL_DATABASE</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
-      <span class="nt">MYSQL_USER</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
-      <span class="nt">MYSQL_PASSWORD</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">password</span>
-    <span class="nt">ports</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">target</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3306</span>
-        <span class="nt">published</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3306</span>
-        <span class="nt">protocol</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tcp</span>
-        <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">host</span>
-    <span class="nt">user</span><span class="p">:</span> <span class="s">&quot;${USER_ID:-root}&quot;</span>
-    <span class="nt">volumes</span><span class="p">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">environment</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">MYSQL_ROOT_PASSWORD</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">password</span>
+      <span class="l l-Scalar l-Scalar-Plain">MYSQL_DATABASE</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
+      <span class="l l-Scalar l-Scalar-Plain">MYSQL_USER</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
+      <span class="l l-Scalar l-Scalar-Plain">MYSQL_PASSWORD</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">password</span>
+    <span class="l l-Scalar l-Scalar-Plain">ports</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">target</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">3306</span>
+        <span class="l l-Scalar l-Scalar-Plain">published</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">3306</span>
+        <span class="l l-Scalar l-Scalar-Plain">protocol</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">tcp</span>
+        <span class="l l-Scalar l-Scalar-Plain">mode</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">host</span>
+    <span class="l l-Scalar l-Scalar-Plain">user</span><span class="p p-Indicator">:</span> <span class="s">&quot;${USER_ID:-root}&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">volumes</span><span class="p p-Indicator">:</span>
       <span class="p p-Indicator">-</span> <span class="s">&quot;${DATA_ROOT:-.}/data/mysql/data:/var/lib/mysql&quot;</span>
 </pre></div>
 
@@ -1073,6 +1073,7 @@ mysql -uroot -ptoor -h127.0.0.1 database<span class="p">;</span>
 </pre></div>
                 
                   
+                
                 
               
               
@@ -1140,7 +1141,7 @@ mysql -uroot -ptoor -h127.0.0.1 database<span class="p">;</span>
       
     </div>
     
-      <script src="../../../assets/javascripts/application.a8b5e56f.js"></script>
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       

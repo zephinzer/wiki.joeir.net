@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -56,7 +56,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -468,6 +468,26 @@
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-on-ubuntu" class="md-nav__link">
+    Installation on Ubuntu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
@@ -1182,6 +1202,26 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-on-ubuntu" class="md-nav__link">
+    Installation on Ubuntu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -1395,6 +1435,10 @@
 <p>Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.</p>
 <ul>
 <li><a href="#software-engineering--golang">Software Engineering / Golang</a></li>
+<li><a href="#installation">Installation</a><ul>
+<li><a href="#installation-on-ubuntu">Installation on Ubuntu</a></li>
+</ul>
+</li>
 <li><a href="#links">Links</a></li>
 <li><a href="#decision-patterns">Decision Patterns</a></li>
 <li><a href="#useful-packages">Useful Packages</a></li>
@@ -1423,6 +1467,15 @@
 </ul>
 </li>
 </ul>
+<hr />
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<h3 id="installation-on-ubuntu">Installation on Ubuntu<a class="headerlink" href="#installation-on-ubuntu" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>sudo add-apt-repository ppa:longsleep/golang-backports<span class="p">;</span>
+sudo apt update<span class="p">;</span>
+sudo apt install golang-go<span class="p">;</span>
+</pre></div>
+
+
 <hr />
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1573,7 +1626,7 @@
 <hr />
 <h2 id="dockerfile-recipes">Dockerfile Recipes<a class="headerlink" href="#dockerfile-recipes" title="Permanent link">&para;</a></h2>
 <p>The following assumes that the script <code>make bin</code> will create a primary binary at <code>./bin/app</code></p>
-<div class="codehilite"><pre><span></span><span class="k">FROM</span> <span class="s">golang:1.13-alpine3.10</span> <span class="k">AS</span> <span class="s">base</span>
+<div class="codehilite"><pre><span></span><span class="k">FROM</span><span class="s"> golang:1.13-alpine3.10 AS base</span>
 <span class="k">ARG</span> <span class="nv">BIN_NAME</span><span class="o">=</span><span class="s2">&quot;app&quot;</span>
 <span class="k">RUN</span> apk update --no-cache
 <span class="k">RUN</span> apk upgrade --no-cache
@@ -1583,7 +1636,7 @@
 <span class="k">RUN</span> make bin
 <span class="k">RUN</span> upx /build/bin/<span class="si">${</span><span class="nv">BIN_NAME</span><span class="si">}</span> -o /build/bin/<span class="si">${</span><span class="nv">BIN_NAME</span><span class="si">}</span>_upxed
 
-<span class="k">FROM</span> <span class="s">scratch</span> <span class="k">AS</span> <span class="s">final</span>
+<span class="k">FROM</span><span class="s"> scratch AS final</span>
 <span class="k">ARG</span> <span class="nv">BIN_NAME</span><span class="o">=</span><span class="s2">&quot;app&quot;</span>
 <span class="k">COPY</span> --from<span class="o">=</span>base /usr/share/ca-certificates /usr/share/ca-certificates
 <span class="k">COPY</span> --from<span class="o">=</span>base /etc/passwd /etc/passwd
@@ -1648,6 +1701,7 @@
 </ul>
                 
                   
+                
                 
               
               
@@ -1715,7 +1769,7 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/application.a8b5e56f.js"></script>
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       

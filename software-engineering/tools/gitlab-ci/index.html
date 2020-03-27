@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -56,7 +56,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -1052,11 +1052,11 @@
                 <h1 id="software-engineering-tools-gitlab">Software Engineering / Tools / GitLab<a class="headerlink" href="#software-engineering-tools-gitlab" title="Permanent link">&para;</a></h1>
 <h2 id="useful-jobs">Useful Jobs<a class="headerlink" href="#useful-jobs" title="Permanent link">&para;</a></h2>
 <h3 id="job-to-bump-version">Job to bump version<a class="headerlink" href="#job-to-bump-version" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="nt">to github</span><span class="p">:</span>
-  <span class="nt">only</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;master&quot;</span><span class="p p-Indicator">]</span>
-  <span class="nt">stage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">publish</span>
-  <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">usvc/semver:gitlab-latest</span>
-  <span class="nt">before_script</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">to github</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">only</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;master&quot;</span><span class="p p-Indicator">]</span>
+  <span class="l l-Scalar l-Scalar-Plain">stage</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">publish</span>
+  <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">usvc/semver:gitlab-latest</span>
+  <span class="l l-Scalar l-Scalar-Plain">before_script</span><span class="p p-Indicator">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">if [ &quot;${BASE64_DEPLOY_KEY}&quot; = &quot;&quot; ]; then</span>
         <span class="l l-Scalar l-Scalar-Plain">exit 1;</span>
       <span class="l l-Scalar l-Scalar-Plain">else</span>
@@ -1065,17 +1065,18 @@
         <span class="l l-Scalar l-Scalar-Plain">chmod 600 -R ~/.ssh/id_rsa;</span>
         <span class="l l-Scalar l-Scalar-Plain">ssh-keyscan -t rsa ${REPO_HOSTNAME} &gt;&gt; ~/.ssh/known_hosts;</span>
       <span class="l l-Scalar l-Scalar-Plain">fi;</span>
-  <span class="nt">script</span><span class="p">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">script</span><span class="p p-Indicator">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">git config --global user.email &quot;${GITLAB_USER_EMAIL}&quot;</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">git config --global user.name &quot;${GITLAB_USER_NAME}&quot;</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">git remote set-url --add --push origin ${REPO_URL}</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">git checkout master</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">git push -u origin master --tags --force</span>
-  <span class="nt">after_script</span><span class="p">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">after_script</span><span class="p p-Indicator">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">rm -rf ~/.ssh/*</span>
 </pre></div>
                 
                   
+                
                 
               
               
@@ -1143,7 +1144,7 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/application.a8b5e56f.js"></script>
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
