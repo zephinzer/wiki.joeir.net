@@ -27,6 +27,7 @@ nav:
       - Gitlab CI: ./software-engineering/tools/gitlab-ci.md
       - Kubernetes: ./software-engineering/tools/kubernetes.md
       - Nginx: ./software-engineering/tools/nginx.md
+      - VSCode: ./software-engineering/tools/vscode.md
     - Operating Systems:
       - Ubuntu: ./software-engineering/os/ubuntu.md
     - System Administration:
