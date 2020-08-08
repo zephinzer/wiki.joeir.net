@@ -9,50 +9,52 @@ google_analytics:
   - wiki.joeir.net
 nav:
   - Home: ./index.md
-  - Software Engineering:
-    - Career and Organisation:
-      - Comptency Frameworks: ./code/career-and-organisation/competency-frameworks.md
-    - Concepts:
-      - Cloud-Native: ./code/concepts/cloud-native.md
-    - Content Management System:
-      - Wordpress: ./code/cms/wordpress.md
-    - Databases:
-      - MySQL: ./code/databases/mysql.md
-    - Languages & Runtimes:
-      - Golang: ./code/languages-runtimes/golang.md
-      - Node: ./code/languages-runtimes/node.md
-    - Tools:
-      - Git: ./code/tools/git.md
-      - Docker: ./code/tools/docker.md
-      - Gitlab CI: ./code/tools/gitlab-ci.md
-      - Kubernetes: ./code/tools/kubernetes.md
-      - Nginx: ./code/tools/nginx.md
-      - VSCode: ./code/tools/vscode.md
-    - Operating Systems:
-      - Ubuntu: ./code/os/ubuntu.md
-    - System Administration:
-      - GPG Keys: ./code/sysadmin/gpg.md
-      - Public Key Infrastructure: ./code/sysadmin/pki.md
+  - Code:
+      - Career and Organisation:
+          - Comptency Frameworks: ./code/career-and-organisation/competency-frameworks.md
+      - Concepts:
+          - Cloud-Native: ./code/concepts/cloud-native.md
+      - Content Management System:
+          - Wordpress: ./code/cms/wordpress.md
+      - Databases:
+          - MySQL: ./code/databases/mysql.md
+      - Languages & Runtimes:
+          - Golang: ./code/languages-runtimes/golang.md
+          - Node: ./code/languages-runtimes/node.md
+      - Skills:
+          - Typing: ./code/skills/typing.md
+      - Tools:
+          - Git: ./code/tools/git.md
+          - Docker: ./code/tools/docker.md
+          - Gitlab CI: ./code/tools/gitlab-ci.md
+          - Kubernetes: ./code/tools/kubernetes.md
+          - Nginx: ./code/tools/nginx.md
+          - VSCode: ./code/tools/vscode.md
+      - Operating Systems:
+          - Ubuntu: ./code/os/ubuntu.md
+      - System Administration:
+          - GPG Keys: ./code/sysadmin/gpg.md
+          - Public Key Infrastructure: ./code/sysadmin/pki.md
   - Money: ./money/money.md
   - OD/Coaching/Counselling:
-    - Interpersonal: ./od/interpersonal.md
-    - Intrapersonal: ./od/intrapersonal.md
-    - Psychological Safety: ./od/psychological-safety.md
+      - Interpersonal: ./od/interpersonal.md
+      - Intrapersonal: ./od/intrapersonal.md
+      - Psychological Safety: ./od/psychological-safety.md
   - Wing Chun: ./wingchun/index.md
   - Bahasa:
-    - Colours: ./bahasa/colours.md
-    - Feelings: ./bahasa/feelings.md
-    - Locations: ./bahasa/locations.md
-    - Numbers: ./bahasa/numbers.md
-    - Titles: ./bahasa/titles.md
+      - Colours: ./bahasa/colours.md
+      - Feelings: ./bahasa/feelings.md
+      - Locations: ./bahasa/locations.md
+      - Numbers: ./bahasa/numbers.md
+      - Titles: ./bahasa/titles.md
   - Español:
-    - El Tiempo: ./español/el-tiempo.md
-    - La Familia: ./español/la-familia.md
-    - Numeros y Recuento: ./español/numeros-y-recuento.md
-    - Países y Nacionalidades: ./español/países-y-nacionalidades.md
-    - Referencias de Aprender: ./español/referencias-de-aprender.md
-    - Verbos: ./español/verbos.md
-    - Vocabulario: ./español/vocabulario.md
+      - El Tiempo: ./español/el-tiempo.md
+      - La Familia: ./español/la-familia.md
+      - Numeros y Recuento: ./español/numeros-y-recuento.md
+      - Países y Nacionalidades: ./español/países-y-nacionalidades.md
+      - Referencias de Aprender: ./español/referencias-de-aprender.md
+      - Verbos: ./español/verbos.md
+      - Vocabulario: ./español/vocabulario.md
 theme:
   name: material
   highlightjs: true
