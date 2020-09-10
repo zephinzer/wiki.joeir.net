@@ -29,6 +29,8 @@
       - [Loading Local Image Into Cluster](#loading-local-image-into-cluster)
     - [Microk8s](#microk8s)
     - [Minikube](#minikube)
+  - [Debugging](#debugging)
+    - [invalid object doesn't have additional properties](#invalid-object-doesnt-have-additional-properties)
   - [Useful Tools](#useful-tools)
     - [CLI](#cli)
     - [VSCode](#vscode)
@@ -333,6 +335,18 @@ kind load docker-image ___;
 
 - [Main Website](https://minikube.sigs.k8s.io/)
 - [Github Repository](https://github.com/kubernetes/minikube)
+
+
+- - -
+
+
+## Debugging
+
+### invalid object doesn't have additional properties
+
+`error: SchemaError(io.k8s.apimachinery.pkg.apis.meta.v1.APIGroup_v2): invalid object doesn't have additional properties`
+
+- Check your `kubectl` version and confirm that the server/client version is compatible
 
 
 - - -
