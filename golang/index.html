@@ -11,7 +11,7 @@
         <meta name="description" content="Joseph's Wiki of Sorts">
       
       
-        <link rel="canonical" href="http://wiki.joeir.net/todo/">
+        <link rel="canonical" href="http://wiki.joeir.net/golang/">
       
       
         <meta name="author" content="zephinzer">
@@ -21,7 +21,7 @@
     
     
       
-        <title>TODO - wiki.joeir.net</title>
+        <title>Golang - wiki.joeir.net</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#todo" class="md-skip">
+        <a href="#software-engineering-golang" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              TODO
+              Golang
             
           </span>
         </div>
@@ -197,10 +197,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Code
@@ -390,10 +392,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" checked>
     
     <label class="md-nav__link" for="nav-2-5">
       Languages & Runtimes
@@ -415,11 +419,257 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../golang/" title="Golang" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Golang
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Golang" class="md-nav__link md-nav__link--active">
       Golang
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-on-ubuntu" class="md-nav__link">
+    Installation on Ubuntu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-patterns" class="md-nav__link">
+    Decision Patterns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-packages" class="md-nav__link">
+    Useful Packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-scripts" class="md-nav__link">
+    Useful Scripts
+  </a>
+  
+    <nav class="md-nav" aria-label="Useful Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-administration" class="md-nav__link">
+    System Administration
+  </a>
+  
+    <nav class="md-nav" aria-label="System Administration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-checking" class="md-nav__link">
+    Environment Checking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development" class="md-nav__link">
+    Development
+  </a>
+  
+    <nav class="md-nav" aria-label="Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-dependencies" class="md-nav__link">
+    Installing Dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-dependencies" class="md-nav__link">
+    Updating Dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-commands" class="md-nav__link">
+    Running Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-tests" class="md-nav__link">
+    Running Tests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    Building
+  </a>
+  
+    <nav class="md-nav" aria-label="Building">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-build" class="md-nav__link">
+    Basic Build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-build" class="md-nav__link">
+    Static Build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symbols-stripped-build" class="md-nav__link">
+    Symbols Stripped Build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-platform-build" class="md-nav__link">
+    Cross-Platform Build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-injection-build" class="md-nav__link">
+    Variable Injection Build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-gui-build" class="md-nav__link">
+    Windows-GUI Build
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerfile-recipes" class="md-nav__link">
+    Dockerfile Recipes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#makefile-recipes" class="md-nav__link">
+    Makefile Recipes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-tools" class="md-nav__link">
+    Useful Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#community-events" class="md-nav__link">
+    Community Events
+  </a>
+  
+    <nav class="md-nav" aria-label="Community Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#singapore" class="md-nav__link">
+    Singapore
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -996,6 +1246,227 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-on-ubuntu" class="md-nav__link">
+    Installation on Ubuntu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-patterns" class="md-nav__link">
+    Decision Patterns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-packages" class="md-nav__link">
+    Useful Packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-scripts" class="md-nav__link">
+    Useful Scripts
+  </a>
+  
+    <nav class="md-nav" aria-label="Useful Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-administration" class="md-nav__link">
+    System Administration
+  </a>
+  
+    <nav class="md-nav" aria-label="System Administration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-checking" class="md-nav__link">
+    Environment Checking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development" class="md-nav__link">
+    Development
+  </a>
+  
+    <nav class="md-nav" aria-label="Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-dependencies" class="md-nav__link">
+    Installing Dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-dependencies" class="md-nav__link">
+    Updating Dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-commands" class="md-nav__link">
+    Running Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-tests" class="md-nav__link">
+    Running Tests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    Building
+  </a>
+  
+    <nav class="md-nav" aria-label="Building">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-build" class="md-nav__link">
+    Basic Build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-build" class="md-nav__link">
+    Static Build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symbols-stripped-build" class="md-nav__link">
+    Symbols Stripped Build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-platform-build" class="md-nav__link">
+    Cross-Platform Build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-injection-build" class="md-nav__link">
+    Variable Injection Build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-gui-build" class="md-nav__link">
+    Windows-GUI Build
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerfile-recipes" class="md-nav__link">
+    Dockerfile Recipes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#makefile-recipes" class="md-nav__link">
+    Makefile Recipes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-tools" class="md-nav__link">
+    Useful Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#community-events" class="md-nav__link">
+    Community Events
+  </a>
+  
+    <nav class="md-nav" aria-label="Community Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#singapore" class="md-nav__link">
+    Singapore
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1006,7 +1477,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://gitlab.com/zephinzer/wiki.joeir.net/edit/master/docs/todo.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://gitlab.com/zephinzer/wiki.joeir.net/edit/master/docs/golang.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
                   </a>
                 
@@ -1014,8 +1485,274 @@
                   
                 
                 
-                <h1 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h1>
-<p>(:</p>
+                <h1 id="software-engineering-golang">Software Engineering / Golang<a class="headerlink" href="#software-engineering-golang" title="Permanent link">&para;</a></h1>
+<p>Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.</p>
+<ul>
+<li><a href="#software-engineering--golang">Software Engineering / Golang</a></li>
+<li><a href="#installation">Installation</a><ul>
+<li><a href="#installation-on-ubuntu">Installation on Ubuntu</a></li>
+</ul>
+</li>
+<li><a href="#links">Links</a></li>
+<li><a href="#decision-patterns">Decision Patterns</a></li>
+<li><a href="#useful-packages">Useful Packages</a></li>
+<li><a href="#useful-scripts">Useful Scripts</a><ul>
+<li><a href="#system-administration">System Administration</a></li>
+<li><a href="#environment-checking">Environment Checking</a></li>
+<li><a href="#development">Development</a></li>
+<li><a href="#installing-dependencies">Installing Dependencies</a></li>
+<li><a href="#updating-dependencies">Updating Dependencies</a></li>
+<li><a href="#running-commands">Running Commands</a></li>
+<li><a href="#running-tests">Running Tests</a></li>
+<li><a href="#building">Building</a></li>
+<li><a href="#basic-build">Basic Build</a></li>
+<li><a href="#static-build">Static Build</a></li>
+<li><a href="#symbols-stripped-build">Symbols Stripped Build</a></li>
+<li><a href="#cross-platform-build">Cross-Platform Build</a></li>
+<li><a href="#variable-injection-build">Variable Injection Build</a></li>
+<li><a href="#windows-gui-build">Windows-GUI Build</a></li>
+</ul>
+</li>
+<li><a href="#dockerfile-recipes">Dockerfile Recipes</a></li>
+<li><a href="#makefile-recipes">Makefile Recipes</a></li>
+<li><a href="#useful-tools">Useful Tools</a></li>
+<li><a href="#community-events">Community Events</a><ul>
+<li><a href="#singapore">Singapore</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<h3 id="installation-on-ubuntu">Installation on Ubuntu<a class="headerlink" href="#installation-on-ubuntu" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>sudo add-apt-repository ppa:longsleep/golang-backports<span class="p">;</span>
+sudo apt update<span class="p">;</span>
+sudo apt install golang-go<span class="p">;</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://golang.org/">Main website</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Go_(programming_language)">Wikipedia</a></li>
+</ul>
+<hr />
+<h2 id="decision-patterns">Decision Patterns<a class="headerlink" href="#decision-patterns" title="Permanent link">&para;</a></h2>
+<ul>
+<li>First class functions</li>
+<li>Support for native classes</li>
+<li>Lean keyword set</li>
+<li>Support for OOP</li>
+<li>Tuple returns</li>
+<li>Strongly typed language</li>
+<li>Type inference</li>
+<li>Compiled binaries</li>
+</ul>
+<hr />
+<h2 id="useful-packages">Useful Packages<a class="headerlink" href="#useful-packages" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cobra</td>
+<td>CLI framework</td>
+<td><a href="https://github.com/spf13/cobra">https://github.com/spf13/cobra</a></td>
+</tr>
+<tr>
+<td>Gorilla Mux</td>
+<td>HTTP request multiplexer</td>
+<td><a href="https://github.com/gorilla/mux">https://github.com/gorilla/mux</a></td>
+</tr>
+<tr>
+<td>Litter</td>
+<td><code>console.log</code> for Go</td>
+<td><a href="https://github.com/sanity-io/litter">https://github.com/sanity-io/litter</a></td>
+</tr>
+<tr>
+<td>Logrus</td>
+<td>Logging</td>
+<td><a href="https://github.com/sirupsen/logrus">https://github.com/sirupsen/logrus</a></td>
+</tr>
+<tr>
+<td>UUID</td>
+<td>Unique ID generator</td>
+<td><a href="https://github.com/google/uuid">https://github.com/google/uuid</a></td>
+</tr>
+<tr>
+<td>Testify</td>
+<td>Testing framework</td>
+<td><a href="https://github.com/stretchr/testify">https://github.com/stretchr/testify</a></td>
+</tr>
+<tr>
+<td>Viper</td>
+<td>Configuration management</td>
+<td><a href="https://github.com/spf13/viper">https://github.com/spf13/viper</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="useful-scripts">Useful Scripts<a class="headerlink" href="#useful-scripts" title="Permanent link">&para;</a></h2>
+<h3 id="system-administration">System Administration<a class="headerlink" href="#system-administration" title="Permanent link">&para;</a></h3>
+<h4 id="environment-checking">Environment Checking<a class="headerlink" href="#environment-checking" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>go env
+</code></pre></div>
+
+
+<h3 id="development">Development<a class="headerlink" href="#development" title="Permanent link">&para;</a></h3>
+<h4 id="installing-dependencies">Installing Dependencies<a class="headerlink" href="#installing-dependencies" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>go mod vendor -v<span class="p">;</span>
+</code></pre></div>
+
+
+<h4 id="updating-dependencies">Updating Dependencies<a class="headerlink" href="#updating-dependencies" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>go mod tidy -v<span class="p">;</span>
+</code></pre></div>
+
+
+<h4 id="running-commands">Running Commands<a class="headerlink" href="#running-commands" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>go run ./cmd/command<span class="p">;</span>
+</code></pre></div>
+
+
+<h4 id="running-tests">Running Tests<a class="headerlink" href="#running-tests" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>go <span class="nb">test</span> -cover -coverprofile c.out ./...<span class="p">;</span>
+</code></pre></div>
+
+
+<h3 id="building">Building<a class="headerlink" href="#building" title="Permanent link">&para;</a></h3>
+<p>The following formulae expects that an invoker runs these from the root directory given a project layout as specificied at <a href="https://github.com/golang-standards/project-layout">https://github.com/golang-standards/project-layout</a>.</p>
+<h4 id="basic-build">Basic Build<a class="headerlink" href="#basic-build" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>go build -o ./bin/command ./cmd/command
+</code></pre></div>
+
+
+<h4 id="static-build">Static Build<a class="headerlink" href="#static-build" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="nv">CGO_ENABLED</span><span class="o">=</span><span class="m">0</span> <span class="se">\</span>
+  go build <span class="se">\</span>
+  -ldflags <span class="s2">&quot;-extldflags &#39;static&#39;&quot;</span> <span class="se">\</span>
+  -o ./bin/command <span class="se">\</span>
+  ./cmd/command<span class="p">;</span>
+</code></pre></div>
+
+
+<h4 id="symbols-stripped-build">Symbols Stripped Build<a class="headerlink" href="#symbols-stripped-build" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>go build <span class="se">\</span>
+  -ldflags <span class="s2">&quot;-s -w&quot;</span> <span class="se">\</span>
+  -o ./bin/command <span class="se">\</span>
+  ./cmd/command<span class="p">;</span>
+</code></pre></div>
+
+
+<h4 id="cross-platform-build">Cross-Platform Build<a class="headerlink" href="#cross-platform-build" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="nv">GOOS</span><span class="o">=</span>windows <span class="nv">GOARCH</span><span class="o">=</span><span class="m">386</span> <span class="se">\</span>
+  go build <span class="se">\</span>
+  -o ./bin/command <span class="se">\</span>
+  ./cmd/command<span class="p">;</span>
+</code></pre></div>
+
+
+<h4 id="variable-injection-build">Variable Injection Build<a class="headerlink" href="#variable-injection-build" title="Permanent link">&para;</a></h4>
+<p>The following assumes the presence of the variables <code>commitHash</code>, <code>version</code>, and <code>buildTimestamp</code> in the <code>main</code> package:</p>
+<div class="codehilite"><pre><span></span><code>go build <span class="se">\</span>
+  -ldflags <span class="s2">&quot;-X main.commitHash=</span><span class="k">$(</span>git rev-parse --verify HEAD<span class="k">)</span><span class="s2"> \</span>
+<span class="s2">    -X main.version=</span><span class="k">$(</span>git describe --tag <span class="k">$(</span>git rev-list --tags --max-count<span class="o">=</span><span class="m">1</span><span class="k">))</span><span class="s2"> \</span>
+<span class="s2">    -X main.buildTimestamp=</span><span class="k">$(</span>date +<span class="s1">&#39;%Y%m%d%H%M%S&#39;</span><span class="k">)</span><span class="s2">&quot;</span> <span class="se">\</span>
+  -o ./bin/command <span class="se">\</span>
+  ./cmd/command<span class="p">;</span>
+</code></pre></div>
+
+
+<h4 id="windows-gui-build">Windows-GUI Build<a class="headerlink" href="#windows-gui-build" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="nv">GOOS</span><span class="o">=</span>windows <span class="nv">GOARCH</span><span class="o">=</span><span class="m">386</span> <span class="se">\</span>
+  go build <span class="se">\</span>
+  -ldflags <span class="s1">&#39;-H=windowsgui&#39;</span> <span class="se">\</span>
+  -o ./bin/command <span class="se">\</span>
+  ./cmd/command<span class="p">;</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="dockerfile-recipes">Dockerfile Recipes<a class="headerlink" href="#dockerfile-recipes" title="Permanent link">&para;</a></h2>
+<p>The following assumes that the script <code>make bin</code> will create a primary binary at <code>./bin/app</code></p>
+<div class="codehilite"><pre><span></span><code><span class="k">FROM</span> <span class="s">golang:1.13-alpine3.10</span> <span class="k">AS</span> <span class="s">base</span>
+<span class="k">ARG</span> <span class="nv">BIN_NAME</span><span class="o">=</span><span class="s2">&quot;app&quot;</span>
+<span class="k">RUN</span> apk update --no-cache
+<span class="k">RUN</span> apk upgrade --no-cache
+<span class="k">RUN</span> apk add --no-cache make upx ca-certificates
+<span class="k">WORKDIR</span><span class="s"> /build</span>
+<span class="k">COPY</span> . /build
+<span class="k">RUN</span> make bin
+<span class="k">RUN</span> upx /build/bin/<span class="si">${</span><span class="nv">BIN_NAME</span><span class="si">}</span> -o /build/bin/<span class="si">${</span><span class="nv">BIN_NAME</span><span class="si">}</span>_upxed
+
+<span class="k">FROM</span> <span class="s">scratch</span> <span class="k">AS</span> <span class="s">final</span>
+<span class="k">ARG</span> <span class="nv">BIN_NAME</span><span class="o">=</span><span class="s2">&quot;app&quot;</span>
+<span class="k">COPY</span> --from<span class="o">=</span>base /usr/share/ca-certificates /usr/share/ca-certificates
+<span class="k">COPY</span> --from<span class="o">=</span>base /etc/passwd /etc/passwd
+<span class="k">COPY</span> --from<span class="o">=</span>base /build/bin/<span class="si">${</span><span class="nv">BIN_NAME</span><span class="si">}</span>_upxed /app
+<span class="k">ENTRYPOINT</span> <span class="p">[</span><span class="s2">&quot;/app&quot;</span><span class="p">]</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="makefile-recipes">Makefile Recipes<a class="headerlink" href="#makefile-recipes" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="nf">deps</span><span class="o">:</span>
+    go mod vendor -v
+    go mod tidy -v
+<span class="nf">run</span><span class="o">:</span>
+    go run ./cmd/<span class="k">$(</span>CMD_ROOT<span class="k">)</span>
+<span class="nf">test</span><span class="o">:</span>
+    go <span class="nb">test</span> -v ./... -cover -coverprofile c.out
+<span class="nf">build</span><span class="o">:</span>
+    <span class="nv">CGO_ENABLED</span><span class="o">=</span><span class="m">0</span> <span class="se">\</span>
+    go build <span class="se">\</span>
+        -v <span class="se">\</span>
+        -o ./bin/<span class="k">$(</span>CMD_ROOT<span class="k">)</span>_<span class="nv">$$</span><span class="o">(</span>go env GOOS<span class="o">)</span>_<span class="nv">$$</span><span class="o">(</span>go env GOARCH<span class="o">)</span><span class="si">${</span><span class="nv">BIN_EXT</span><span class="si">}</span> <span class="se">\</span>
+        ./cmd/<span class="k">$(</span>CMD_ROOT<span class="k">)</span>
+<span class="nf">build_production</span><span class="o">:</span>
+    <span class="nv">CGO_ENABLED</span><span class="o">=</span><span class="m">0</span> <span class="se">\</span>
+    go build <span class="se">\</span>
+        -a -v <span class="se">\</span>
+        -ldflags <span class="s2">&quot;-X main.Commit=</span><span class="nv">$$</span><span class="s2">(git rev-parse --verify HEAD) \</span>
+<span class="s2">            -X main.Version=</span><span class="nv">$$</span><span class="s2">(git describe --tag </span><span class="nv">$$</span><span class="s2">(git rev-list --tags --max-count=1)) \</span>
+<span class="s2">            -X main.Timestamp=</span><span class="nv">$$</span><span class="s2">(date +&#39;%Y%m%d%H%M%S&#39;) \</span>
+<span class="s2">            -extldflags &#39;static&#39; \</span>
+<span class="s2">            -s -w&quot;</span> <span class="se">\</span>
+        -o ./bin/<span class="k">$(</span>CMD_ROOT<span class="k">)</span>_<span class="nv">$$</span><span class="o">(</span>go env GOOS<span class="o">)</span>_<span class="nv">$$</span><span class="o">(</span>go env GOARCH<span class="o">)</span><span class="si">${</span><span class="nv">BIN_EXT</span><span class="si">}</span> <span class="se">\</span>
+        ./cmd/<span class="k">$(</span>CMD_ROOT<span class="k">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="useful-tools">Useful Tools<a class="headerlink" href="#useful-tools" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Go</td>
+<td>Rich Go language support for Visual Studio Code</td>
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go">https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="community-events">Community Events<a class="headerlink" href="#community-events" title="Permanent link">&para;</a></h2>
+<h3 id="singapore">Singapore<a class="headerlink" href="#singapore" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://gophercon.sg">GopherCon</a></li>
+<li><a href="https://www.meetup.com/en-SG/golangsg/">GoSG</a></li>
+</ul>
                 
               
               
@@ -1030,6 +1767,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../mysql/" title="MySQL" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                MySQL
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../node/" title="Node" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Node
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
