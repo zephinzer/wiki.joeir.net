@@ -13,28 +13,28 @@ nav:
       - Career and Organisation:
           - Comptency Frameworks: ./code/career-and-organisation/competency-frameworks.md
       - Concepts:
-          - Cloud-Native: ./code/concepts/cloud-native.md
+          - Cloud-Native: ./cloud-native.md
       - Content Management System:
-          - Wordpress: ./code/cms/wordpress.md
+          - Wordpress: ./wordpress.md
       - Databases:
-          - MySQL: ./code/databases/mysql.md
+          - MySQL: ./mysql.md
       - Languages & Runtimes:
-          - Golang: ./code/languages-runtimes/golang.md
-          - Node: ./code/languages-runtimes/node.md
+          - Golang: ./golang.md
+          - Node: ./node.md
       - Skills:
-          - Typing: ./code/skills/typing.md
+          - Typing: ./typing.md
       - Tools:
-          - Git: ./code/tools/git.md
-          - Docker: ./code/tools/docker.md
-          - Gitlab CI: ./code/tools/gitlab-ci.md
-          - Kubernetes: ./code/tools/kubernetes.md
-          - Nginx: ./code/tools/nginx.md
-          - VSCode: ./code/tools/vscode.md
+          - Git: ./git.md
+          - Docker: ./docker.md
+          - Gitlab CI: ./gitlab-ci.md
+          - Kubernetes: ./kubernetes.md
+          - Nginx: ./nginx.md
+          - VSCode: ./vscode.md
       - Operating Systems:
           - Ubuntu: ./code/os/ubuntu.md
       - System Administration:
-          - GPG Keys: ./code/sysadmin/gpg.md
-          - Public Key Infrastructure: ./code/sysadmin/pki.md
+          - GPG Keys: ./gpg.md
+          - Public Key Infrastructure: ./pki.md
   - Money: ./money/money.md
   - OD/Coaching/Counselling:
       - Interpersonal: ./od/interpersonal.md
