@@ -30,6 +30,7 @@ This page provides an overview of some useful concepts and commands.
 - [Modifying changes](#modifying-changes)
   - [Adding a file to a previous commit](#adding-a-file-to-a-previous-commit)
   - [Squash commit](#squash-commit)
+    - [Squashing till origin/master/HEAD](#squashing-till-originmasterhead)
   - [Uncommit last commit](#uncommit-last-commit)
   - [Reverting a commit](#reverting-a-commit)
 - [Submitting changes](#submitting-changes)
@@ -43,7 +44,7 @@ This page provides an overview of some useful concepts and commands.
   - [View the Git configuration](#view-the-git-configuration)
   - [Check which branch you're on](#check-which-branch-youre-on)
   - [See all remotes](#see-all-remotes)
-  - [Checking which .gitignore is ignoring a file](#checking-which-gitignore-is-ignoring-a-file)
+  - [Checking which `.gitignore` is ignoring a file](#checking-which-gitignore-is-ignoring-a-file)
 
 # Installation
 
@@ -235,6 +236,10 @@ git commit -m 'some message'
 git commit --allow-empty 'some message'
 ```
 
+
+- - -
+
+
 # Modifying changes
 
 ## Adding a file to a previous commit
@@ -258,6 +263,15 @@ git commit --amend
 ```sh
 # indicate `p` or `pick` for the head commit, and `s` or `squash` for the rest
 git rebase -i HEAD~5
+```
+
+### Squashing till origin/master/HEAD
+
+!!! Info "Why"
+    - I have made X number of commits to my branch and want to squash/rebase my commits within my branch so that a rebase with master will be cleaner
+
+```sh
+git rebase -i HEAD~$(git log --oneline master..HEAD | wc -l);
 ```
 
 ## Uncommit last commit
