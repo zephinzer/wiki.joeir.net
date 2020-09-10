@@ -1056,7 +1056,10 @@
 <li><a href="#commiting-without-any-changes">Commiting without any changes</a></li>
 <li><a href="#modifying-changes">Modifying changes</a></li>
 <li><a href="#adding-a-file-to-a-previous-commit">Adding a file to a previous commit</a></li>
-<li><a href="#squash-commit">Squash commit</a></li>
+<li><a href="#squash-commit">Squash commit</a><ul>
+<li><a href="#squashing-till-originmasterhead">Squashing till origin/master/HEAD</a></li>
+</ul>
+</li>
 <li><a href="#uncommit-last-commit">Uncommit last commit</a></li>
 <li><a href="#reverting-a-commit">Reverting a commit</a></li>
 <li><a href="#submitting-changes">Submitting changes</a></li>
@@ -1070,7 +1073,7 @@
 <li><a href="#view-the-git-configuration">View the Git configuration</a></li>
 <li><a href="#check-which-branch-youre-on">Check which branch you're on</a></li>
 <li><a href="#see-all-remotes">See all remotes</a></li>
-<li><a href="#checking-which-gitignore-is-ignoring-a-file">Checking which .gitignore is ignoring a file</a></li>
+<li><a href="#checking-which-gitignore-is-ignoring-a-file">Checking which <code>.gitignore</code> is ignoring a file</a></li>
 </ul>
 <h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
 <h2 id="installation-on-ubuntu-1604">Installation on Ubuntu 16.04<a class="headerlink" href="#installation-on-ubuntu-1604" title="Permanent link">&para;</a></h2>
@@ -1273,6 +1276,7 @@ git add ./path/to/changed_file
 </code></pre></div>
 
 
+<hr />
 <h1 id="modifying-changes">Modifying changes<a class="headerlink" href="#modifying-changes" title="Permanent link">&para;</a></h1>
 <h2 id="adding-a-file-to-a-previous-commit">Adding a file to a previous commit<a class="headerlink" href="#adding-a-file-to-a-previous-commit" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
@@ -1298,6 +1302,17 @@ git commit --amend
 </div>
 <div class="codehilite"><pre><span></span><code><span class="c1"># indicate `p` or `pick` for the head commit, and `s` or `squash` for the rest</span>
 git rebase -i HEAD~5
+</code></pre></div>
+
+
+<h3 id="squashing-till-originmasterhead">Squashing till origin/master/HEAD<a class="headerlink" href="#squashing-till-originmasterhead" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I have made X number of commits to my branch and want to squash/rebase my commits within my branch so that a rebase with master will be cleaner</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><code>git rebase -i HEAD~<span class="k">$(</span>git log --oneline master..HEAD <span class="p">|</span> wc -l<span class="k">)</span><span class="p">;</span>
 </code></pre></div>
 
 
