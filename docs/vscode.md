@@ -1,9 +1,8 @@
-# Visual Studio Code/Codium
+# VSCode/VSCodium
 
+## Notes
 
-# Notes for Codium
-
-## Extensions not loading
+### Extensions not loading in VSCodium
 
 1. Find your binary location: `which codium`
 2. Navigate to that directory and search for a file called `product.json` which should be in `./resources/app/` relative to the root of the application directory (the binary should be in `./bin`)
@@ -15,4 +14,25 @@
     "cacheUrl": "https://vscode.blob.core.windows.net/gallery/index",
     "itemUrl": "https://marketplace.visualstudio.com/items"
 }
+```
+
+### 429 Too Many Requests on Ubuntu/Debian-based systems in VSCodium
+
+Add the GPG key:
+
+```
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo dd of=/etc/apt/trusted.gpg.d/vscodium-archive-keyring.gpg;
+```
+
+Change `/etc/apt/sources.list.d/vscodium.list` to:
+
+```
+deb [signed-by=/etc/apt/trusted.gpg.d/vscodium-archive-keyring.gpg] https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/ vscodium main
+```
+
+Update and upgrade:
+
+```
+sudo apt update;
+sudo apt upgrade;
 ```
