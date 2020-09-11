@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#visual-studio-codecodium" class="md-skip">
+        <a href="#vscodevscodium" class="md-skip">
           Skip to content
         </a>
       
@@ -585,9 +585,62 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        VSCode
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
     <a href="./" title="VSCode" class="md-nav__link md-nav__link--active">
       VSCode
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extensions-not-loading-in-vscodium" class="md-nav__link">
+    Extensions not loading in VSCodium
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#429-too-many-requests-on-ubuntudebian-based-systems-in-vscodium" class="md-nav__link">
+    429 Too Many Requests on Ubuntu/Debian-based systems in VSCodium
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1009,6 +1062,43 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extensions-not-loading-in-vscodium" class="md-nav__link">
+    Extensions not loading in VSCodium
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#429-too-many-requests-on-ubuntudebian-based-systems-in-vscodium" class="md-nav__link">
+    429 Too Many Requests on Ubuntu/Debian-based systems in VSCodium
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1027,9 +1117,9 @@
                   
                 
                 
-                <h1 id="visual-studio-codecodium">Visual Studio Code/Codium<a class="headerlink" href="#visual-studio-codecodium" title="Permanent link">&para;</a></h1>
-<h1 id="notes-for-codium">Notes for Codium<a class="headerlink" href="#notes-for-codium" title="Permanent link">&para;</a></h1>
-<h2 id="extensions-not-loading">Extensions not loading<a class="headerlink" href="#extensions-not-loading" title="Permanent link">&para;</a></h2>
+                <h1 id="vscodevscodium">VSCode/VSCodium<a class="headerlink" href="#vscodevscodium" title="Permanent link">&para;</a></h1>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<h3 id="extensions-not-loading-in-vscodium">Extensions not loading in VSCodium<a class="headerlink" href="#extensions-not-loading-in-vscodium" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Find your binary location: <code>which codium</code></li>
 <li>Navigate to that directory and search for a file called <code>product.json</code> which should be in <code>./resources/app/</code> relative to the root of the application directory (the binary should be in <code>./bin</code>)</li>
@@ -1040,6 +1130,23 @@
     <span class="nt">&quot;cacheUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://vscode.blob.core.windows.net/gallery/index&quot;</span><span class="p">,</span>
     <span class="nt">&quot;itemUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://marketplace.visualstudio.com/items&quot;</span>
 <span class="p">}</span>
+</code></pre></div>
+
+
+<h3 id="429-too-many-requests-on-ubuntudebian-based-systems-in-vscodium">429 Too Many Requests on Ubuntu/Debian-based systems in VSCodium<a class="headerlink" href="#429-too-many-requests-on-ubuntudebian-based-systems-in-vscodium" title="Permanent link">&para;</a></h3>
+<p>Add the GPG key:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo dd of=/etc/apt/trusted.gpg.d/vscodium-archive-keyring.gpg;</span>
+</code></pre></div>
+
+
+<p>Change <code>/etc/apt/sources.list.d/vscodium.list</code> to:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">deb</span> <span class="sx">[signed-by=/etc/apt/trusted.gpg.d/vscodium-archive-keyring.gpg]</span> <span class="kp">https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/</span> <span class="kp">vscodium</span> <span class="kp">main</span>
+</code></pre></div>
+
+
+<p>Update and upgrade:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">sudo apt update;</span>
+<span class="err">sudo apt upgrade;</span>
 </code></pre></div>
                 
               
