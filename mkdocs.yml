@@ -14,28 +14,28 @@ nav:
           - Comptency Frameworks: ./code/career-and-organisation/competency-frameworks.md
       - Concepts:
           - Cloud-Native: ./cloud-native.md
-      - Content Management System:
+      - Software-as-a-Service:
           - Wordpress: ./wordpress.md
       - Databases:
           - MySQL: ./mysql.md
-      - Languages & Runtimes:
+      - Software Engineering:
           - Golang: ./golang.md
           - Node: ./node.md
-      - Skills:
-          - Typing: ./typing.md
-      - Tools:
-          - Git: ./git.md
+          - Shell: ./shell.md
+      - Infrastructure/DevOps:
           - Docker: ./docker.md
+          - Git: ./git.md
           - Gitlab CI: ./gitlab-ci.md
+          - GPG Keys: ./gpg.md
           - Kubernetes: ./kubernetes.md
           - Nginx: ./nginx.md
-          - VSCode: ./vscode.md
+          - Public Key Infrastructure: ./pki.md
+          - VSCode/VSCodium: ./vscode.md
       - Operating Systems:
           - Ubuntu: ./code/os/ubuntu.md
-      - System Administration:
-          - GPG Keys: ./gpg.md
-          - Public Key Infrastructure: ./pki.md
-  - Money: ./money/money.md
+      - Other Skills:
+          - Typing: ./typing.md
+  - Money: ./money.md
   - OD/Coaching/Counselling:
       - Interpersonal: ./od/interpersonal.md
       - Intrapersonal: ./od/intrapersonal.md
