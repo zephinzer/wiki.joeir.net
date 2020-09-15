@@ -1,8 +1,13 @@
-# Software Engineering / Tools / Docker
+# Docker
 
-- [Software Engineering / Tools / Docker](#software-engineering--tools--docker)
+- [Docker](#docker)
   - [Installation](#installation)
     - [Ubuntu](#ubuntu)
+  - [Notes](#notes)
+    - [Logging into a Docker Registry](#logging-into-a-docker-registry)
+    - [Logging into ECR Docker Registry](#logging-into-ecr-docker-registry)
+
+
 
 ## Installation
 
@@ -69,3 +74,19 @@ sudo loginctl enable-linger $(whoami);
 ```
 
 If the above instructions fail, the latest is available at [https://docs.docker.com/engine/security/rootless/](https://docs.docker.com/engine/security/rootless/).
+
+
+
+## Notes
+
+### Logging into a Docker Registry
+
+```sh
+docker login docker.io -u username -p password
+```
+
+### Logging into ECR Docker Registry
+
+```sh
+aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.ap-southeast-1.amazonaws.com
+```
