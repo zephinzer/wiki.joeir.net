@@ -11,7 +11,7 @@
         <meta name="description" content="Joseph's Wiki of Sorts">
       
       
-        <link rel="canonical" href="http://wiki.joeir.net/kubernetes-cka-notes/">
+        <link rel="canonical" href="http://wiki.joeir.net/postgresql/">
       
       
         <meta name="author" content="zephinzer">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Software Engineering / Tools / Kubernetes Certified Kubernetes Administrator Notes - wiki.joeir.net</title>
+        <title>PostgreSQL - wiki.joeir.net</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#software-engineering-tools-kubernetes-certified-kubernetes-administrator-notes" class="md-skip">
+        <a href="#postgresql" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Software Engineering / Tools / Kubernetes Certified Kubernetes Administrator Notes
+              PostgreSQL
             
           </span>
         </div>
@@ -999,8 +999,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#practice-tests" class="md-nav__link">
-    Practice Tests
+  <a href="#installation" class="md-nav__link">
+    Installation
   </a>
   
 </li>
@@ -1017,7 +1017,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://gitlab.com/zephinzer/wiki.joeir.net/edit/master/docs/kubernetes-cka-notes.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://gitlab.com/zephinzer/wiki.joeir.net/edit/master/docs/postgresql.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
                   </a>
                 
@@ -1025,223 +1025,24 @@
                   
                 
                 
-                <h1 id="software-engineering-tools-kubernetes-certified-kubernetes-administrator-notes">Software Engineering / Tools / Kubernetes Certified Kubernetes Administrator Notes<a class="headerlink" href="#software-engineering-tools-kubernetes-certified-kubernetes-administrator-notes" title="Permanent link">&para;</a></h1>
-<p>The following are notes and resources from the <a href="https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests">Certified Kubernetes Administrator (CKA) with Practice Tests course on Udemy</a>.</p>
-<h2 id="practice-tests">Practice Tests<a class="headerlink" href="#practice-tests" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th align="right">Category</th>
-<th align="left">URL</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="right">Pods</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038860">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038860</a></td>
-</tr>
-<tr>
-<td align="right">ReplicaSets</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038862">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038862</a></td>
-</tr>
-<tr>
-<td align="right">Deployments</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038864">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038864</a></td>
-</tr>
-<tr>
-<td align="right">Namespaces</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038867">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038867</a></td>
-</tr>
-<tr>
-<td align="right">Services</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038870">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038870</a></td>
-</tr>
-<tr>
-<td align="right">Imperative Commands</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038872">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038872</a></td>
-</tr>
-<tr>
-<td align="right">Manual Scheduling</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038819">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038819</a></td>
-</tr>
-<tr>
-<td align="right">Labels &amp; Selectors</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038823">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038823</a></td>
-</tr>
-<tr>
-<td align="right">Taints and Tolerations</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038827">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038827</a></td>
-</tr>
-<tr>
-<td align="right">Node Affinity</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038831">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038831</a></td>
-</tr>
-<tr>
-<td align="right">Resource Requirements and Limits</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038835">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038835</a></td>
-</tr>
-<tr>
-<td align="right">DaemonSets</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038838">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038838</a></td>
-</tr>
-<tr>
-<td align="right">Static Pods</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038841">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038841</a></td>
-</tr>
-<tr>
-<td align="right">Multiple Schedulers</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038844">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038844</a></td>
-</tr>
-<tr>
-<td align="right">Monitoring</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038897">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038897</a></td>
-</tr>
-<tr>
-<td align="right">Monitoring Application Logs</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038899">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038899</a></td>
-</tr>
-<tr>
-<td align="right">Rolling Updates and Rollbacks</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038795">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038795</a></td>
-</tr>
-<tr>
-<td align="right">Commands and Arguments</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038798">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038798</a></td>
-</tr>
-<tr>
-<td align="right">Environment Variables</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038802">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038802</a></td>
-</tr>
-<tr>
-<td align="right">Secrets</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038804">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038804</a></td>
-</tr>
-<tr>
-<td align="right">Multi-Container Pods</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038807">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038807</a></td>
-</tr>
-<tr>
-<td align="right">Init Containers</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038813">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038813</a></td>
-</tr>
-<tr>
-<td align="right">OS Upgrades</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038783">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038783</a></td>
-</tr>
-<tr>
-<td align="right">Cluster Upgrade</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038786">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038786</a></td>
-</tr>
-<tr>
-<td align="right">Backup and Restore Methods</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038789">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038789</a></td>
-</tr>
-<tr>
-<td align="right">View Certificates</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038706">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038706</a></td>
-</tr>
-<tr>
-<td align="right">Certificates API</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038708">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038708</a></td>
-</tr>
-<tr>
-<td align="right">KubeConfig</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038710">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038710</a></td>
-</tr>
-<tr>
-<td align="right">Role-Based Authentication Control (RBAC)</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038715">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038715</a></td>
-</tr>
-<tr>
-<td align="right">ClusterRoles and RoleBindings</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038717">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038717</a></td>
-</tr>
-<tr>
-<td align="right">Image Security</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038719">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038719</a></td>
-</tr>
-<tr>
-<td align="right">Security Contexts</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038721">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038721</a></td>
-</tr>
-<tr>
-<td align="right">Network Policy</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038723">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038723</a></td>
-</tr>
-<tr>
-<td align="right">PersistentVolumes (PVs) and PersistentVolumeClaims (PVCs)</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038887">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038887</a></td>
-</tr>
-<tr>
-<td align="right">Explore Kubernetes Environment</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038764">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038764</a></td>
-</tr>
-<tr>
-<td align="right">Explore CNI Weave</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038768">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038768</a></td>
-</tr>
-<tr>
-<td align="right">Explore CNI Weave - 2</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12077031">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12077031</a></td>
-</tr>
-<tr>
-<td align="right">Deploy Network Solution</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038769">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038769</a></td>
-</tr>
-<tr>
-<td align="right">Service Networking</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038773">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038773</a></td>
-</tr>
-<tr>
-<td align="right">Explore DNS</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038776">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038776</a></td>
-</tr>
-<tr>
-<td align="right">Ingress - 1</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038778">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038778</a></td>
-</tr>
-<tr>
-<td align="right">Ingress - 2</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038779">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038779</a></td>
-</tr>
-<tr>
-<td align="right">Deploy a Kubernetes Cluster using <code>kubeadm</code></td>
-<td align="left"><a href="https://kodekloud.com/courses/675080/lectures/12940170">https://kodekloud.com/courses/675080/lectures/12940170</a></td>
-</tr>
-<tr>
-<td align="right">Application Failure</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038890">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038890</a></td>
-</tr>
-<tr>
-<td align="right">Control Plane Failure</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038892">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038892</a></td>
-</tr>
-<tr>
-<td align="right">Worker Node Failure</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038894">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038894</a></td>
-</tr>
-<tr>
-<td align="right">Advanced <code>kubectl</code> Commands</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038882">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038882</a></td>
-</tr>
-<tr>
-<td align="right">Lightning Lab - 1</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/14560177">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/14560177</a></td>
-</tr>
-<tr>
-<td align="right">Mock Exam 1</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038875">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038875</a></td>
-</tr>
-<tr>
-<td align="right">Mock Exam 2</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038876">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038876</a></td>
-</tr>
-<tr>
-<td align="right">Mock Exam 3</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038878">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038878</a></td>
-</tr>
-</tbody>
-</table>
+                <h1 id="postgresql">PostgreSQL<a class="headerlink" href="#postgresql" title="Permanent link">&para;</a></h1>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Reference URL: <a href="https://www.postgresql.org/download/linux/ubuntu/">https://www.postgresql.org/download/linux/ubuntu/</a></p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Create the file repository configuration:</span>
+sudo sh -c <span class="s1">&#39;echo &quot;deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main&quot; &gt; /etc/apt/sources.list.d/pgdg.list&#39;</span>
+
+<span class="c1"># Import the repository signing key:</span>
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc <span class="p">|</span> sudo apt-key add -
+
+<span class="c1"># Update the package lists:</span>
+sudo apt-get update
+
+<span class="c1"># Install the latest version of PostgreSQL.</span>
+<span class="c1"># If you want a specific version, use &#39;postgresql-12&#39; or similar instead of &#39;postgresql&#39;:</span>
+sudo apt-get -y install postgresql
+</code></pre></div>
                 
               
               

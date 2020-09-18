@@ -11,7 +11,7 @@
         <meta name="description" content="Joseph's Wiki of Sorts">
       
       
-        <link rel="canonical" href="http://wiki.joeir.net/kubernetes-cka-notes/">
+        <link rel="canonical" href="http://wiki.joeir.net/cassandra/">
       
       
         <meta name="author" content="zephinzer">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Software Engineering / Tools / Kubernetes Certified Kubernetes Administrator Notes - wiki.joeir.net</title>
+        <title>Cassandra - wiki.joeir.net</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#software-engineering-tools-kubernetes-certified-kubernetes-administrator-notes" class="md-skip">
+        <a href="#cassandra" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Software Engineering / Tools / Kubernetes Certified Kubernetes Administrator Notes
+              Cassandra
             
           </span>
         </div>
@@ -197,10 +197,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Code
@@ -348,10 +350,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" checked>
     
     <label class="md-nav__link" for="nav-2-4">
       Databases
@@ -373,11 +377,306 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../cassandra/" title="Cassandra" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Cassandra
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Cassandra" class="md-nav__link md-nav__link--active">
       Cassandra
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#terms-definitions" class="md-nav__link">
+    Terms &amp; Definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Terms &amp; Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-terminology" class="md-nav__link">
+    Infrastructure terminology
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-terminology" class="md-nav__link">
+    Database terminology
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opertaional-terminology" class="md-nav__link">
+    Opertaional terminology
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consistency-check" class="md-nav__link">
+    Consistency Check
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-path" class="md-nav__link">
+    Read Path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-repair" class="md-nav__link">
+    Read Repair
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tombstone" class="md-nav__link">
+    Tombstone
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#availability-scaling" class="md-nav__link">
+    Availability Scaling
+  </a>
+  
+    <nav class="md-nav" aria-label="Availability Scaling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consistency" class="md-nav__link">
+    Consistency
+  </a>
+  
+    <nav class="md-nav" aria-label="Consistency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-two-three" class="md-nav__link">
+    One, Two, Three
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quorum" class="md-nav__link">
+    Quorum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local_-modifier" class="md-nav__link">
+    Local_ (modifier)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#each_-modifier" class="md-nav__link">
+    Each_ (modifier)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-partition" class="md-nav__link">
+    Data Partition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-replication" class="md-nav__link">
+    Data Replication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-centers" class="md-nav__link">
+    Data Centers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node" class="md-nav__link">
+    Node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partition" class="md-nav__link">
+    Partition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partition-key" class="md-nav__link">
+    Partition Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replication" class="md-nav__link">
+    Replication
+  </a>
+  
+    <nav class="md-nav" aria-label="Replication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#replication-factor" class="md-nav__link">
+    Replication Factor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replication-strategy" class="md-nav__link">
+    Replication Strategy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replica-placement-strategy" class="md-nav__link">
+    Replica Placement Strategy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snitches" class="md-nav__link">
+    Snitches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token" class="md-nav__link">
+    Token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vnode" class="md-nav__link">
+    VNode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-scaling" class="md-nav__link">
+    Performance Scaling
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Scaling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partition-sizes" class="md-nav__link">
+    Partition sizes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querying" class="md-nav__link">
+    Querying
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -999,8 +1298,261 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#practice-tests" class="md-nav__link">
-    Practice Tests
+  <a href="#terms-definitions" class="md-nav__link">
+    Terms &amp; Definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Terms &amp; Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-terminology" class="md-nav__link">
+    Infrastructure terminology
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-terminology" class="md-nav__link">
+    Database terminology
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opertaional-terminology" class="md-nav__link">
+    Opertaional terminology
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consistency-check" class="md-nav__link">
+    Consistency Check
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-path" class="md-nav__link">
+    Read Path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-repair" class="md-nav__link">
+    Read Repair
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tombstone" class="md-nav__link">
+    Tombstone
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#availability-scaling" class="md-nav__link">
+    Availability Scaling
+  </a>
+  
+    <nav class="md-nav" aria-label="Availability Scaling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consistency" class="md-nav__link">
+    Consistency
+  </a>
+  
+    <nav class="md-nav" aria-label="Consistency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-two-three" class="md-nav__link">
+    One, Two, Three
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quorum" class="md-nav__link">
+    Quorum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local_-modifier" class="md-nav__link">
+    Local_ (modifier)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#each_-modifier" class="md-nav__link">
+    Each_ (modifier)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-partition" class="md-nav__link">
+    Data Partition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-replication" class="md-nav__link">
+    Data Replication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-centers" class="md-nav__link">
+    Data Centers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node" class="md-nav__link">
+    Node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partition" class="md-nav__link">
+    Partition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partition-key" class="md-nav__link">
+    Partition Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replication" class="md-nav__link">
+    Replication
+  </a>
+  
+    <nav class="md-nav" aria-label="Replication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#replication-factor" class="md-nav__link">
+    Replication Factor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replication-strategy" class="md-nav__link">
+    Replication Strategy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replica-placement-strategy" class="md-nav__link">
+    Replica Placement Strategy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snitches" class="md-nav__link">
+    Snitches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token" class="md-nav__link">
+    Token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vnode" class="md-nav__link">
+    VNode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-scaling" class="md-nav__link">
+    Performance Scaling
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Scaling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partition-sizes" class="md-nav__link">
+    Partition sizes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querying" class="md-nav__link">
+    Querying
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
   </a>
   
 </li>
@@ -1017,7 +1569,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://gitlab.com/zephinzer/wiki.joeir.net/edit/master/docs/kubernetes-cka-notes.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://gitlab.com/zephinzer/wiki.joeir.net/edit/master/docs/cassandra.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
                   </a>
                 
@@ -1025,223 +1577,259 @@
                   
                 
                 
-                <h1 id="software-engineering-tools-kubernetes-certified-kubernetes-administrator-notes">Software Engineering / Tools / Kubernetes Certified Kubernetes Administrator Notes<a class="headerlink" href="#software-engineering-tools-kubernetes-certified-kubernetes-administrator-notes" title="Permanent link">&para;</a></h1>
-<p>The following are notes and resources from the <a href="https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests">Certified Kubernetes Administrator (CKA) with Practice Tests course on Udemy</a>.</p>
-<h2 id="practice-tests">Practice Tests<a class="headerlink" href="#practice-tests" title="Permanent link">&para;</a></h2>
+                <h1 id="cassandra">Cassandra<a class="headerlink" href="#cassandra" title="Permanent link">&para;</a></h1>
+<h2 id="terms-definitions">Terms &amp; Definitions<a class="headerlink" href="#terms-definitions" title="Permanent link">&para;</a></h2>
+<h3 id="infrastructure-terminology">Infrastructure terminology<a class="headerlink" href="#infrastructure-terminology" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th align="right">Category</th>
-<th align="left">URL</th>
+<th>Term</th>
+<th>Definition</th>
+<th>AKA</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="right">Pods</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038860">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038860</a></td>
+<td>Node</td>
+<td>Logical atomic unit of processing</td>
+<td>Database server instance</td>
 </tr>
 <tr>
-<td align="right">ReplicaSets</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038862">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038862</a></td>
+<td>Rack</td>
+<td>A set of Nodes</td>
+<td>Load-balanced database server instances</td>
 </tr>
 <tr>
-<td align="right">Deployments</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038864">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038864</a></td>
+<td>Data Center</td>
+<td>A set of Racks</td>
+<td>Highly available load-balanced database server instances</td>
 </tr>
 <tr>
-<td align="right">Namespaces</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038867">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038867</a></td>
-</tr>
-<tr>
-<td align="right">Services</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038870">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038870</a></td>
-</tr>
-<tr>
-<td align="right">Imperative Commands</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038872">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038872</a></td>
-</tr>
-<tr>
-<td align="right">Manual Scheduling</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038819">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038819</a></td>
-</tr>
-<tr>
-<td align="right">Labels &amp; Selectors</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038823">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038823</a></td>
-</tr>
-<tr>
-<td align="right">Taints and Tolerations</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038827">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038827</a></td>
-</tr>
-<tr>
-<td align="right">Node Affinity</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038831">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038831</a></td>
-</tr>
-<tr>
-<td align="right">Resource Requirements and Limits</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038835">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038835</a></td>
-</tr>
-<tr>
-<td align="right">DaemonSets</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038838">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038838</a></td>
-</tr>
-<tr>
-<td align="right">Static Pods</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038841">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038841</a></td>
-</tr>
-<tr>
-<td align="right">Multiple Schedulers</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038844">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038844</a></td>
-</tr>
-<tr>
-<td align="right">Monitoring</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038897">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038897</a></td>
-</tr>
-<tr>
-<td align="right">Monitoring Application Logs</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038899">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038899</a></td>
-</tr>
-<tr>
-<td align="right">Rolling Updates and Rollbacks</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038795">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038795</a></td>
-</tr>
-<tr>
-<td align="right">Commands and Arguments</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038798">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038798</a></td>
-</tr>
-<tr>
-<td align="right">Environment Variables</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038802">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038802</a></td>
-</tr>
-<tr>
-<td align="right">Secrets</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038804">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038804</a></td>
-</tr>
-<tr>
-<td align="right">Multi-Container Pods</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038807">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038807</a></td>
-</tr>
-<tr>
-<td align="right">Init Containers</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038813">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038813</a></td>
-</tr>
-<tr>
-<td align="right">OS Upgrades</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038783">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038783</a></td>
-</tr>
-<tr>
-<td align="right">Cluster Upgrade</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038786">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038786</a></td>
-</tr>
-<tr>
-<td align="right">Backup and Restore Methods</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038789">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038789</a></td>
-</tr>
-<tr>
-<td align="right">View Certificates</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038706">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038706</a></td>
-</tr>
-<tr>
-<td align="right">Certificates API</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038708">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038708</a></td>
-</tr>
-<tr>
-<td align="right">KubeConfig</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038710">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038710</a></td>
-</tr>
-<tr>
-<td align="right">Role-Based Authentication Control (RBAC)</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038715">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038715</a></td>
-</tr>
-<tr>
-<td align="right">ClusterRoles and RoleBindings</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038717">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038717</a></td>
-</tr>
-<tr>
-<td align="right">Image Security</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038719">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038719</a></td>
-</tr>
-<tr>
-<td align="right">Security Contexts</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038721">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038721</a></td>
-</tr>
-<tr>
-<td align="right">Network Policy</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038723">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038723</a></td>
-</tr>
-<tr>
-<td align="right">PersistentVolumes (PVs) and PersistentVolumeClaims (PVCs)</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038887">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038887</a></td>
-</tr>
-<tr>
-<td align="right">Explore Kubernetes Environment</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038764">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038764</a></td>
-</tr>
-<tr>
-<td align="right">Explore CNI Weave</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038768">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038768</a></td>
-</tr>
-<tr>
-<td align="right">Explore CNI Weave - 2</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12077031">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12077031</a></td>
-</tr>
-<tr>
-<td align="right">Deploy Network Solution</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038769">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038769</a></td>
-</tr>
-<tr>
-<td align="right">Service Networking</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038773">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038773</a></td>
-</tr>
-<tr>
-<td align="right">Explore DNS</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038776">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038776</a></td>
-</tr>
-<tr>
-<td align="right">Ingress - 1</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038778">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038778</a></td>
-</tr>
-<tr>
-<td align="right">Ingress - 2</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038779">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038779</a></td>
-</tr>
-<tr>
-<td align="right">Deploy a Kubernetes Cluster using <code>kubeadm</code></td>
-<td align="left"><a href="https://kodekloud.com/courses/675080/lectures/12940170">https://kodekloud.com/courses/675080/lectures/12940170</a></td>
-</tr>
-<tr>
-<td align="right">Application Failure</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038890">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038890</a></td>
-</tr>
-<tr>
-<td align="right">Control Plane Failure</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038892">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038892</a></td>
-</tr>
-<tr>
-<td align="right">Worker Node Failure</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038894">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038894</a></td>
-</tr>
-<tr>
-<td align="right">Advanced <code>kubectl</code> Commands</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038882">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038882</a></td>
-</tr>
-<tr>
-<td align="right">Lightning Lab - 1</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/14560177">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/14560177</a></td>
-</tr>
-<tr>
-<td align="right">Mock Exam 1</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038875">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038875</a></td>
-</tr>
-<tr>
-<td align="right">Mock Exam 2</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038876">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038876</a></td>
-</tr>
-<tr>
-<td align="right">Mock Exam 3</td>
-<td align="left"><a href="https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038878">https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038878</a></td>
+<td>Cluster</td>
+<td>A set of Data Centers</td>
+<td>Globally available load-balanced database server instances</td>
 </tr>
 </tbody>
 </table>
+<h3 id="database-terminology">Database terminology<a class="headerlink" href="#database-terminology" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+<th>AKA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keyspace</td>
+<td>Contains data related to a single application</td>
+<td>Schema</td>
+</tr>
+<tr>
+<td>Table</td>
+<td>Contains data related to a single object (originally known as Column Family)</td>
+<td>Database table/Collection</td>
+</tr>
+<tr>
+<td>Row</td>
+<td>Contains data for a single object instance with a structure equal to the Column Family the Row is under</td>
+<td>Row (duh?)</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>Composed of the Partition Key and Clustering Keys</td>
+<td>Nothing like this</td>
+</tr>
+<tr>
+<td>Partition Key</td>
+<td>Non-unique identifier for a Row</td>
+<td>Primary key</td>
+</tr>
+<tr>
+<td>Clustering Key</td>
+<td>Identifier for Rows with</td>
+<td>A <code>GROUP BY</code>-ish key</td>
+</tr>
+</tbody>
+</table>
+<h3 id="opertaional-terminology">Opertaional terminology<a class="headerlink" href="#opertaional-terminology" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+<th>AKA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bloom Filter</td>
+<td>Reduces the seek-time for read operations</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CQL</td>
+<td>Cassandra Query Language</td>
+<td>(Yet another) domain-specific SQL</td>
+</tr>
+<tr>
+<td>Gossip</td>
+<td>Protocol used to achieve eventual consistency</td>
+<td>The syncing protocol</td>
+</tr>
+<tr>
+<td>Partition Key Cache</td>
+<td>Stores the location of partitions which are commonly queried. Default feature</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Row Cache</td>
+<td>A cache reserved for frequently queried data rows. Optional feature</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Seed Node</td>
+<td>A node that bootstraps other nodes</td>
+<td>Master database instance</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<h3 id="consistency-check">Consistency Check<a class="headerlink" href="#consistency-check" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Before querying, Cassandra checks if replicas consistency is satisfied. If not, an exception is thrown</li>
+</ul>
+<h3 id="read-path">Read Path<a class="headerlink" href="#read-path" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Reading is more expensive than writing because of the Consistency Check and Read Repair</li>
+</ul>
+<h3 id="read-repair">Read Repair<a class="headerlink" href="#read-repair" title="Permanent link">&para;</a></h3>
+<ul>
+<li>When reading, data is read from the fastest responding replica (via the <a href="#snitches">dynamic snitch</a>) and hashed into a digest. Digests are requested from all other replicas. If all match, the data is returned to the client. If some don't match, data is requested from all replicas and the data with the latest timestamp is returend to the client. Read Repair requests are then issued to replicas whose digest do not match the digest of the returned data (with the latest timetsamp).</li>
+</ul>
+<h3 id="tombstone">Tombstone<a class="headerlink" href="#tombstone" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cassandra does not delete data immediately, it tags a Row for deletion and this is called a Tombstone</li>
+</ul>
+<h2 id="availability-scaling">Availability Scaling<a class="headerlink" href="#availability-scaling" title="Permanent link">&para;</a></h2>
+<h3 id="consistency">Consistency<a class="headerlink" href="#consistency" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cassandra is eventually consistent</li>
+</ul>
+<h4 id="one-two-three">One, Two, Three<a class="headerlink" href="#one-two-three" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Specified number of replicas must agree</li>
+</ul>
+<h4 id="quorum">Quorum<a class="headerlink" href="#quorum" title="Permanent link">&para;</a></h4>
+<ul>
+<li>A majority of replicas must agree</li>
+</ul>
+<h4 id="local_-modifier">Local_ (modifier)<a class="headerlink" href="#local_-modifier" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Local refers to the Data Center</li>
+<li><code>Local_two</code> - two replicas within the Data Center must agree</li>
+<li><code>Local_quorum</code> - majority of replicas within the Data Center must agree</li>
+</ul>
+<h4 id="each_-modifier">Each_ (modifier)<a class="headerlink" href="#each_-modifier" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Each refers to the Data Center</li>
+<li><code>Each_two</code> - all Data Centers must have two replicas within that Data Center agree</li>
+<li><code>Each_quorum</code> - all Data Centers must have a majority of replicas within the Data Center agree</li>
+</ul>
+<h3 id="data-partition">Data Partition<a class="headerlink" href="#data-partition" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Made up of rows that share a common Partition Key</li>
+</ul>
+<h3 id="data-replication">Data Replication<a class="headerlink" href="#data-replication" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Configured per keyspace (replication factor per data center)</li>
+</ul>
+<h3 id="data-centers">Data Centers<a class="headerlink" href="#data-centers" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Simulates real-world data centers</li>
+<li>Holds multiple racks</li>
+<li>Enable segregation of workloads that require the same data set</li>
+<li>Enable lower latency by processing data as close to the source region as possible</li>
+<li>Enables a disaster-recovery-ready setup</li>
+</ul>
+<h3 id="node">Node<a class="headerlink" href="#node" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Owns set(s) of Data Partitions</li>
+<li>Responsible for multiple token-ranges via Vnodes</li>
+<li>Each node by default is assigned 256 tokens (<code>num_tokens</code> option)</li>
+</ul>
+<h3 id="partition">Partition<a class="headerlink" href="#partition" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ideally less than 10 MB</li>
+<li>Definitely less than 100MB</li>
+<li>Size of this is a crucial attribute for Cassandra performance</li>
+</ul>
+<h3 id="partition-key">Partition Key<a class="headerlink" href="#partition-key" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Each Table contains one</li>
+<li>Can be standalone or composite</li>
+<li>Converted to a Token by a partitioner</li>
+<li>Default partitioner is <code>Murmur3Partitioner</code></li>
+</ul>
+<h3 id="replication">Replication<a class="headerlink" href="#replication" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Defined by the replication factor</li>
+<li>One primary replica which exists in the Node that owns the associated Token</li>
+</ul>
+<h4 id="replication-factor">Replication Factor<a class="headerlink" href="#replication-factor" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Ideally an odd number</li>
+<li>Number of Racks should be in multiples of the Replication Factor</li>
+</ul>
+<h4 id="replication-strategy">Replication Strategy<a class="headerlink" href="#replication-strategy" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Defined at the keyspace level</li>
+<li>Either <code>SimpleStrategy</code> or <code>NetworkTopologyStrategy</code></li>
+<li><code>SimpleStrategy</code> does not consider Racks/Data Centers. Places data replicas on nodes sequentially</li>
+<li><code>NetworkTopologyStrategy</code> does the above</li>
+</ul>
+<h4 id="replica-placement-strategy">Replica Placement Strategy<a class="headerlink" href="#replica-placement-strategy" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Defines placement of a Data Partition on other nodes</li>
+</ul>
+<h3 id="snitches">Snitches<a class="headerlink" href="#snitches" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Determines the Data Center and Rack a Node belongs to</li>
+<li>Defined at the Node level</li>
+<li>Defaults to <code>GossipingPropertyFileSnitch</code></li>
+<li>Dynamic snitches exist to keep track of node latencies dynmically</li>
+</ul>
+<h3 id="token">Token<a class="headerlink" href="#token" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Unique identifer referencing a Data Partition</li>
+<li>Range: <code>-2e63</code> to <code>+2e63 - 1</code> - each node owns a portion of this range and primarily owns data corresponding to the range</li>
+<li>Token range is split as cluster grows (eg. if one node =&gt; one node owns entire range, if X nodes =&gt; X nodes own the entire range)</li>
+</ul>
+<h3 id="vnode">VNode<a class="headerlink" href="#vnode" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A virtual node structure that enables splitting of a node's token-range into smaller ranges</li>
+<li>Each physical node is assigned a number of virtual nodes</li>
+</ul>
+<h2 id="performance-scaling">Performance Scaling<a class="headerlink" href="#performance-scaling" title="Permanent link">&para;</a></h2>
+<h3 id="partition-sizes">Partition sizes<a class="headerlink" href="#partition-sizes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Partition size affects JVM heap size</li>
+<li>Partition size affects GC</li>
+<li>Big partition makes garbage collection inefficient (GC works over a larger JVM heap)</li>
+<li>Partition size affects Cassandra Repairs</li>
+</ul>
+<h3 id="querying">Querying<a class="headerlink" href="#querying" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use as little Partition Keys as possible - 1 if possible</li>
+<li>Cassandra is more efficient because data is retrieved from a single Partition</li>
+</ul>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="https://cassandra.apache.org/">Apache Cassandra (open-source version)</a></li>
+<li><a href="https://www.datastax.com/">Datastax (commercial Cassandra)</a></li>
+<li><a href="https://www.instaclustr.com/cassandra-data-partitioning/">Cassandra Data Partitioning</a></li>
+</ol>
                 
               
               
@@ -1256,6 +1844,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../wordpress/" title="Wordpress" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Wordpress
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../mysql/" title="MySQL" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                MySQL
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
