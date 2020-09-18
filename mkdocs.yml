@@ -17,6 +17,7 @@ nav:
       - Software-as-a-Service:
           - Wordpress: ./wordpress.md
       - Databases:
+          - Cassandra: ./cassandra.md
           - MySQL: ./mysql.md
       - Software Engineering:
           - Golang: ./golang.md
