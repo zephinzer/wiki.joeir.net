@@ -165,6 +165,23 @@
 - Use as little Partition Keys as possible - 1 if possible
 - Cassandra is more efficient because data is retrieved from a single Partition
 
+## Error messages
+
+### Data center differs from previous data center
+
+```
+ERROR [main] 2020-09-24 02:10:24,030 CassandraDaemon.java:759 - Cannot start node if snitch's data center (dc1) differs from previous data center (ap-southeast-1). Please fix the snitch configuration, decommission and rebootstrap this node or use the flag -Dcassandra.ignore_dc=true.
+```
+
+- Run `kubectl edit statefulset cassandra` and add the flag
+
+
+### Snitch's rack differs from previous rack
+
+```
+RROR [main] 2020-09-24 02:13:42,845 CassandraDaemon.java:759 - Cannot start node if snitch's rack (rack1) differs from previous rack (ap-southeast-1a). Please fix the snitch configuration, decommission and rebootstrap this node or use the flag -Dcassandra.ignore_rack=true.
+```
+
 ## References
 
 1. [Apache Cassandra (open-source version)](https://cassandra.apache.org/)

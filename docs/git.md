@@ -45,6 +45,11 @@ This page provides an overview of some useful concepts and commands.
   - [Check which branch you're on](#check-which-branch-youre-on)
   - [See all remotes](#see-all-remotes)
   - [Checking which `.gitignore` is ignoring a file](#checking-which-gitignore-is-ignoring-a-file)
+- [Repository adminstration](#repository-adminstration)
+  - [Creating a new branch from an existing one](#creating-a-new-branch-from-an-existing-one)
+  - [Deleting a local branch](#deleting-a-local-branch)
+  - [Deleting a remote branch](#deleting-a-remote-branch)
+  - [Deleting local remote branches that have been deleted remotely](#deleting-local-remote-branches-that-have-been-deleted-remotely)
 
 # Installation
 
@@ -389,4 +394,34 @@ git remote -v
 ```sh
 cd `./path/to`;
 git check-ignore -v *;
+```
+
+# Repository adminstration
+
+## Creating a new branch from an existing one
+
+!!! Info "Why"
+    - I would like to create a new branch based on the current one I'm on
+
+```sh
+git checkout $SOURCE_BRANCH_SLUG;
+git checkout -b $NEW_BRANCH_SLUG;
+```
+
+## Deleting a local branch
+
+```sh
+git branch -D $BRANCH_SLUG;
+```
+
+## Deleting a remote branch
+
+```sh
+git push origin --delete $BRANCH_SLUG;
+```
+
+## Deleting local remote branches that have been deleted remotely
+
+```sh
+git remote update origin --prune;
 ```
