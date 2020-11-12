@@ -3,6 +3,14 @@
 - [Software Engineering / Tools / Kubernetes](#software-engineering--tools--kubernetes)
   - [Installation](#installation)
     - [Installation on Ubuntu](#installation-on-ubuntu)
+  - [Local Development](#local-development)
+    - [Kubernetes-in-Docker (KIND)](#kubernetes-in-docker-kind)
+      - [Simple Setup](#simple-setup)
+      - [Named Cluster](#named-cluster)
+      - [Multi-Node Cluster Configuration](#multi-node-cluster-configuration)
+      - [Loading Local Image Into Cluster](#loading-local-image-into-cluster)
+    - [Microk8s](#microk8s)
+    - [Minikube](#minikube)
   - [Resource Types Overview](#resource-types-overview)
     - [ConfigMap](#configmap)
       - [ConfigMap template for environment variables injection](#configmap-template-for-environment-variables-injection)
@@ -21,14 +29,6 @@
       - [Template for an opaque secret](#template-for-an-opaque-secret)
     - [Services](#services)
       - [Template for a service](#template-for-a-service)
-  - [Local Development](#local-development)
-    - [Kubernetes-in-Docker (KIND)](#kubernetes-in-docker-kind)
-      - [Simple Setup](#simple-setup)
-      - [Named Cluster](#named-cluster)
-      - [Multi-Node Cluster Configuration](#multi-node-cluster-configuration)
-      - [Loading Local Image Into Cluster](#loading-local-image-into-cluster)
-    - [Microk8s](#microk8s)
-    - [Minikube](#minikube)
   - [Debugging](#debugging)
     - [invalid object doesn't have additional properties](#invalid-object-doesnt-have-additional-properties)
   - [Useful Tools](#useful-tools)
@@ -61,6 +61,71 @@ sudo apt-get install kubeadm;
 
 If the above instructions fail, you can find the instructions for Ubuntu 18.04 here: [https://vitux.com/install-and-deploy-kubernetes-on-ubuntu/](https://vitux.com/install-and-deploy-kubernetes-on-ubuntu/)
 
+
+- - -
+
+
+## Local Development
+
+The following documents options available to run Kubernetes on a local machine. Primarily, they are:
+
+- [Kubernetes-in-Docker (KIND)](#kubernetes-in-docker-kind)
+- [Microk8s](#microk8s)
+- [Minikube](#minikube)
+
+### Kubernetes-in-Docker (KIND)
+
+- [Github Repository](https://github.com/kubernetes-sigs/kind)
+
+#### Simple Setup
+
+```sh
+kind create cluster;
+```
+
+#### Named Cluster
+
+```sh
+kind create cluster --name mycluster;
+```
+
+#### Multi-Node Cluster Configuration
+
+Place the following in a `kind-config.yaml` file:
+
+```yaml
+apiVersion: kind.sigs.k8s.io/v1alpha3
+kind: Cluster
+nodes:
+- role: control-plane
+- role: worker
+- role: worker
+```
+
+Run the following from the same directory as the `kind-config.yaml` file:
+
+```sh
+kind create cluster --config ./kind-config.yaml;
+```
+
+#### Loading Local Image Into Cluster
+
+```sh
+kind load docker-image ___;
+```
+
+### Microk8s
+
+- [Main Website](https://microk8s.io/)
+- [Github Repository](https://github.com/ubuntu/microk8s)
+
+### Minikube
+
+- [Main Website](https://minikube.sigs.k8s.io/)
+- [Github Repository](https://github.com/kubernetes/minikube)
+
+
+- - -
 
 
 ## Resource Types Overview
@@ -276,68 +341,6 @@ spec:
 
 - - -
 
-
-## Local Development
-
-The following documents options available to run Kubernetes on a local machine. Primarily, they are:
-
-- [Kubernetes-in-Docker (KIND)](#kubernetes-in-docker-kind)
-- [Microk8s](#microk8s)
-- [Minikube](#minikube)
-
-### Kubernetes-in-Docker (KIND)
-
-- [Github Repository](https://github.com/kubernetes-sigs/kind)
-
-#### Simple Setup
-
-```sh
-kind create cluster;
-```
-
-#### Named Cluster
-
-```sh
-kind create cluster --name mycluster;
-```
-
-#### Multi-Node Cluster Configuration
-
-Place the following in a `kind-config.yaml` file:
-
-```yaml
-apiVersion: kind.sigs.k8s.io/v1alpha3
-kind: Cluster
-nodes:
-- role: control-plane
-- role: worker
-- role: worker
-```
-
-Run the following from the same directory as the `kind-config.yaml` file:
-
-```sh
-kind create cluster --config ./kind-config.yaml;
-```
-
-#### Loading Local Image Into Cluster
-
-```sh
-kind load docker-image ___;
-```
-
-### Microk8s
-
-- [Main Website](https://microk8s.io/)
-- [Github Repository](https://github.com/ubuntu/microk8s)
-
-### Minikube
-
-- [Main Website](https://minikube.sigs.k8s.io/)
-- [Github Repository](https://github.com/kubernetes/minikube)
-
-
-- - -
 
 
 ## Debugging
