@@ -1068,6 +1068,11 @@
 <li><a href="#check-which-branch-youre-on">Check which branch you're on</a></li>
 <li><a href="#see-all-remotes">See all remotes</a></li>
 <li><a href="#checking-which-gitignore-is-ignoring-a-file">Checking which <code>.gitignore</code> is ignoring a file</a></li>
+<li><a href="#repository-adminstration">Repository adminstration</a></li>
+<li><a href="#creating-a-new-branch-from-an-existing-one">Creating a new branch from an existing one</a></li>
+<li><a href="#deleting-a-local-branch">Deleting a local branch</a></li>
+<li><a href="#deleting-a-remote-branch">Deleting a remote branch</a></li>
+<li><a href="#deleting-local-remote-branches-that-have-been-deleted-remotely">Deleting local remote branches that have been deleted remotely</a></li>
 </ul>
 <h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
 <h2 id="installation-on-ubuntu-1604">Installation on Ubuntu 16.04<a class="headerlink" href="#installation-on-ubuntu-1604" title="Permanent link">&para;</a></h2>
@@ -1443,6 +1448,34 @@ git diff HEAD <span class="si">${</span><span class="nv">COMMIT_HASH</span><span
 </div>
 <div class="codehilite"><pre><span></span><code><span class="nb">cd</span> <span class="sb">`</span>./path/to<span class="sb">`</span><span class="p">;</span>
 git check-ignore -v *<span class="p">;</span>
+</code></pre></div>
+
+
+<h1 id="repository-adminstration">Repository adminstration<a class="headerlink" href="#repository-adminstration" title="Permanent link">&para;</a></h1>
+<h2 id="creating-a-new-branch-from-an-existing-one">Creating a new branch from an existing one<a class="headerlink" href="#creating-a-new-branch-from-an-existing-one" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Why</p>
+<ul>
+<li>I would like to create a new branch based on the current one I'm on</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><code>git checkout <span class="nv">$SOURCE_BRANCH_SLUG</span><span class="p">;</span>
+git checkout -b <span class="nv">$NEW_BRANCH_SLUG</span><span class="p">;</span>
+</code></pre></div>
+
+
+<h2 id="deleting-a-local-branch">Deleting a local branch<a class="headerlink" href="#deleting-a-local-branch" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>git branch -D <span class="nv">$BRANCH_SLUG</span><span class="p">;</span>
+</code></pre></div>
+
+
+<h2 id="deleting-a-remote-branch">Deleting a remote branch<a class="headerlink" href="#deleting-a-remote-branch" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>git push origin --delete <span class="nv">$BRANCH_SLUG</span><span class="p">;</span>
+</code></pre></div>
+
+
+<h2 id="deleting-local-remote-branches-that-have-been-deleted-remotely">Deleting local remote branches that have been deleted remotely<a class="headerlink" href="#deleting-local-remote-branches-that-have-been-deleted-remotely" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>git remote update origin --prune<span class="p">;</span>
 </code></pre></div>
                 
               

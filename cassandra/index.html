@@ -667,6 +667,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#error-messages" class="md-nav__link">
+    Error messages
+  </a>
+  
+    <nav class="md-nav" aria-label="Error messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-center-differs-from-previous-data-center" class="md-nav__link">
+    Data center differs from previous data center
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snitchs-rack-differs-from-previous-rack" class="md-nav__link">
+    Snitch's rack differs from previous rack
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -1551,6 +1578,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#error-messages" class="md-nav__link">
+    Error messages
+  </a>
+  
+    <nav class="md-nav" aria-label="Error messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-center-differs-from-previous-data-center" class="md-nav__link">
+    Data center differs from previous data center
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snitchs-rack-differs-from-previous-rack" class="md-nav__link">
+    Snitch's rack differs from previous rack
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -1824,6 +1878,20 @@
 <li>Use as little Partition Keys as possible - 1 if possible</li>
 <li>Cassandra is more efficient because data is retrieved from a single Partition</li>
 </ul>
+<h2 id="error-messages">Error messages<a class="headerlink" href="#error-messages" title="Permanent link">&para;</a></h2>
+<h3 id="data-center-differs-from-previous-data-center">Data center differs from previous data center<a class="headerlink" href="#data-center-differs-from-previous-data-center" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">ERROR</span><span class="w"> </span><span class="o">[</span><span class="n">main</span><span class="o">]</span><span class="w"> </span><span class="mi">2020</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">24</span><span class="w"> </span><span class="mi">02</span><span class="err">:</span><span class="mi">10</span><span class="err">:</span><span class="mi">24</span><span class="p">,</span><span class="mi">030</span><span class="w"> </span><span class="n">CassandraDaemon</span><span class="p">.</span><span class="nl">java</span><span class="p">:</span><span class="mi">759</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Cannot</span><span class="w"> </span><span class="k">start</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">snitch</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="p">(</span><span class="n">dc1</span><span class="p">)</span><span class="w"> </span><span class="n">differs</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">previous</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="p">(</span><span class="n">ap</span><span class="o">-</span><span class="n">southeast</span><span class="o">-</span><span class="mi">1</span><span class="p">).</span><span class="w"> </span><span class="n">Please</span><span class="w"> </span><span class="n">fix</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">snitch</span><span class="w"> </span><span class="n">configuration</span><span class="p">,</span><span class="w"> </span><span class="n">decommission</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">rebootstrap</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="k">use</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">flag</span><span class="w"> </span><span class="o">-</span><span class="n">Dcassandra</span><span class="p">.</span><span class="n">ignore_dc</span><span class="o">=</span><span class="k">true</span><span class="p">.</span><span class="w"></span>
+</code></pre></div>
+
+
+<ul>
+<li>Run <code>kubectl edit statefulset cassandra</code> and add the flag</li>
+</ul>
+<h3 id="snitchs-rack-differs-from-previous-rack">Snitch's rack differs from previous rack<a class="headerlink" href="#snitchs-rack-differs-from-previous-rack" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">RROR</span><span class="w"> </span><span class="o">[</span><span class="n">main</span><span class="o">]</span><span class="w"> </span><span class="mi">2020</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">24</span><span class="w"> </span><span class="mi">02</span><span class="err">:</span><span class="mi">13</span><span class="err">:</span><span class="mi">42</span><span class="p">,</span><span class="mi">845</span><span class="w"> </span><span class="n">CassandraDaemon</span><span class="p">.</span><span class="nl">java</span><span class="p">:</span><span class="mi">759</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Cannot</span><span class="w"> </span><span class="k">start</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">snitch</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">rack</span><span class="w"> </span><span class="p">(</span><span class="n">rack1</span><span class="p">)</span><span class="w"> </span><span class="n">differs</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">previous</span><span class="w"> </span><span class="n">rack</span><span class="w"> </span><span class="p">(</span><span class="n">ap</span><span class="o">-</span><span class="n">southeast</span><span class="o">-</span><span class="mi">1</span><span class="n">a</span><span class="p">).</span><span class="w"> </span><span class="n">Please</span><span class="w"> </span><span class="n">fix</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">snitch</span><span class="w"> </span><span class="n">configuration</span><span class="p">,</span><span class="w"> </span><span class="n">decommission</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">rebootstrap</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="k">use</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">flag</span><span class="w"> </span><span class="o">-</span><span class="n">Dcassandra</span><span class="p">.</span><span class="n">ignore_rack</span><span class="o">=</span><span class="k">true</span><span class="p">.</span><span class="w"></span>
+</code></pre></div>
+
+
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ol>
 <li><a href="https://cassandra.apache.org/">Apache Cassandra (open-source version)</a></li>
